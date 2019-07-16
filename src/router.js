@@ -46,13 +46,6 @@ export default new Router({
       meta: { title: "Devenez Annonceur", icon: 'home', id: '', menu: 'footer', divider: false }
     },
     {
-      path: '/testdb',
-      name: 'testdb',
-      component: () => import('./views/_testdb.vue'),
-      props: true,
-      meta: { title: "testdb", icon: 'help', id: '', menu: 'main', divider: true }
-    },
-    {
       path: '*',
       redirect: '/home'
     }
