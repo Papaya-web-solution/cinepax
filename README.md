@@ -1,4 +1,4 @@
-# cinepax-v4
+# cinepax
 
 ## Project setup
 ```
