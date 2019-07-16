@@ -1,0 +1,20 @@
+/* @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap'); */
+
+/* #app {
+  font-family: 'Pacifico', 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #297dd1;
+  background-color: rgb(15, 15, 15);
+  height: 100vh;
+  max-width: 600px;
+} */
+
+.middle-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: inherit;
+}

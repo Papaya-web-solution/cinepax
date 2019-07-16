@@ -1,0 +1,100 @@
+ /* TRANSITION fade */
+
+ .fade-enter-active, .fade-leave-active {
+   transition-duration: 0.3s;
+   transition-property: opacity;
+   transition-timing-function: ease;
+ }
+
+ .fade-enter, .fade-leave-to {
+   /* .fade-leave-active below version 2.1.8 */
+   opacity: 0;
+ }
+
+ /* TRANSITION slide-left et slide-right */
+
+ .slide-left-enter-active, .slide-left-leave-active, .slide-right-enter-active, .slide-right-leave-active {
+   transition-duration: 0.5s;
+   transition-property: height, opacity, transform;
+   transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+   overflow: hidden;
+ }
+
+ .slide-left-enter, .slide-right-leave-active {
+   opacity: 0;
+   transform: translate(2em, 0);
+ }
+
+ .slide-left-leave-active, .slide-right-enter {
+   opacity: 0;
+   transform: translate(-2em, 0);
+ }
+
+ /* TRANSITION zoom */
+
+ zoom-enter-active, .zoom-leave-active {
+   animation-duration: 0.5s;
+   animation-fill-mode: both;
+   animation-name: zoom;
+ }
+
+ .zoom-leave-active {
+   animation-direction: reverse;
+ }
+
+ @keyframes zoom {
+   from {
+     opacity: 0;
+     transform: scale3d(0.3, 0.3, 0.3);
+   }
+   100% {
+     opacity: 1;
+   }
+ }
+
+  /* TRANSITION slide 1 - simple */
+ .slide1-enter-active, .slide1-leave-active {
+   transition: transform 0.8s ease;
+ }
+
+ .slide1-enter, .slide1-leave-to {
+   transform: translateY(-50%);
+ }
+
+ /* TRANSITION slide 2 - avec effet */
+
+ .slide2-enter {
+   opacity: 0;
+   transform: scale3d(2, 0.5, 1) translate3d(400px, 0, 0);
+ }
+
+ .slide2-enter-to {
+   transform: scale3d(1, 1, 1);
+ }
+
+ .slide2-enter-active, .slide2-leave-active {
+   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ }
+
+ .slidex-leave {
+   transform: scale3d(1, 1, 1);
+ }
+
+ .slide2-leave-to {
+   opacity: 0;
+   transform: scale3d(2, 0.5, 1) translate3d(-400px, 0, 0);
+ }
+
+ /* TRANSITION rotate */
+
+ .rotate-enter {
+   transform: perspective(500px) rotate3d(0, 1, 0, 90deg);
+ }
+
+ .rotate-enter-active, .rotate-leave-active {
+   transition: 0.5s;
+ }
+
+ .rotate-leave-to {
+   transform: perspective(500px) rotate3d(0, 1, 0, -90deg);
+ }
