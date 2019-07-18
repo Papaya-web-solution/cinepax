@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "id_film": "tt0371746",
+    "id_cinema": 1,
+    "id_salle": 3,
+    "day": "2019-07-17",
+    "hour":"20:30",
+    "infos": "Dolby 3D, VF"
+  },
+  {
+    "id": 2,
+    "id_film": "tt0371746",
+    "id_cinema": 1,
+    "id_salle": 3,
+    "day": "2019-07-17",
+    "hour":"22:30",
+    "infos": "Dolby 3D, VO ENG"
+  },
+  {
+    "id": 3,
+    "id_film": "tt0371746",
+    "id_cinema": 1,
+    "id_salle": 3,
+    "day": "2019-07-18",
+    "hour":"12:00",
+    "infos": "Dolby 3D, VF"
+  },
+  {
+    "id": 4,
+    "id_film": "tt0371746",
+    "id_cinema": 1,
+    "id_salle": 3,
+    "day": "2019-07-18",
+    "hour":"14:00",
+    "infos": "Dolby 3D, VF"
+  },
+  {
+    "id": 5,
+    "id_film": "tt0371746",
+    "id_cinema": 1,
+    "id_salle": 3,
+    "day": "2019-07-18",
+    "hour":"16:00",
+    "infos": "VF"
+  },
+]

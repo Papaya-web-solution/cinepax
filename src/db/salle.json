@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "id_cinema": 1,
+    "title": "Salle 1",
+    "infos": "Dolby 3D, écran géeant, blabalbalbaab"
+  },
+  {
+    "id": 2,
+    "id_cinema": 1,
+    "title": "Salle 2",
+    "infos": "Dolby 3D"
+  },
+  {
+    "id": 3,
+    "id_cinema": 1,
+    "title": "Salle 3",
+    "infos": "blabalbalbaab"
+  },
+  {
+    "id": 1,
+    "id_cinema": 2,
+    "title": "Salle Tiare",
+    "infos": "Dolby 3D, écran géeant, blabalbalbaab"
+  }
+]

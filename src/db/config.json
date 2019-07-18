@@ -1,0 +1,12 @@
+[
+  {
+    "updates": {
+      "pub": false,
+      "film": true,
+      "seance": true,
+      "cinema": false,
+      "info": false,
+      "salle": false
+    }
+  }
+]
