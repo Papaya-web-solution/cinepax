@@ -1,9 +1,8 @@
 <template>
-  <v-app dark>
-    <app-navigation :config="config"></app-navigation>
+  <v-app dark> 
     <v-content>
-      <transition :name="transitionView">
-        <router-view :config="config" :pubs="pubs"></router-view>
+      <transition name="slide">
+        <router-view :pubs="pubs"></router-view>
       </transition>
     </v-content>
     <app-footer></app-footer>
@@ -11,26 +10,16 @@
 </template>
 
 <script>
-import AppNavigation from "./components/AppNavigation.vue";
-import AppFooter from "./components/AppFooter.vue";
-import mixin from "@/mixin.js";
+
+import AppFooter from "@/components/AppFooter.vue";
 
 export default {
   name: "App",
   components: {
-    AppNavigation,
     AppFooter
   },
-  mixins: [mixin],
   data() {
     return {
-      config: {
-        title: "Cinepax".toUpperCase(),
-        version: "v5.0",
-        logo: require("./assets/logo.png"),
-        periode: ["20190601", "20190610"],
-        searchplaceholder: "titre de film, nom du réalisateur, etc.."
-      },
       pubs: {
         home: {
           title: "Avis",
@@ -42,8 +31,7 @@ export default {
           img: require("./assets/pubs/eico.gif"),
           url: "https://www.glopglopg.com"
         }
-      },
-      transitionView: "fade"
+      }
     };
   }
 };

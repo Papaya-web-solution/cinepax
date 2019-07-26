@@ -1,8 +1,9 @@
 <template>
   <div class="about">
+    <app-navigation></app-navigation>
     <h1>About</h1>
     --{{test}}--
-    <HelloWorld :config="config" :test="test" @fromChild="methodFromChild($event)" />
+    <HelloWorld :test="test" @fromChild="methodFromChild($event)" />
     <h2>metaInfo T : {{ metaInfo('title')}}</h2>
     <h2>metaInfo R : {{ metaInfo('menu')}}</h2>
     
@@ -46,6 +47,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import AppNavigation from "@/components/AppNavigation.vue";
 
 export default {
   data() {
@@ -54,11 +56,9 @@ export default {
       routes: this.$router.options.routes
     };
   },
-  props: {
-    config: {}
-  },
   components: {
-    HelloWorld
+    HelloWorld,
+    AppNavigation
   },
   methods: {
     methodFromChild(test) {
@@ -67,7 +67,7 @@ export default {
     },
     metaInfo(x) {
       //console.log(this.$route)
-      return this.$route.meta.config[x];
+      return this.$route.meta[x];
     }
   }
 };

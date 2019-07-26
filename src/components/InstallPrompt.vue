@@ -23,7 +23,7 @@ export default {
       this.showInstallBanner = true;
     });
     window.addEventListener("appinstalled", function handler(e) {
-      console.log("a2hs installed");
+      console.log("a2hs installed",e);
       alert("L'application a été ajoutée à votre écran d'accueil");
       this.removeEventListener("appinstalled", handler);
     });
@@ -33,6 +33,7 @@ export default {
       this.showInstallBanner = false;
       installEvent.prompt();
       installEvent.userChoice.then(choiceResult => {
+        console.log(choiceResult)
         installEvent = null;
       });
     }

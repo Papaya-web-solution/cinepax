@@ -1,49 +1,37 @@
 <template>
-  <div>
-    <v-footer class="px-3" color="grey--text text--darken-2 text-xs-center">
-      <v-layout justify-center>
-        &copy;{{copyrightYear}} -
-        <span class="mx-2">
-          réalisé par
-          <a href="https://www.glopglop.com" target="_blank">Glopglop</a>
-        </span>
-        -
-        <span class="mx-2">
-          <span v-if="standaloneMode">Standalone</span>
-          <span v-else>Web</span>
-        </span>
-        -
-        <span class="mx-2">
-          <router-link :to="mxNextRoute('annonceur')">Devenez annonceur</router-link>
-        </span>
-      </v-layout>
-    </v-footer>
-  </div>
+	<div>
+		<div v-if="$store.state.route.meta['footer']=='normal'">
+			<v-footer class="px-3" color="grey--text text--darken-2">
+				<v-layout justify-center>
+					<div>
+						<template v-for="(route) in $router.options.routes">
+							<span v-if="route.meta" :key="route.name">
+								<span v-if="route.meta.menu=='footer'">
+									<router-link :to="{name: route.name}" class="mx-2">{{route.meta.title}}</router-link>
+								</span>
+							</span>
+						</template>
+					</div>
+				</v-layout>
+			</v-footer>
+		</div>
+		<div v-if="$store.state.route.meta['footer']=='autre'">
+			<v-footer class="px-3" color="grey--text text--darken-2">
+				<v-layout justify-center>
+					test
+				</v-layout>
+			</v-footer>
+		</div>
+	</div>
 </template>
 
 <script>
-import mixin from "@/mixin.js";
-
-export default {
-  mixins: [mixin],
-  computed: {
-    copyrightYear: function() {
-      return new Date().getFullYear();
-    },
-    standaloneMode: function() {
-      if (window.matchMedia("(display-mode: standalone)").matches) {
-        return true;
-      } else {
-        return window.navigator.standalone;
-      }
-    }
-  }
-};
+export default {};
 </script>
 
 <style  scoped>
 footer a {
-  color: #bdbdbd;
-  text-decoration: none;
+	color: #bdbdbd;
+	text-decoration: none;
 }
 </style>
