@@ -1,9 +1,10 @@
 {
   "cinemas": {
-    "1": {
-      "id": 1,
+    "majestic": {
       "title": "Majestic Tahiti",
       "logo": "img/majestic.png",
+      "adress":"Avenue du Commandant Chesse MAMAO 98713 Papeete",
+      "telephone":"40 42 54 69",
       "description": "<h3>Bienvenue au Cinéma MAJESTIC TAHITI</h3><br>fsqsds qs dqs dqsdqsqs dqsdq qsd qs dqs dqsd qsd qsd qsd qsd qsd qsdqsdqsd qsdsqqsdqsd qsqsd qsd sqd ",
       "prices": "<h3>NOUVEAUX TARIFS</h3><p>2D/3D<br>Adulte 1100F/1450F<br>Enfant -12ans 750F / 1100F<br>Senior +60ans1000F<br><br>Veuillez nous contacter pour les tarifs groupes<br>Tous nos tarifs 3D sont hors lunettes 3D<br>Ajouter 200 F pour les lunettes 3D<br>(N'oubliez pas de les conserver aprés le film)",
       "rating": 3,
@@ -30,8 +31,7 @@
         }
       }
     },
-    "2": {
-      "id": 2,
+    "concorde": {
       "title": "Concorde",
       "logo": "img/pacificfilms.png",
       "description": "balblablalba",
@@ -52,8 +52,7 @@
         }
       }
     },
-    "3": {
-      "id": 3,
+    "liberty": {
       "title": "Liberty",
       "logo": "img/pacificfilms.png",
       "description": "balblablalba",
@@ -62,6 +61,7 @@
       "like": 15050,
       "coord": "-17.539129, -149.566159",
       "website": "http://www.pacificfilms.pf",
+      "facebook": "https://www.facebook.com/majestictahiti/?ref=br_rs",
       "images": [],
       "salles": {
         "1": {
@@ -74,8 +74,7 @@
         }
       }
     },
-    "4": {
-      "id": 4,
+    "hollywood": {
       "title": "Hollywood",
       "logo": "img/pacificfilms.png",
       "description": "balblablalba qsd qsdsqd qsqs dqsdqsdqsd sqd sqdsqd sqdsq sqd sqd",
@@ -84,6 +83,7 @@
       "like": 15,
       "coord": "-17.540419, -149.568733",
       "website": "http://www.pacificfilms.pf",
+      "facebook": "https://www.facebook.com/PacificFilms.Tahiti/?ref=br_rs",
       "images": [],
       "salles": {
         "1": {

@@ -1,17 +1,23 @@
 <template>
-  <div>
-    <app-navigation></app-navigation>
-    <h1>CINEMA : {{ id }}</h1>
-    
-  </div>
+	<div>
+		<app-navigation></app-navigation>
+		<v-content>
+		<h1>CINEMA : {{ id }}  {{cinema.title}}</h1>
+		</v-content>
+	</div>
 </template>
 <script>
 import AppNavigation from "@/components/AppNavigation.vue";
+
 export default {
-  components: {
-		AppNavigation
+	props: ["id"],
+	components: {
+    AppNavigation
 	},
-  props: ["id"],
-  
+	computed: {
+		cinema() {
+			return this.$store.state.cinemas[this.id]
+		}
+	}
 };
 </script>

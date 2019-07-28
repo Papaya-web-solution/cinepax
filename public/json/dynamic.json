@@ -1,7 +1,7 @@
 {
   "update": {
     "cinemas": true,
-    "infos" : false
+    "infos" : true
   },
   "films": {
     "1": {

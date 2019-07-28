@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<app-navigation></app-navigation>
+		<v-content>
 		<v-container fill-height text-xs-center>
 			<v-layout align-center justify-center column>
 				<v-flex>
@@ -80,6 +81,7 @@
 				<v-btn color="orange" text @click="showInfo = false">Close</v-btn>
 			</v-snackbar>
 		</v-container>
+		</v-content>
 	</div>
 </template>
 
