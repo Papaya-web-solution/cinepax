@@ -1,44 +1,41 @@
 <template>
-  <div >
-    <div class="" style="text-align:center">
-        <img :src="mypub.img" :class="classPub" />
-    </div>
-  </div>
+	<div>
+		<div v-if="picturePub!=undefined" style="text-align:center">
+			<div v-if="picturePub['url']!=''">
+				<a :href="picturePub['url']" target="_blank" :title="picturePub['title']">
+					<img :src="imgSrc" :class="classPub" :alt="picturePub['title']" />
+				</a>
+			</div>
+			<div v-else>
+				<img :src="imgSrc" :class="classPub" :alt="picturePub['title']" />
+			</div>
+		</div>
+	</div>
 </template>
-<!--
-<template>
-  <v-container fluid>
-    <v-layout align-center column mt-3>
-      <v-flex>
-        <img :src="mypub.img" class="imagePub" />
-      </v-flex>
-    </v-layout>
-  </v-container>
-</template>
--->
+
 <script>
 export default {
-  data() {
-    return {
-    };
-  },
-  props: {
-    pubs: {},
-    pagePub:String,
-    classPub:String
-  },
-  computed: {
-    mypub: function () {
-      return this.pubs[this.pagePub]
-    }
-  }
-}
+	props: {
+		pagePub: String,
+		classPub: String
+	},
+	computed: {
+		picturePub: function() {
+			return this.$store.state.pubs[this.pagePub];
+		},
+		imgSrc: function() {
+			return (
+				process.env.BASE_URL + this.$store.state.pubs[this.pagePub]["image"]
+			);
+		}
+	}
+};
 </script>
 <style scoped>
 .max100 {
-  max-width: 100%;
+	max-width: 100%;
 }
 .full {
-  width: 100%;
+	width: 100%;
 }
 </style>

@@ -8,7 +8,7 @@
 					class="primary--text text-uppercase"
 				>Séances du </h3>
 			</div>
-			<pub :pubs="pubs" pagePub="seances" classPub="max100"></pub>
+			<pub pagePub="seances" classPub="max100"></pub>
 			<v-tabs grow icons-and-text>
 				<v-tabs-slider color="primary"></v-tabs-slider>
 				<v-tab href="#tab-1">
@@ -34,7 +34,6 @@
 				</v-tab-item>
 			</v-tabs>
 		</v-content>
-		<app-footer></app-footer>
 	</div>
 </template>
 <script>
@@ -53,9 +52,6 @@ export default {
 	},
 	data() {
 		return {};
-	},
-	props: {
-		pubs: {}
 	}
 };
 </script>

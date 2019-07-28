@@ -12,8 +12,8 @@
 } */
 
 .middle-centered {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  min-height: inherit;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  min-height: inherit !important;
 }

@@ -1,0 +1,19 @@
+{
+  "infos":{
+    "1":{
+      "id": "PG-13",
+      "title" : "Interdit aux moins de 13 ans",
+      "image" : "https://www.turlututu.top/cinepax/img/pg-13.png"
+    },
+    "2":{
+      "id": "3D",
+      "title": "Film en 3D",
+      "image": "https://www.turlututu.top/cinepax/img/3D.png"
+    },
+    "3":{
+      "id": "VF",
+      "title": "Film en français",
+      "image": "https://www.turlututu.top/cinepax/img/vf.png"
+    }
+  }
+}

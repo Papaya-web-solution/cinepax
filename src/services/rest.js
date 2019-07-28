@@ -4,7 +4,7 @@ import AppConfig from "@/config";
 
 let baseURL = "";
 if (process.env.NODE_ENV == "development") {
-    baseURL = AppConfig.rootURL;
+    baseURL = "https://cors-anywhere.herokuapp.com/" + AppConfig.rootURL;
     // A placer dans le htaccess pour éviter les restrictions Control Allow Origin
     // Header always set Access-Control-Allow-Origin "http://localhost:8080"
     // Header always set Access-Control-Max-Age "1000"
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV == "development") {
 } else {
     baseURL = AppConfig.rootURL;
 }
-//console.log(baseURL);
+
 const folderJson = baseURL + "json/";
 const folderScripts = baseURL + "api/";
 
@@ -32,17 +32,31 @@ const folderScripts = baseURL + "api/";
 // };
 
 export default {
-
+    getDatasDynamic() {
+        let dbFile = folderJson + 'dynamic.json';
+        console.log(dbFile)
+        return axios
+            .get(dbFile)
+            .then(function (response) {
+                //console.log(response.data)
+                return response.data;
+            })
+            .catch(function (error) {
+                console.log("error productService getDatasDynamic: ", error)
+                return false;
+            });
+    },
     sendMail(form) {
         let dbFile = folderScripts + 'sendmail.php';
         let datas = { form }
         return axios
             .get(dbFile, datas)
             .then(function (response) {
-               return true;
+                return true;
             })
             .catch(function (error) {
                 return error;
             });
-    }
+    },
+
 }

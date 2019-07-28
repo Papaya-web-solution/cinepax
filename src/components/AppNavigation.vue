@@ -2,7 +2,7 @@
 	<div>
 		<v-navigation-drawer app v-model="drawer" fixed>
 			<v-list class="pt-0">
-				<v-list-tile class="py-2">
+				<v-list-tile class=" py-2">
 					<v-spacer></v-spacer>
 					<img src="@/assets/logo.png" style="height:25px;" class="mr-2" />
 					<span class="title">{{this.$root.appTxt.title}}</span>
@@ -78,7 +78,7 @@ export default {
 	},
 	data() {
 		return {
-			drawer: true,
+			drawer: false,
 			searchfield: false
 		};
 	},

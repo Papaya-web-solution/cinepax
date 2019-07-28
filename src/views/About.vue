@@ -2,9 +2,12 @@
 	<div>
 		<app-navigation></app-navigation>
 		<v-container fill-height text-xs-center>
-			<v-layout align-center>
+			<v-layout align-center justify-center column>
 				<v-flex>
-					<div class="my-3" @click="showInfo = true">&copy; {{copyrightYear}}</div>
+					<v-card style="padding:30px;" color="black" elevation="10">
+						<img src="@/assets/logo.png" width="192" />
+					</v-card>
+					<div @click="showInfo = true">&copy; {{copyrightYear}} - {{this.$root.appTxt.version}}</div>
 					<div class="my-3" @click="showInfo = true">
 						Conçu et réalisé par
 						<a
@@ -14,21 +17,17 @@
 					</div>
 					<v-container text-xs-center>
 						<h2>Contactez-nous</h2>
-						<v-container>
-							<v-layout>
-								<v-flex>
-									par
-									<v-btn text>
-										<a href="mailto:bolardmarc@gmail.com" style="text-decoration:none">Email</a>
-									</v-btn>ou
-									<v-btn text>
-										<a href="tel:+68987791037" style="text-decoration:none">Téléphone</a>
-									</v-btn>
-								</v-flex>
-							</v-layout>
-						</v-container>
+						<v-flex>
+							par
+							<v-btn text>
+								<a href="mailto:bolardmarc@gmail.com" style="text-decoration:none">Email</a>
+							</v-btn>ou
+							<v-btn text>
+								<a href="tel:+68987791037" style="text-decoration:none">Téléphone</a>
+							</v-btn>
+						</v-flex>
 						<v-container v-show="!sended">
-							ou via ce formulaire:
+							ou encore via ce formulaire:
 							<v-form ref="form" v-model="valid" lazy-validation>
 								<v-layout wrap>
 									<div v-if="errors.length">
@@ -60,14 +59,7 @@
 										></v-textarea>
 									</v-flex>
 									<v-flex xs12>
-										<v-btn
-											@click="validate"
-											:loading="loading"
-											:disabled="loading"
-											large
-											class="mt-5"
-											color="primary"
-										>
+										<v-btn @click="validate" :loading="loading" :disabled="loading" large class="mt-5">
 											Validate
 											<v-icon right dark>send</v-icon>
 										</v-btn>
@@ -83,7 +75,7 @@
 				<div>
 					<span v-if="standaloneMode">Standalone</span>
 					<span v-else>Web</span>
-					<span>| {{nodeenv}}</span>
+					<span>&nbsp;|&nbsp;{{nodeenv}}</span>
 				</div>
 				<v-btn color="orange" text @click="showInfo = false">Close</v-btn>
 			</v-snackbar>
@@ -98,7 +90,7 @@ import restService from "@/services/rest.js";
 export default {
 	components: {
 		AppNavigation,
-		restService
+		restService,
 	},
 	data() {
 		return {
@@ -138,21 +130,20 @@ export default {
 		validate() {
 			if (this.$refs.form.validate()) {
 				//console.log(JSON.stringify(this.form));
-				(this.loading = true),
-					restService.sendMail(this.form)
-						.then(result => {
-							console.log("validate: sendMail");
-							if (result === true) {
-								this.msgReturn =
-									this.$root.appTxt.msgReturnOK;
-								this.sended = true;
-							} else {
-								this.msgReturn = this.$root.appTxt.msgReturnKO;;
-								console.log(result);
-								this.sended = true;
-							}
-						})
-						.catch(err => console.log(err.message));
+				this.loading = true;
+				restService.sendMail(this.form)
+					.then(result => {
+						console.log("validate: sendMail");
+						if (result === true) {
+							this.msgReturn = this.$root.appTxt.msgReturnOK;
+							this.sended = true;
+						} else {
+							this.msgReturn = this.$root.appTxt.msgReturnKO;
+							console.log(result);
+							this.sended = true;
+						}
+					})
+					.catch(err => console.log(err.message));
 			}
 		}
 	}
