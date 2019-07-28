@@ -1,6 +1,6 @@
 {
-  "cinemas" : {
-    "1" : {
+  "cinemas": {
+    "1": {
       "id": 1,
       "title": "Majestic Tahiti",
       "logo": "img/majestic.png",
@@ -14,9 +14,23 @@
         "http://www.majestictahiti.pf/images/Majestic/Photos%20restaurant%202014/DSC03025.JPG",
         "http://www.majestictahiti.pf/images/Majestic/Salles%20accueil/Salle%201.jpg",
         "http://www.majestictahiti.pf/images/Majestic/Photos%20halletage/hall1.jpg"
-      ]
+      ],
+      "salles": {
+        "1": {
+          "title": "Salle 1 Majestic",
+          "infos": "Dolby 3D, écran géeant, blabalbalbaab"
+        },
+        "2": {
+          "title": "Salle 2 Majestic",
+          "infos": "Dolby 3D"
+        },
+        "3": {
+          "title": "Salle 3 Majestic",
+          "infos": "dsfdsfs sfsddsf"
+        }
+      }
     },
-    "2" : {
+    "2": {
       "id": 2,
       "title": "Concorde",
       "logo": "img/pacificfilms.png",
@@ -26,9 +40,19 @@
       "like": 50,
       "coord": "-17.540534, -149.568339",
       "website": "http://www.pacificfilms.pf",
-      "images": []
+      "images": [],
+      "salles": {
+        "1": {
+          "title": "Salle 1 Concorde",
+          "infos": "Dolby 3D, écran géeant, blabalbalbaab"
+        },
+        "2": {
+          "title": "Salle 2 Concorde",
+          "infos": "Dolby 3D"
+        }
+      }
     },
-    "3" : {
+    "3": {
       "id": 3,
       "title": "Liberty",
       "logo": "img/pacificfilms.png",
@@ -38,9 +62,19 @@
       "like": 15050,
       "coord": "-17.539129, -149.566159",
       "website": "http://www.pacificfilms.pf",
-      "images": []
+      "images": [],
+      "salles": {
+        "1": {
+          "title": "Salle 1 Liberty",
+          "infos": "Dolby 3D, écran géeant, blabalbalbaab"
+        },
+        "2": {
+          "title": "Salle 2 Liberty",
+          "infos": "Dolby 3D"
+        }
+      }
     },
-    "4" : {
+    "4": {
       "id": 4,
       "title": "Hollywood",
       "logo": "img/pacificfilms.png",
@@ -50,33 +84,17 @@
       "like": 15,
       "coord": "-17.540419, -149.568733",
       "website": "http://www.pacificfilms.pf",
-      "images": []
-    }
-  },
-  "salles": {
-    "1" : {
-      "id": 1,
-      "id_cinema": 1,
-      "title": "Salle 1",
-      "infos": "Dolby 3D, écran géeant, blabalbalbaab"
-    },
-    "2" : {
-      "id": 2,
-      "id_cinema": 1,
-      "title": "Salle 2",
-      "infos": "Dolby 3D"
-    },
-    "3" : {
-      "id": 3,
-      "id_cinema": 1,
-      "title": "Salle 3",
-      "infos": "blabalbalbaab"
-    },
-    "4" : {
-      "id": 1,
-      "id_cinema": 2,
-      "title": "Salle Tiare",
-      "infos": "Dolby 3D, écran géeant, blabalbalbaab"
+      "images": [],
+      "salles": {
+        "1": {
+          "title": "Salle 1 Hollywood",
+          "infos": "Dolby 3D, écran géeant, blabalbalbaab"
+        },
+        "2": {
+          "title": "Salle 2 Hollywood",
+          "infos": "Dolby 3D"
+        }
+      }
     }
   }
 }

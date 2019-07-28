@@ -46,11 +46,38 @@ export default {
                 return false;
             });
     },
+    getDatasCinemas() {
+        let dbFile = folderJson + 'cinemas.json';
+        console.log(dbFile)
+        return axios
+            .get(dbFile)
+            .then(function (response) {
+                //console.log(response.data)
+                return response.data;
+            })
+            .catch(function (error) {
+                console.log("error productService getDatasCinemas: ", error)
+                return false;
+            });
+    },
+    getDatasInfos() {
+        let dbFile = folderJson + 'infos.json';
+        console.log(dbFile)
+        return axios
+            .get(dbFile)
+            .then(function (response) {
+                return response.data;
+            })
+            .catch(function (error) {
+                console.log("error productService getDatasInfos: ", error)
+                return false;
+            });
+    },
     sendMail(form) {
         let dbFile = folderScripts + 'sendmail.php';
-        let datas = { form }
+        let data = { form }
         return axios
-            .get(dbFile, datas)
+            .get(dbFile, data)
             .then(function (response) {
                 return true;
             })

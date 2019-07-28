@@ -17,21 +17,21 @@ export default new Vuex.Store({
     evenements: {},
     splashAnnonce: {},
     loadingAnnonce: false,
-    toto: '',
+    cinemas: '',
   },
   mutations: {
     SET_CURRENT_ROUTE(state, route) {
-      state.route = route;
+      this.state.route = route;
     },
-    GET_DYNAMIC(state, dynamicData) {
+    GET_DYNAMIC(state, data) {
       this.state.loadingDynamic = false;
-      this.state.update = dynamicData.update;
-      this.state.films = dynamicData.films;
-      this.state.seances = dynamicData.seances;
-      this.state.pubs = dynamicData.pubs;
-      this.state.prochainement = dynamicData.prochainement;
-      this.state.evenements = dynamicData.evenements;
-      this.state.splashAnnonce = dynamicData.splashAnnonce;
+      this.state.update = data.update;
+      this.state.films = data.films;
+      this.state.seances = data.seances;
+      this.state.pubs = data.pubs;
+      this.state.prochainement = data.prochainement;
+      this.state.evenements = data.evenements;
+      this.state.splashAnnonce = data.splashAnnonce;
       if (this.state.splashAnnonce.html == "") {
         this.state.loadingAnnonce = false;
       } else {
@@ -46,6 +46,13 @@ export default new Vuex.Store({
           }
         }
       }
+    },
+    GET_CINEMAS(state, data) {
+      this.state.cinemas = data.cinemas;
+    },
+    GET_INFOS(state, data) {
+      console.log(data.infos);
+      this.state.infos = data.infos;
     }
   },
   actions: {
@@ -53,11 +60,32 @@ export default new Vuex.Store({
       commit("SET_CURRENT_ROUTE", route);
     },
     getDatasDynamic({ commit }, payload) {
-      restService.getDatasDynamic().then(res => {
-        // console.log("Store: getDatasDynamic");
-        commit("GET_DYNAMIC", res);
+      restService.getDatasDynamic().then(data => {
+        console.log("Store: getDatasDynamic");
+        commit("GET_DYNAMIC", data);
+        // 
+        // après les données dynamics, on charge celle des cinémas...si c'est demandé
+        if (data.update.cinemas) {
+          // 
+          restService.getDatasCinemas().then(datacine => {
+            console.log("Store: getDatasCinemas");
+            commit("GET_CINEMAS", datacine);
+          })
+            .catch(err => console.log("Err Store: getDatasDynamic Cinema", err.message))
+        } 
+        // 
+        // après les données dynamics, on charge celle des infos...si c'est demandé
+        if (data.update.infos) {
+          // 
+          restService.getDatasInfos().then(datacine => {
+            console.log("Store: getDatasInfos");
+            commit("GET_INFOS", datacine);
+          })
+            .catch(err => console.log("Err Store: getDatasInfos INfos", err.message))
+        } 
+
       })
-        .catch(err => console.log("Store: getDatasDynamic", err.message))
+        .catch(err => console.log("Err Store: getDatasDynamic Dyna", err.message))
     },
   }
 });

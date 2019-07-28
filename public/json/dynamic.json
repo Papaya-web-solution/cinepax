@@ -1,6 +1,6 @@
 {
   "update": {
-    "cinemasx": false,
+    "cinemas": true,
     "infos" : false
   },
   "films": {
