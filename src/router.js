@@ -85,7 +85,7 @@ export default new Router({
       name: 'cinema',
       component: () => import('./views/Cinema.vue'),
       props: true,
-      meta: { title: "", icon: '', menu: '', divider: false, navLeft: 'prev', navRight: 'share', footer: 'normal' }
+      meta: { title: "Cinema", icon: '', menu: '', divider: false, navLeft: 'prev', navRight: 'share', footer: 'normal' }
     },
     {
       path: '*',

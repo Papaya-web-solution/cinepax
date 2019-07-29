@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div v-if="$store.state.route.meta['footer']=='normal'">
-			<v-footer absolute color="secondary"  class="pa-4">
+			<v-footer absolute  class="pa-4">
 				<v-layout justify-center >
 					<v-bottom-navigation horizontal>
 						<template v-for="(route) in $router.options.routes">

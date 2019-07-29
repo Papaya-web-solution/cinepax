@@ -31,7 +31,7 @@
 			</v-container>
 		</v-dialog>
 		<vue-page-transition name="overlay-left-full">
-			<router-view></router-view>
+			<router-view style="margin-bottom:80px"></router-view>
 		</vue-page-transition>
 		<app-footer></app-footer>
 	</v-app>

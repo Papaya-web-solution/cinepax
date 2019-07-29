@@ -13,7 +13,7 @@
 								<template v-for="(cinema,index) in cinemas">
 									<v-card :key="cinema.title">
 										<v-layout mb-4>
-											<v-flex pa-0  mr-3 style="width:30%">
+											<v-flex pa-0 mr-3 style="width:30%">
 												<img width="100%" :src="cinema.logo" />
 											</v-flex>
 											<v-flex style="width:70%">
@@ -26,33 +26,46 @@
 														@click.prevent="$router.push({ name: 'cinema', params: { id: index }})"
 													>En savoir plus</v-btn>
 													<h2 class="text-uppercase">{{cinema.title}}</h2>
-													<div class="font-weight-light grey--text text--lighten-1">
+													<div class="font-weight-light grey--text text--lighten-1 my-2">
 														<i>{{cinema.adress}}</i>
 													</div>
-													<v-btn
-														v-if="cinema.telephone"
-														:href="cinema.telephone |linkTel"
-														small
-														light
-														class="mx-2"
-														fab
-													>
-														<v-icon dark>fas fa-phone-alt</v-icon>
-													</v-btn>
-													<v-btn v-if="cinema.facebook" :href="cinema.facebook" small light class="mx-2" fab>
-														<v-icon dark>fab fa-facebook-f</v-icon>
-													</v-btn>
-													<v-btn
-														v-if="cinema.website"
-														:href="cinema.website"
-														small
-														light
-														class="mx-2"
-														fab
-														title="Site web"
-													>
-														<v-icon dark>fas fa-link</v-icon>
-													</v-btn>
+													<v-card-actions class="pl-0 pt-2 ma-0">
+														<v-btn
+															v-if="cinema.telephone"
+															:href="cinema.telephone |linkTel"
+															small
+															light
+															class="mx-2"
+															fab
+														>
+															<v-icon dark>fas fa-phone-alt</v-icon>
+														</v-btn>
+														<v-btn v-if="cinema.facebook" :href="cinema.facebook" small light class="mx-2" fab>
+															<v-icon dark>fab fa-facebook-f</v-icon>
+														</v-btn>
+														<v-btn
+															v-if="cinema.website"
+															:href="cinema.website"
+															small
+															light
+															class="mx-2"
+															fab
+															title="Site web"
+														>
+															<v-icon dark>fas fa-link</v-icon>
+														</v-btn>
+														<v-spacer></v-spacer>
+														<span class="grey--text text--lighten-2 caption mr-2">({{ rating }})</span>
+														<v-rating
+															v-model="rating"
+															background-color="white"
+															color="yellow accent-4"
+															dense
+															half-increments
+															hover
+															size="18"
+														></v-rating>
+													</v-card-actions>
 												</v-flex>
 											</v-flex>
 										</v-layout>

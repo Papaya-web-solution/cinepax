@@ -17,3 +17,21 @@
   text-align: center !important;
   min-height: inherit !important;
 }
+
+  h1 {
+    color: white !important;
+  }
+
+  h2 {
+    color:#F5A623 !important;
+  }
+
+  h4 {
+    color:#F5A623 !important;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color:#e69b64 !important;
+    margin-bottom:6px;
+  }

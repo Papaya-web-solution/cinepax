@@ -3,7 +3,7 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import 'vuetify/src/stylus/app.styl'
 
- 
+
 import lgfr from 'vuetify/es5/locale/fr'
 import { colors } from 'vuetify/lib';
 
@@ -15,6 +15,11 @@ Vue.use(Vuetify, {
   },
   theme: {
     primary: '#F5A623',
-    secondary: '#212121'
+    secondary: '#a9a9a9',
+    accent: '#82B1FF',
+    error: '#FF5252',
+    info: '#2196F3',
+    success: '#4CAF50',
+    warning: '#FFC107',
   }
 })

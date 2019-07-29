@@ -2,13 +2,13 @@
 	<div>
 		<v-navigation-drawer app v-model="drawer" fixed>
 			<v-list class="pt-0">
-				<v-list-tile class=" py-2">
+				<v-list-tile class="py-2">
 					<v-spacer></v-spacer>
 					<img src="@/assets/logo.png" style="height:25px;" class="mr-2" />
 					<span class="title">{{this.$root.appTxt.title}}</span>
 					<v-spacer></v-spacer>
 					<v-icon @click="drawer = !drawer">arrow_back</v-icon>
-				</v-list-tile>							
+				</v-list-tile>
 				<template v-for="(route) in $router.options.routes">
 					<div v-if="route.meta" :key="route.name">
 						<div v-if="route.meta.menu=='main'">
@@ -34,14 +34,13 @@
 			<v-toolbar-side-icon @click="drawer = !drawer" v-if="$store.state.route.meta['navLeft']=='ham'"></v-toolbar-side-icon>
 			<v-btn
 				icon
-				class="hidden-xs-only"
 				@click="goBack"
 				v-if="$store.state.route.meta['navLeft']=='prev'"
 			>
 				<v-icon>arrow_back</v-icon>
 			</v-btn>
 			<v-spacer v-if="$store.state.route.meta['navLeft']=='ham'"></v-spacer>
-			<v-toolbar-title>{{$store.state.route.meta["title"]}}</v-toolbar-title>
+			<v-toolbar-title>{{the_title}}</v-toolbar-title>
 			<v-spacer></v-spacer>
 			<v-btn icon v-if="$store.state.route.meta['navRight']=='search'">
 				<v-icon @click="searchfield = !searchfield">search</v-icon>
@@ -82,6 +81,18 @@ export default {
 			searchfield: false
 		};
 	},
+	props: {
+		chgTitle: { type: String, default:"" }
+	},
+	computed: {
+		the_title() {
+			if (this.chgTitle != "") {
+				return this.chgTitle;
+			} else {
+				return this.$store.state.route.meta["title"];
+			}
+		}
+	},
 	beforeMount() {
 		this.$store.dispatch("setCurrentRoute", this.$route);
 	},
@@ -94,6 +105,4 @@ export default {
 </script>
 
 <style scoped>
-
-
 </style>
