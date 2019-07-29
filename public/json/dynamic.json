@@ -1,15 +1,14 @@
 {
   "update": {
     "cinemas": true,
-    "infos" : true
+    "infos": true
   },
   "films": {
-    "1": {
-      "id": "tt0371746",
+    "tt0371746": {
       "title": "Lâche-moi les valseuses!...",
       "poster": "https://www.turlututu.top/cinepax/img/majestic.png",
       "video": "https://www.youtube.com/watch?v=8hYlB38asDY",
-      "etat": "now", 
+      "etat": "now",
       "genre": "Action, Adventure, Sci-Fi",
       "runtime": "71 min",
       "year": "1977",
@@ -20,14 +19,49 @@
       "Plot": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
       "website": "http://www.ironmanmovie.com/",
       "rating": 3,
-      "like": 150
+      "seances": {
+        "1": {
+          "id_cinema": "majestic",
+          "id_salle": 3,
+          "day": "2019-07-17",
+          "hour": "20:30",
+          "infos": "Dolby 3D, VF"
+        },
+        "2": {
+          "id_cinema": "concorde",
+          "id_salle": 3,
+          "day": "2019-07-17",
+          "hour": "22:30",
+          "infos": "Dolby 3D, VO ENG"
+        },
+        "3": {
+          "id_cinema": "hollywood",
+          "id_salle": 3,
+          "day": "2019-07-18",
+          "hour": "12:00",
+          "infos": "Dolby 3D, VF"
+        },
+        "4": {
+          "id_cinema": "majestic",
+          "id_salle": 3,
+          "day": "2019-07-18",
+          "hour": "14:00",
+          "infos": "Dolby 3D, VF"
+        },
+        "5": {
+          "id_cinema": 1,
+          "id_salle": 3,
+          "day": "2019-07-18",
+          "hour": "16:00",
+          "infos": "VF"
+        }
+      }
     },
-    "2": {
-      "id": "xxxxxx",
+    "xxxxxx": {
       "title": "xxxxxxxx!...",
       "poster": "https://www.turlututu.top/cinepax/img/majestic.png",
       "video": "https://www.youtube.com/watch?v=8hYlB38asDY",
-      "etat": "now", 
+      "etat": "now",
       "genre": "Action, Adventure, Sci-Fi",
       "runtime": "71 min",
       "year": "1977",
@@ -37,74 +71,31 @@
       "actors": "Linda Guegan, Hervé Palud, Roland Blanche, André Chazel",
       "Plot": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
       "website": "http://www.ironmanmovie.com/",
-      "rating": 3,
-      "like": 150
-    }
-  },
-   "seances": {
-    "1": {
-      "id": 1,
-      "id_film": "tt0371746",
-      "id_cinema": 1,
-      "id_salle": 3,
-      "day": "2019-07-17",
-      "hour": "20:30",
-      "infos": "Dolby 3D, VF"
-    },
-    "2": {
-      "id": 2,
-      "id_film": "tt0371746",
-      "id_cinema": 1,
-      "id_salle": 3,
-      "day": "2019-07-17",
-      "hour": "22:30",
-      "infos": "Dolby 3D, VO ENG"
-    },
-    "3": {
-      "id": 3,
-      "id_film": "tt0371746",
-      "id_cinema": 1,
-      "id_salle": 3,
-      "day": "2019-07-18",
-      "hour": "12:00",
-      "infos": "Dolby 3D, VF"
-    },
-    "4": {
-      "id": 4,
-      "id_film": "tt0371746",
-      "id_cinema": 1,
-      "id_salle": 3,
-      "day": "2019-07-18",
-      "hour": "14:00",
-      "infos": "Dolby 3D, VF"
-    },
-    "5": {
-      "id": 5,
-      "id_film": "tt0371746",
-      "id_cinema": 1,
-      "id_salle": 3,
-      "day": "2019-07-18",
-      "hour": "16:00",
-      "infos": "VF"
+      "rating": 3
     }
   },
   "pubs": {
-    "home":  {
+    "home": {
       "title": "heiva",
       "image": "pubs/heiva.gif",
-      "url": "https://www.glopqsdglop.com"
+      "url": "https://www.home.com"
     },
     "seances": {
       "title": "eico",
       "image": "pubs/eico2.gif",
-      "url": "https://www.xxxxxx.com"
+      "url": "https://www.seances.com"
+    },
+    "cinemas": {
+      "title": "eico",
+      "image": "pubs/eico.gif",
+      "url": "https://www.cinema.com"
     }
   },
   "evenements": {},
   "prochainement": {},
   "splashAnnonce": {
-    "html":"<h1>Titrexxxxxxxxx</h1><br><div>Une nouvelle version est disponibles, veuillez vous connectez à cette adresse pour l'installer<br><a href='https://www.glopglop.com' target='blank'>URL</a></div><br><img src='pubs/eico2.gif'>",
-    "delay":5,
-    "close":true
+    "html": "<h1>Titrexxxxxxxxx</h1><br><div>Une nouvelle version est disponibles, veuillez vous connectez à cette adresse pour l'installer<br><a href='https://www.glopglop.com' target='blank'>URL</a></div><br><img src='pubs/eico2.gif'>",
+    "delay": 5,
+    "close": true
   }
 }

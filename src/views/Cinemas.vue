@@ -7,21 +7,52 @@
 					<v-container grid-list-md fluid>
 						<v-layout wrap>
 							<v-flex xs12>
-								<template v-for="(cinema, index) in cinemas">
-									<v-card>
-										<v-layout mb-4 pa-3>
-											<v-flex mr-3 shrink style="width:30%">
+								<div class="mb-3">
+									<pub pagePub="cinemas" classPub="full"></pub>
+								</div>
+								<template v-for="(cinema,index) in cinemas">
+									<v-card :key="cinema.title">
+										<v-layout mb-4>
+											<v-flex pa-0  mr-3 style="width:30%">
 												<img width="100%" :src="cinema.logo" />
 											</v-flex>
 											<v-flex style="width:70%">
-												<v-flex fill-height style="border:0px solid red">
-													<h2>{{cinema.title}}</h2>
-													<v-flex ><i>{{cinema.adress}}</i></v-flex>
-													<v-btn  v-if="cinema.telephone" :href="'tel:'+cinema.telephone" small>TELEPHONE</v-btn>
-													<v-btn  v-if="cinema.facebook" :href="cinema.facebook" small>FACEBOOK</v-btn>
-													<v-btn  v-if="cinema.website" :href="cinema.website" small>SITE WEB</v-btn>
-													<v-btn  color="primary" small @click.prevent="$router.push({ name: 'cinema', params: { id: index }})" >En savoir plus</v-btn>
-													
+												<v-flex>
+													<v-btn
+														right
+														absolute
+														color="primary"
+														small
+														@click.prevent="$router.push({ name: 'cinema', params: { id: index }})"
+													>En savoir plus</v-btn>
+													<h2 class="text-uppercase">{{cinema.title}}</h2>
+													<div class="font-weight-light grey--text text--lighten-1">
+														<i>{{cinema.adress}}</i>
+													</div>
+													<v-btn
+														v-if="cinema.telephone"
+														:href="cinema.telephone |linkTel"
+														small
+														light
+														class="mx-2"
+														fab
+													>
+														<v-icon dark>fas fa-phone-alt</v-icon>
+													</v-btn>
+													<v-btn v-if="cinema.facebook" :href="cinema.facebook" small light class="mx-2" fab>
+														<v-icon dark>fab fa-facebook-f</v-icon>
+													</v-btn>
+													<v-btn
+														v-if="cinema.website"
+														:href="cinema.website"
+														small
+														light
+														class="mx-2"
+														fab
+														title="Site web"
+													>
+														<v-icon dark>fas fa-link</v-icon>
+													</v-btn>
 												</v-flex>
 											</v-flex>
 										</v-layout>
@@ -50,7 +81,4 @@ export default {
 };
 </script>
 <style scoped>
-.theme--dark.v-sheet {
-	backgrsound-color: inherit;
-}
 </style>

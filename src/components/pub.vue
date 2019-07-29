@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div v-if="picturePub!=undefined" style="text-align:center">
+		<div v-if="imgSrc!='/undefined'" style="text-align:center">
 			<div v-if="picturePub['url']!=''">
 				<a :href="picturePub['url']" target="_blank" :title="picturePub['title']">
 					<img :src="imgSrc" :class="classPub" :alt="picturePub['title']" />
@@ -37,5 +37,6 @@ export default {
 }
 .full {
 	width: 100%;
+	max-width: 300%;
 }
 </style>

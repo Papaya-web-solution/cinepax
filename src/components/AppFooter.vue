@@ -1,25 +1,26 @@
 <template>
 	<div>
 		<div v-if="$store.state.route.meta['footer']=='normal'">
-			<v-footer absolute class="px-3" color="grey--text text--darken-2">
-				<v-layout justify-center>
-					<div>
+			<v-footer absolute color="secondary"  class="pa-4">
+				<v-layout justify-center >
+					<v-bottom-navigation horizontal>
 						<template v-for="(route) in $router.options.routes">
 							<span v-if="route.meta" :key="route.name">
 								<span v-if="route.meta.menu=='footer'">
-									<router-link :to="{name: route.name}" class="mx-2">{{route.meta.title}}</router-link>
+									<v-btn>
+										<router-link :to="{name: route.name}" class="mx-2">{{route.meta.title}}</router-link>
+										<v-icon>{{route.meta.icon}}</v-icon>
+									</v-btn>
 								</span>
 							</span>
 						</template>
-					</div>
+					</v-bottom-navigation>
 				</v-layout>
 			</v-footer>
 		</div>
 		<div v-if="$store.state.route.meta['footer']=='autre'">
 			<v-footer class="px-3" color="grey--text text--darken-2">
-				<v-layout justify-center>
-					test
-				</v-layout>
+				<v-layout justify-center>test</v-layout>
 			</v-footer>
 		</div>
 	</div>

@@ -8,9 +8,9 @@
       "description": "<h3>Bienvenue au Cinéma MAJESTIC TAHITI</h3><br>fsqsds qs dqs dqsdqsqs dqsdq qsd qs dqs dqsd qsd qsd qsd qsd qsd qsdqsdqsd qsdsqqsdqsd qsqsd qsd sqd ",
       "prices": "<h3>NOUVEAUX TARIFS</h3><p>2D/3D<br>Adulte 1100F/1450F<br>Enfant -12ans 750F / 1100F<br>Senior +60ans1000F<br><br>Veuillez nous contacter pour les tarifs groupes<br>Tous nos tarifs 3D sont hors lunettes 3D<br>Ajouter 200 F pour les lunettes 3D<br>(N'oubliez pas de les conserver aprés le film)",
       "rating": 3,
-      "like": 150,
       "coord": "-17.534831, -149.558564",
       "website": "http://www.majestictahiti.pf",
+      "facebook": "https://www.facebook.com/majestictahiti/?ref=br_rs",
       "images": [
         "http://www.majestictahiti.pf/images/Majestic/Photos%20restaurant%202014/DSC03025.JPG",
         "http://www.majestictahiti.pf/images/Majestic/Salles%20accueil/Salle%201.jpg",
@@ -36,8 +36,8 @@
       "logo": "img/pacificfilms.png",
       "description": "balblablalba",
       "prices": "sdfsdfsdfsdfsdfsf sfsdf sdfsdf ds",
+      "telephone":"+33 01.02.04.788 ",
       "rating": 2,
-      "like": 50,
       "coord": "-17.540534, -149.568339",
       "website": "http://www.pacificfilms.pf",
       "images": [],
@@ -57,11 +57,11 @@
       "logo": "img/pacificfilms.png",
       "description": "balblablalba",
       "prices": "sdfsdfsdfsdfsdfsf sfsdf sdfsdf ds",
+      "telephone":"+33 01 0204 ",
       "rating": 5,
-      "like": 15050,
       "coord": "-17.539129, -149.566159",
       "website": "http://www.pacificfilms.pf",
-      "facebook": "https://www.facebook.com/majestictahiti/?ref=br_rs",
+      "facebook": "",
       "images": [],
       "salles": {
         "1": {
@@ -80,10 +80,9 @@
       "description": "balblablalba qsd qsdsqd qsqs dqsdqsdqsd sqd sqdsqd sqdsq sqd sqd",
       "prices": "sdfsdfsdfsdfsdfsf sfsdf sdfsdf ds qs qssqd qsd qsdqs dqsd sq dsd ",
       "rating": 1,
-      "like": 15,
       "coord": "-17.540419, -149.568733",
       "website": "http://www.pacificfilms.pf",
-      "facebook": "https://www.facebook.com/PacificFilms.Tahiti/?ref=br_rs",
+      "facebook": "",
       "images": [],
       "salles": {
         "1": {

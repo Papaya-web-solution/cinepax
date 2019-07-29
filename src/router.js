@@ -57,14 +57,14 @@ export default new Router({
       name: 'prochainement',
       component: () => import('./views/Prochainement.vue'),
       props: true,
-      meta: { title: "Prochainement", icon: '', menu: 'footer', divider: false, navLeft: 'prev', navRight: '', footer: 'normal' }
+      meta: { title: "Prochainement", icon: 'calendar_today', menu: 'footer', divider: false, navLeft: 'prev', navRight: '', footer: 'normal' }
     },
     {
       path: '/evenements',
       name: 'evenements',
       component: () => import('./views/Evenements.vue'),
       props: true,
-      meta: { title: "Evenements", icon: '', menu: 'footer', divider: false, navLeft: 'prev', navRight: 'share', footer: 'normal' }
+      meta: { title: "Evenements", icon: 'star', menu: 'footer', divider: false, navLeft: 'prev', navRight: 'share', footer: 'normal' }
     },
     {
       path: '/test',
