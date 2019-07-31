@@ -4,7 +4,6 @@
 		<v-content grid-list-md>
 			<v-layout mt-4>
 				<v-flex xs10 offset-xs1 md8 offset-md2>
-					<!-- <pub pagePub="cinemas" classPub="full"></pub> -->
 					<v-card>
 						<v-container grid-list-xl pa-3>
 							<v-layout wrap>
@@ -84,13 +83,10 @@
 					</v-card>
 				</v-flex>
 			</v-layout>
-			<v-snackbar timeout="3000" color="success" v-model="thanksRating" ></v-snackbar>
-					"Merci pour votre vote !"
+			<v-snackbar timeout="3000" color="success" v-model="thanksRating">
+				"Merci pour votre vote !"
 				<v-btn text @click="thanksRating = false">Close</v-btn>
 			</v-snackbar>
-		</v-content>
-	</div>
-</template>
 		</v-content>
 	</div>
 </template>
@@ -105,7 +101,7 @@ export default {
 	data() {
 		return {
 			rating: 0,
-			thanksRating:0,
+			thanksRating: 0
 		};
 	},
 	computed: {
@@ -118,9 +114,14 @@ export default {
 	},
 	watch: {
 		rating(newValue, oldValue) {
-			if(this.thanksRating===false) { console.log("ddfgf"); this.thanksRating=true } else {console.log("aaa"); this.thanksRating=false}
+			if (this.thanksRating === false) {
+				console.log("ddfgf");
+				this.thanksRating = true;
+			} else {
+				console.log("aaa");
+				this.thanksRating = false;
+			}
 			console.log(newValue, oldValue);
-			
 		}
 	}
 };
