@@ -13,7 +13,7 @@
 									<div v-html="cinema.prices"></div>
 								</v-flex>
 								<v-flex xs12 md6>
-									<img width="100%" :src="'/'+cinema.logo" />
+									<img width="100%" :src="cinema.logo | addBaseURL" />
 									<v-card color="primary" elevation="10">
 										<v-container grid-list-xl py-2 px-4 mt-3 class="black--text">
 											<v-layout wrap>
@@ -115,10 +115,8 @@ export default {
 	watch: {
 		rating(newValue, oldValue) {
 			if (this.thanksRating === false) {
-				console.log("ddfgf");
 				this.thanksRating = true;
 			} else {
-				console.log("aaa");
 				this.thanksRating = false;
 			}
 			console.log(newValue, oldValue);

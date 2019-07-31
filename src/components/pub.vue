@@ -3,11 +3,11 @@
 		<div v-if="imgSrc!='/undefined'" style="text-align:center">
 			<div v-if="picturePub['url']!=''">
 				<a :href="picturePub['url']" target="_blank" :title="picturePub['title']">
-					<img :src="imgSrc" :class="classPub" :alt="picturePub['title']" />
+					<img :src="picturePub['image'] | addBaseURL" :class="classPub" :alt="picturePub['title']" />
 				</a>
 			</div>
 			<div v-else>
-				<img :src="imgSrc" :class="classPub" :alt="picturePub['title']" />
+				<img :src="picturePub['image'] | addBaseURL" :class="classPub" :alt="picturePub['title']" />
 			</div>
 		</div>
 	</div>
@@ -22,11 +22,6 @@ export default {
 	computed: {
 		picturePub: function() {
 			return this.$store.state.pubs[this.pagePub];
-		},
-		imgSrc: function() {
-			return (
-				process.env.BASE_URL + this.$store.state.pubs[this.pagePub]["image"]
-			);
 		}
 	}
 };

@@ -15,5 +15,9 @@ Vue.filter('dateF', function (date) {
 	  }
 	
   })
+  ,
+  Vue.filter('addBaseURL', function (image) {
+	 return process.env.BASE_URL + image ;
+  })
 
   

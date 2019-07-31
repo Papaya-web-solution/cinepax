@@ -14,7 +14,7 @@
 									<v-card :key="cinema.title">
 										<v-layout mb-4>
 											<v-flex pa-0 mr-3 style="width:30%">
-												<img width="100%" :src="cinema.logo" />
+												<img width="100%" :src="cinema.logo | addBaseURL " />
 											</v-flex>
 											<v-flex style="width:70%">
 												<v-flex>
