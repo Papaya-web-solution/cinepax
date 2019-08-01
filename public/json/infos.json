@@ -1,19 +1,58 @@
 {
-  "infos":{
-    "1":{
-      "id": "PG-13",
-      "title" : "Interdit aux moins de 13 ans",
-      "image" : "https://www.turlututu.top/cinepax/img/pg-13.png"
+  "etat": {
+    "new": {
+      "title": "Nouveau",
+      "color": "#eb0000"
     },
-    "2":{
-      "id": "3D",
-      "title": "Film en 3D",
-      "image": "https://www.turlututu.top/cinepax/img/3D.png"
+    "exclu": {
+      "title": "Exclusivité",
+      "color": "#b90061"
+    }
+  },
+  "rated": {
+    "G": {
+      "title": "Tout public",
+      "color": "#14b600"
     },
-    "3":{
-      "id": "VF",
-      "title": "Film en français",
-      "image": "https://www.turlututu.top/cinepax/img/vf.png"
+    "PG-13": {
+      "title": "-13",
+      "color": "#ffac14"
+    },
+    "PG-16": {
+      "title": "-16",
+      "color": "#ff4424"
+    },
+    "PG-18": {
+      "title": "-18",
+      "color": "#ff4424"
+    },
+    "X": {
+      "title": "X",
+      "color": "#eb0000"
+    }
+  },
+  "tech": {
+    "3D": {
+      "title": "3D",
+      "color": "#eb0000"
+    },
+    "2D": {
+      "title": "",
+      "color": "#000"
+    },
+    "Dolby": {
+      "title": "Dolby",
+      "color": "#eb0000"
+    }
+  },
+  "lang": {
+    "VF": {
+      "title": "VF",
+      "color": "#eb0000"
+    },
+    "VOST": {
+      "title": "VOST",
+      "color": "#eb0000"
     }
   }
 }

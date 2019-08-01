@@ -11,7 +11,7 @@
 				</v-list-tile>
 				<template v-for="(route) in $router.options.routes">
 					<div v-if="route.meta" :key="route.name">
-						<div v-if="route.meta.menu=='main'">
+						<div v-if="intoMenu(route.meta.menu,'main')==true">
 							<div :route="route">
 								<v-divider v-if="route.meta.divider"></v-divider>
 								<v-list-tile :key="route.meta.title" :to="{name: route.name, params:{id:route.meta.id} }">
@@ -32,11 +32,7 @@
 		</v-navigation-drawer>
 		<v-toolbar app>
 			<v-toolbar-side-icon @click="drawer = !drawer" v-if="$store.state.route.meta['navLeft']=='ham'"></v-toolbar-side-icon>
-			<v-btn
-				icon
-				@click="goBack"
-				v-if="$store.state.route.meta['navLeft']=='prev'"
-			>
+			<v-btn icon @click="goBack" v-if="$store.state.route.meta['navLeft']=='prev'">
 				<v-icon>arrow_back</v-icon>
 			</v-btn>
 			<v-spacer v-if="$store.state.route.meta['navLeft']=='ham'"></v-spacer>
@@ -82,7 +78,7 @@ export default {
 		};
 	},
 	props: {
-		chgTitle: { type: String, default:"" }
+		chgTitle: { type: String, default: "" }
 	},
 	computed: {
 		the_title() {
@@ -99,6 +95,13 @@ export default {
 	methods: {
 		goBack() {
 			this.$router.go(-1);
+		},
+		intoMenu(metamenu, menu) {
+			if (metamenu.indexOf(menu)>-1) {
+				return true
+			} else {
+				return false
+			}
 		}
 	}
 };

@@ -17,7 +17,8 @@ export default new Vuex.Store({
     evenements: {},
     splashAnnonce: {},
     loadingAnnonce: false,
-    cinemas: '',
+    cinemas: {},
+    infos:{},
   },
   mutations: {
     SET_CURRENT_ROUTE(state, route) {
@@ -51,38 +52,38 @@ export default new Vuex.Store({
       this.state.cinemas = data.cinemas;
     },
     GET_INFOS(state, data) {
-      console.log(data.infos);
-      this.state.infos = data.infos;
+    // console.log("infos:", data);
+      this.state.infos = data;
     }
   },
   actions: {
     setCurrentRoute({ commit }, route) {
       commit("SET_CURRENT_ROUTE", route);
     },
-    getDatasDynamic({ commit }, payload) {
+    getDatasDynamic({ commit }) {
       restService.getDatasDynamic().then(data => {
-        console.log("Store: getDatasDynamic");
+     //   console.log("Store: getDatasDynamic");
         commit("GET_DYNAMIC", data);
         // 
         // après les données dynamics, on charge celle des cinémas...si c'est demandé
         if (data.update.cinemas) {
           // 
           restService.getDatasCinemas().then(datacine => {
-            console.log("Store: getDatasCinemas");
+        //    console.log("Store: getDatasCinemas");
             commit("GET_CINEMAS", datacine);
           })
             .catch(err => console.log("Err Store: getDatasDynamic Cinema", err.message))
-        } 
+        }
         // 
         // après les données dynamics, on charge celle des infos...si c'est demandé
         if (data.update.infos) {
           // 
           restService.getDatasInfos().then(datacine => {
-            console.log("Store: getDatasInfos");
+          //  console.log("Store: getDatasInfos");
             commit("GET_INFOS", datacine);
           })
             .catch(err => console.log("Err Store: getDatasInfos INfos", err.message))
-        } 
+        }
 
       })
         .catch(err => console.log("Err Store: getDatasDynamic Dyna", err.message))

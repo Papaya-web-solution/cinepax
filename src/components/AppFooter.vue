@@ -3,18 +3,14 @@
 		<div v-if="$store.state.route.meta['footer']=='normal'">
 			<v-footer absolute  class="pa-4">
 				<v-layout justify-center >
-					<v-bottom-navigation horizontal>
+					<v-bottom-navigation>
 						<template v-for="(route) in $router.options.routes">
-							<span v-if="route.meta" :key="route.name">
-								<span v-if="route.meta.menu=='footer'">
-									<v-btn>
-										<router-link :to="{name: route.name}" class="mx-2">{{route.meta.title}}</router-link>
+									<v-btn v-if="route.meta && intoMenu(route.meta.menu,'footer')==true" :key="route.name">
+										<span><router-link :to="{name: route.name}" class="mx-2">{{route.meta.title}}</router-link></span>
 										<v-icon>{{route.meta.icon}}</v-icon>
 									</v-btn>
-								</span>
-							</span>
 						</template>
-					</v-bottom-navigation>
+					</v-bottom-navigation>					
 				</v-layout>
 			</v-footer>
 		</div>
@@ -27,7 +23,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+	methods: {
+		intoMenu(metamenu, menu) {
+			if (metamenu.indexOf(menu)>-1) {
+				return true
+			} else {
+				return false
+			}
+		}
+	}
+
+};
 </script>
 
 <style  scoped>

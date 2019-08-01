@@ -38,7 +38,6 @@
 												<v-rating
 													v-model="rating"
 													background-color="black"
-													color="yellow"
 													dense
 													hover
 													size="20"

@@ -15,21 +15,21 @@ export default new Router({
       name: 'home',
       component: Home,
       props: true,
-      meta: { title: "Accueil", icon: 'home', menu: 'main', divider: true, navLeft: 'ham', navRight: '', footer: '' }
+      meta: { title: "Accueil", icon: 'home', menu: 'main', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/seances',
       name: 'seances',
       component: () => import('./views/Seances.vue'),
       props: true,
-      meta: { title: "A l'affiche", icon: 'alarm', menu: 'main', divider: true, navLeft: 'ham', navRight: 'search', footer: 'normal' }
+      meta: { title: "A l'affiche", icon: 'alarm', menu: '["main","footer"]', divider: true, navLeft: 'ham', navRight: 'search', footer: 'normal' }
     },
     {
       path: '/films',
       name: 'films',
       component: () => import('./views/Films.vue'),
       props: true,
-      meta: { title: "Les Films", icon: 'local_movies', menu: 'main', divider: true, navLeft: 'prev', navRight: '', footer: 'normal' }
+      meta: { title: "Les Films", icon: 'local_movies', menu: '["main","footer"]', divider: true, navLeft: 'prev', navRight: '', footer: 'normal' }
     },
     {
       path: '/cinemas',
@@ -57,14 +57,14 @@ export default new Router({
       name: 'prochainement',
       component: () => import('./views/Prochainement.vue'),
       props: true,
-      meta: { title: "Prochainement", icon: 'calendar_today', menu: 'footer', divider: false, navLeft: 'prev', navRight: '', footer: 'normal' }
+      meta: { title: "Prochainement", icon: 'calendar_today', menu: '["main","footer"]', divider: true, navLeft: 'prev', navRight: '', footer: 'normal' }
     },
     {
       path: '/evenements',
       name: 'evenements',
       component: () => import('./views/Evenements.vue'),
       props: true,
-      meta: { title: "Evenements", icon: 'star', menu: 'footer', divider: false, navLeft: 'prev', navRight: 'share', footer: 'normal' }
+      meta: { title: "Evenements", icon: 'star', menu: '["main","footer"]', divider: true, navLeft: 'prev', navRight: 'share', footer: 'normal' }
     },
     {
       path: '/test',

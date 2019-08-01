@@ -6,18 +6,17 @@
   "films": {
     "tt0371746": {
       "title": "Lâche-moi les valseuses!...",
-      "poster": "https://www.turlututu.top/cinepax/img/majestic.png",
-      "video": "https://www.youtube.com/watch?v=8hYlB38asDY",
-      "etat": "now",
+      "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/moNTkXigaVuSr5FFMT9hHQALesj.jpg?resize=400%2C650&ssl=1",
+      "youtube": "kSiPwM31Y08",
       "genre": "Action, Adventure, Sci-Fi",
       "runtime": "71 min",
       "year": "1977",
-      "rated": "PG-13",
+      "rated": "G",
+      "etat": "",
       "country": "France",
       "director": "Alain Nauroy",
       "actors": "Linda Guegan, Hervé Palud, Roland Blanche, André Chazel",
-      "Plot": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-      "website": "http://www.ironmanmovie.com/",
+      "plot": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
       "rating": 3,
       "seances": {
         "1": {
@@ -25,76 +24,162 @@
           "id_salle": 3,
           "day": "2019-07-17",
           "hour": "20:30",
-          "infos": "Dolby 3D, VF"
+          "lang":"VF",
+          "tech": "Dolby,3D"
         },
         "2": {
           "id_cinema": "concorde",
           "id_salle": 3,
           "day": "2019-07-17",
           "hour": "22:30",
-          "infos": "Dolby 3D, VO ENG"
+          "lang":"VOST",
+          "tech": "2D"
         },
         "3": {
           "id_cinema": "hollywood",
           "id_salle": 3,
           "day": "2019-07-18",
           "hour": "12:00",
-          "infos": "Dolby 3D, VF"
+          "lang":"VF",
+          "tech": ""
         },
         "4": {
           "id_cinema": "majestic",
           "id_salle": 3,
           "day": "2019-07-18",
           "hour": "14:00",
-          "infos": "Dolby 3D, VF"
+          "lang":"VF",
+          "tech": "Dolby,3D"
         },
         "5": {
           "id_cinema": 1,
           "id_salle": 3,
           "day": "2019-07-18",
           "hour": "16:00",
-          "infos": "VF"
+          "lang":"VOST",
+          "tech": ""
+        }
+      }
+    },
+    "tt0xxx371746": {
+      "title": "aaaaaLâche-moi les valseuses!...",
+      "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/moNTkXigaVuSr5FFMT9hHQALesj.jpg?resize=400%2C650&ssl=1",
+      "youtube": "",
+      "genre": "Action, Adventure, Sci-Fi",
+      "runtime": "71 min",
+      "year": "1977",
+      "rated": "G",
+      "etat": "exclu",
+      "country": "France",
+      "director": "Alain Nauroy",
+      "actors": "Linda Guegan, Hervé Palud, Roland Blanche, André Chazel",
+      "plot": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+      "rating": 3,
+      "seances": {
+        "1": {
+          "id_cinema": "majestic",
+          "id_salle": 3,
+          "day": "2019-07-17",
+          "hour": "20:30",
+          "lang":"VF",
+          "tech": "Dolby,3D"
+        },
+        "2": {
+          "id_cinema": "concorde",
+          "id_salle": 3,
+          "day": "2019-07-17",
+          "hour": "22:30",
+          "lang":"VOST",
+          "tech": "2D"
+        },
+        "3": {
+          "id_cinema": "hollywood",
+          "id_salle": 3,
+          "day": "2019-07-18",
+          "hour": "12:00",
+          "lang":"VF",
+          "tech": ""
+        },
+        "4": {
+          "id_cinema": "majestic",
+          "id_salle": 3,
+          "day": "2019-07-18",
+          "hour": "14:00",
+          "lang":"VF",
+          "tech": "Dolby,3D"
+        },
+        "5": {
+          "id_cinema": 1,
+          "id_salle": 3,
+          "day": "2019-07-18",
+          "hour": "16:00",
+          "lang":"VOST",
+          "tech": ""
         }
       }
     },
     "xxxxxx": {
-      "title": "xxxxxxxx!...",
-      "poster": "https://www.turlututu.top/cinepax/img/majestic.png",
-      "video": "https://www.youtube.com/watch?v=8hYlB38asDY",
-      "etat": "now",
+      "title": "XXXXXLâche-moi les valseuses!...",
+      "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/moNTkXigaVuSr5FFMT9hHQALesj.jpg?resize=400%2C650&ssl=1",
+      "youtube": "eV6yW6aPanA",
       "genre": "Action, Adventure, Sci-Fi",
       "runtime": "71 min",
       "year": "1977",
-      "rated": "PG-13",
+      "rated": "PG-18",
+      "etat": "exclu",
       "country": "France",
       "director": "Alain Nauroy",
       "actors": "Linda Guegan, Hervé Palud, Roland Blanche, André Chazel",
-      "Plot": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-      "website": "http://www.ironmanmovie.com/",
-      "rating": 3
-    }
-  },
-  "pubs": {
-    "home": {
-      "title": "heiva",
-      "image": "pubs/heiva.gif",
-      "url": "https://www.home.com"
-    },
-    "seances": {
-      "title": "eico",
-      "image": "pubs/eico2.gif",
-      "url": "https://www.seances.com"
-    },
-    "cinemas": {
-      "title": "eico",
-      "image": "pubs/eico.gif",
-      "url": "https://www.cinema.com"
+      "plot": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+      "rating": 3,
+      "seances": {
+        "1": {
+          "id_cinema": "majestic",
+          "id_salle": 3,
+          "day": "2019-07-17",
+          "hour": "20:30",
+          "lang":"VF",
+          "tech": "Dolby,3D"
+        },
+        "2": {
+          "id_cinema": "concorde",
+          "id_salle": 3,
+          "day": "2019-07-17",
+          "hour": "22:30",
+          "lang":"VOST",
+          "tech": "2D"
+        },
+        "3": {
+          "id_cinema": "hollywood",
+          "id_salle": 3,
+          "day": "2019-07-18",
+          "hour": "12:00",
+          "lang":"VF",
+          "tech": ""
+        },
+        "4": {
+          "id_cinema": "majestic",
+          "id_salle": 3,
+          "day": "2019-07-18",
+          "hour": "14:00",
+          "lang":"VF",
+          "tech": "Dolby,3D"
+        },
+        "5": {
+          "id_cinema": 1,
+          "id_salle": 3,
+          "day": "2019-07-18",
+          "hour": "16:00",
+          "lang":"VOST",
+          "tech": ""
+        }
+      }
     }
   },
   "evenements": {},
   "prochainement": {},
   "splashAnnonce": {
-    "html": "<h1>Titrexxxxxxxxx</h1><br><div>Une nouvelle version est disponibles, veuillez vous connectez à cette adresse pour l'installer<br><a href='https://www.glopglop.com' target='blank'>URL</a></div><br><img src='pubs/eico2.gif'>",
+    "html": "<h1>SplashScreen pour une info important ou une pub</h1><br><div>Une nouvelle version est disponibles, veuillez vous connectez à cette adresse pour l'installer<br><a href='https://www.glopglop.com' target='blank'>URL</a></div><br><img src='https://www.turlututu.top/cinepax/pubs/eico2.gif'>",
     "delay": 5,
     "close": true
   }

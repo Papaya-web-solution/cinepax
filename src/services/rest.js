@@ -34,7 +34,7 @@ const folderScripts = baseURL + "api/";
 export default {
     getDatasDynamic() {
         let dbFile = folderJson + 'dynamic.json';
-        console.log(dbFile)
+       // console.log(dbFile)
         return axios
             .get(dbFile)
             .then(function (response) {
@@ -48,7 +48,7 @@ export default {
     },
     getDatasCinemas() {
         let dbFile = folderJson + 'cinemas.json';
-        console.log(dbFile)
+       // console.log(dbFile)
         return axios
             .get(dbFile)
             .then(function (response) {
@@ -62,7 +62,7 @@ export default {
     },
     getDatasInfos() {
         let dbFile = folderJson + 'infos.json';
-        console.log(dbFile)
+      //  console.log(dbFile)
         return axios
             .get(dbFile)
             .then(function (response) {

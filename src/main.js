@@ -19,6 +19,9 @@ Vue.component('pub', Pub);
 import VuePageTransition from 'vue-page-transition';
 Vue.use(VuePageTransition);
 
+import VueYoutube from 'vue-youtube'
+Vue.use(VueYoutube)
+
 // empêche certains messages dans la console
 Vue.config.productionTip = false
 
