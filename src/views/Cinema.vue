@@ -109,6 +109,7 @@ export default {
 		}
 	},
 	mounted() {
+		console.log("fsdsdsd")
 		this.rating = this.cinema.rating;
 	},
 	watch: {

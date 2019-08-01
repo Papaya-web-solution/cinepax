@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<v-navigation-drawer app v-model="drawer" fixed>
+		<v-navigation-drawer app v-model="drawer" fixed clipped>
 			<v-list class="pt-0">
 				<v-list-tile class="py-2">
 					<v-spacer></v-spacer>
@@ -30,9 +30,9 @@
 				<install-prompt></install-prompt>
 			</v-list>
 		</v-navigation-drawer>
-		<v-toolbar app>
-			<v-toolbar-side-icon @click="drawer = !drawer" v-if="$store.state.route.meta['navLeft']=='ham'"></v-toolbar-side-icon>
-			<v-btn icon @click="goBack" v-if="$store.state.route.meta['navLeft']=='prev'">
+		<v-toolbar app fixed clipped-left>
+			<v-toolbar-side-icon v-if="$store.state.route.meta['navLeft']=='ham'" @click="drawer = !drawer"></v-toolbar-side-icon>
+			<v-btn v-if="$store.state.route.meta['navLeft']=='prev'" icon @click="goBack">
 				<v-icon>arrow_back</v-icon>
 			</v-btn>
 			<v-spacer v-if="$store.state.route.meta['navLeft']=='ham'"></v-spacer>
@@ -97,10 +97,10 @@ export default {
 			this.$router.go(-1);
 		},
 		intoMenu(metamenu, menu) {
-			if (metamenu.indexOf(menu)>-1) {
-				return true
+			if (metamenu.indexOf(menu) > -1) {
+				return true;
 			} else {
-				return false
+				return false;
 			}
 		}
 	}

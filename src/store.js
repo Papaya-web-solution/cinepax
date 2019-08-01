@@ -30,6 +30,7 @@ export default new Vuex.Store({
       this.state.films = data.films;
       this.state.seances = data.seances;
       this.state.pubs = data.pubs;
+      console.log("eeeee");
       this.state.prochainement = data.prochainement;
       this.state.evenements = data.evenements;
       this.state.splashAnnonce = data.splashAnnonce;

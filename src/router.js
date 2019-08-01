@@ -67,13 +67,6 @@ export default new Router({
       meta: { title: "Evenements", icon: 'star', menu: '["main","footer"]', divider: true, navLeft: 'prev', navRight: 'share', footer: 'normal' }
     },
     {
-      path: '/test',
-      name: 'test',
-      component: () => import('./views/Test.vue'),
-      props: true,
-      meta: { title: "Test", icon: '', menu: 'main', divider: true, navLeft: 'prev', footer: 'autre' }
-    },
-    {
       path: '/film/:id',
       name: 'film',
       component: () => import('./views/Film.vue'),
@@ -86,6 +79,20 @@ export default new Router({
       component: () => import('./views/Cinema.vue'),
       props: true,
       meta: { title: "Cinema", icon: '', menu: '', divider: false, navLeft: 'prev', navRight: 'share', footer: 'normal' }
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('./views/Test.vue'),
+      props: true,
+      meta: { title: "Test", icon: '', menu: 'main', divider: true, navLeft: 'prev', footer: 'autre' }
+    },
+    {
+      path: '/testvuetify',
+      name: 'testvuetify',
+      component: () => import('./views/testvuetify.vue'),
+      props: true,
+      meta: { title: "testvuetify", icon: '', menu: 'main', divider: true, navLeft: 'prev', footer: 'autre' }
     },
     {
       path: '*',

@@ -13,8 +13,7 @@ import './filters.js'
 // textes
 import appLang from "@/assets/lang/fr.js";
 
-import Pub from "@/components/pub.vue";
-Vue.component('pub', Pub);
+
 
 import VuePageTransition from 'vue-page-transition';
 Vue.use(VuePageTransition);

@@ -1,5 +1,6 @@
 <template>
 	<div>
+		xxxxxxxxxx {{toto}}qsqd{{picturePub}}qsdqsd
 		<div v-if="imgExists" style="text-align:center">
 			<div v-if="picturePub['url']!=''">
 				<a :href="picturePub['url']" target="_blank" :title="picturePub['title']">
@@ -15,23 +16,34 @@
 
 <script>
 export default {
+	data() {
+		return {
+			picturePub: {},
+			picturePubxxxxx: {}
+		};
+	},
 	props: {
 		pagePub: String,
 		classPub: String
 	},
 	computed: {
-		picturePub: function() {
-			return this.$store.state.pubs[this.pagePub];
+		toto() {
+			return this.$store.state.pubs
 		}
 	},
+	mounted() {
+		console.log("eee",this.pagePub);
+		this.picturePub = this.$store.state.pubs[this.pagePub];
+		console.log("aaaa", this.picturePub )
+	},
 	methods: {
-		imgExists() {
-			if (this.$store.state.pubs[this.pagePub]["image"] == "undefined") {
-				return false;
-			} else {
-				return true;
-			}
-		}
+		 imgExists() {
+		// 	if (this.$store.state.pubs[this.pagePub]["image"] == "undefined") {
+		// 		return false;
+		// 	} else {
+		 		return true;
+		// 	}
+		 }
 	}
 };
 </script>

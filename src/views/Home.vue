@@ -1,5 +1,5 @@
 <template>
-	<div>a
+	<div>
 		<app-navigation></app-navigation>
 		<v-content>
 			<v-container fluid fill-height class="d-flex" >
@@ -27,12 +27,13 @@
 <script>
 import InstallPrompt from "@/components/InstallPrompt.vue";
 import AppNavigation from "@/components/AppNavigation.vue";
-import AppTxt from "@/assets/lang/fr.js";
+import Pub from "@/components/pub.vue";
 
 export default {
 	components: {
 		InstallPrompt,
-		AppNavigation
+		AppNavigation,
+		Pub
 	}
 };
 </script>
