@@ -7,7 +7,7 @@
 					<v-img :src="film.poster">
 						<v-layout class="pa-1 ma-0">
 							<v-chip
-								v-if="film.etat!=''"
+								v-if="film.etat!='' && infos.etat"
 								class="etat"
 								:style="'background-color:'+infos.etat[film.etat].color"
 							>{{infos.etat[film.etat].title}}</v-chip>
@@ -30,7 +30,7 @@
 							<!-- <span v-if="film.country!=''">&nbsp;- {{film.country}}</span> -->
 							<span v-if="film.genre!=''">&nbsp;- {{film.genre}}</span>
 							<v-chip
-								v-if="film.rated!='' && film.rated!='G'"
+								v-if="film.rated!='' && film.rated!='G'  && infos.rated"
 								:style="'background-color:'+infos.rated[film.rated].color"
 								class="small rated mr-0 ml-3"
 								small
@@ -56,6 +56,8 @@
 
 -->
 <script>
+import {store} from "@/store.js";
+
 export default {
 	data() {
 		return {
@@ -74,7 +76,7 @@ export default {
 	},
 	computed: {
 		infos() {
-			return this.$store.state.infos;
+			return store.state.infos;
 		},
 		fontSizeText() {
 			switch (this.$vuetify.breakpoint.name) {

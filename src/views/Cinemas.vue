@@ -55,9 +55,9 @@
 															<v-icon dark>fas fa-link</v-icon>
 														</v-btn>
 														<v-spacer></v-spacer>
-														<span class="grey--text text--lighten-2 caption mr-2">({{ rating }})</span>
+														<span class="grey--text text--lighten-2 caption mr-2">({{ cinema.rating }})</span>
 														<v-rating
-															v-model="rating"
+															v-model="cinema.rating"
 															background-color="white"
 															color="yellow accent-4"
 															dense
@@ -82,13 +82,17 @@
 
 <script>
 import AppNavigation from "@/components/AppNavigation.vue";
+import Pub from "@/components/pub.vue";
+import {store} from "@/store.js";
+
 export default {
 	components: {
-		AppNavigation
+		AppNavigation,
+		Pub
 	},
 	computed: {
 		cinemas() {
-			return this.$store.state.cinemas;
+			return store.state.cinemas;
 		}
 	}
 };

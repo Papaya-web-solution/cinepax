@@ -1,6 +1,6 @@
 <template>
 	<v-app dark class="black">
-		<v-dialog v-model="this.$store.state.loadingDynamic" fullscreen full-width>
+		<v-dialog v-model="loadingDynamic" fullscreen full-width>
 			<v-container fluid fill-height style="background-color: rgba(0, 0, 0, 0.80);">
 				<v-layout align-content-center justify-center fill-height wrap>
 					<v-flex xs12 style="text-align: center;">
@@ -15,17 +15,17 @@
 				</v-layout>
 			</v-container>
 		</v-dialog>
-		<v-dialog v-model="this.$store.state.loadingAnnonce" fullscreen full-width>
+		<v-dialog v-model="loadingAnnonce" fullscreen full-width>
 			<v-container fluid fill-height style="background-color: rgba(0, 0, 0, 1);">
 				<v-layout align-content-center justify-center fill-height wrap>
-					<v-toolbar v-if="this.$store.state.splashAnnonce.close" absolute style="background-color: rgba(0, 0, 0, 0);">
+					<v-toolbar v-if="splashAnnonce.close" absolute style="background-color: rgba(0, 0, 0, 0);">
 						<v-spacer></v-spacer>
-						<v-btn icon dark @click="$store.state.loadingAnnonce = false">
+						<v-btn icon dark @click="loadingAnnonce = false">
 							<v-icon>close</v-icon>
 						</v-btn>
 					</v-toolbar>
 					<v-flex xs12 style="text-align: center;">
-						<div v-html="this.$store.state.splashAnnonce.html">{{}}</div>
+						<div v-html="splashAnnonce.html"></div>
 					</v-flex>
 				</v-layout>
 			</v-container>
@@ -39,20 +39,27 @@
 
 <script>
 import AppFooter from "@/components/AppFooter.vue";
+import {store} from "@/store.js";
 
 export default {
 	name: "App",
 	components: {
 		AppFooter
 	},
-	data() {
-		return {
-			loadingDynamic: true 
-		};
+	computed: {
+		loadingDynamic() {
+			return store.state.loadingDynamic
+		},
+		splashAnnonce() {
+			return store.state.splashAnnonce
+		},
+		loadingAnnonce() {
+			return store.state.loadingAnnonce
+		}
 	},
-	beforeMount() {		
-		this.$store.state.loadingDynamic = true;
-		this.$store.dispatch("getDatasDynamic");
+	created() {		
+		store.state.loadingDynamic = true;
+		store.dispatch("getDatasDynamic");
 	}
 };
 </script>

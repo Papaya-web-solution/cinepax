@@ -2,7 +2,7 @@ import Vue from 'vue'
 import './plugins/vuetify.js'
 import App from './App.vue'
 import router from './router.js'
-import store from "./store.js";
+import {store} from "./store.js";
 import './registerServiceWorker.js'
 
 import './assets/custom.css'
@@ -23,6 +23,8 @@ Vue.use(VueYoutube)
 
 // empêche certains messages dans la console
 Vue.config.productionTip = false
+
+
 
 new Vue({
   data() {

@@ -66,6 +66,7 @@
 
 <script>
 import InstallPrompt from "@/components/InstallPrompt.vue";
+import {store} from "@/store.js";
 
 export default {
 	components: {
@@ -85,12 +86,12 @@ export default {
 			if (this.chgTitle != "") {
 				return this.chgTitle;
 			} else {
-				return this.$store.state.route.meta["title"];
+				return store.state.route.meta["title"];
 			}
 		}
 	},
 	beforeMount() {
-		this.$store.dispatch("setCurrentRoute", this.$route);
+		store.dispatch("setCurrentRoute", this.$route);
 	},
 	methods: {
 		goBack() {

@@ -176,6 +176,23 @@
       }
     }
   },
+  "pubs": {
+    "home": {
+      "title": "heiva",
+      "image": "pubs/heiva.gif",
+      "url": "https://www.home.com"
+    },
+    "seances": {
+      "title": "eico",
+      "image": "pubs/eico2.gif",
+      "url": "https://www.seances.com"
+    },
+    "cinemas": {
+      "title": "eico",
+      "image": "pubs/eico.gif",
+      "url": "https://www.cinema.com"
+    }
+  },
   "evenements": {},
   "prochainement": {},
   "splashAnnonce": {

@@ -5,7 +5,7 @@ import restService from "@/services/rest.js";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+export const store = new Vuex.Store({
   state: {
     route: {},
     loadingDynamic: false,
@@ -18,7 +18,12 @@ export default new Vuex.Store({
     splashAnnonce: {},
     loadingAnnonce: false,
     cinemas: {},
-    infos:{},
+    infos: {}
+  },
+  getters: {
+    donePubs: state => {
+      return state.pubs
+    }
   },
   mutations: {
     SET_CURRENT_ROUTE(state, route) {
@@ -30,7 +35,6 @@ export default new Vuex.Store({
       this.state.films = data.films;
       this.state.seances = data.seances;
       this.state.pubs = data.pubs;
-      console.log("eeeee");
       this.state.prochainement = data.prochainement;
       this.state.evenements = data.evenements;
       this.state.splashAnnonce = data.splashAnnonce;
@@ -53,7 +57,7 @@ export default new Vuex.Store({
       this.state.cinemas = data.cinemas;
     },
     GET_INFOS(state, data) {
-    // console.log("infos:", data);
+      // console.log("infos:", data);
       this.state.infos = data;
     }
   },
@@ -63,14 +67,14 @@ export default new Vuex.Store({
     },
     getDatasDynamic({ commit }) {
       restService.getDatasDynamic().then(data => {
-     //   console.log("Store: getDatasDynamic");
+        //   console.log("Store: getDatasDynamic");
         commit("GET_DYNAMIC", data);
         // 
         // après les données dynamics, on charge celle des cinémas...si c'est demandé
         if (data.update.cinemas) {
           // 
           restService.getDatasCinemas().then(datacine => {
-        //    console.log("Store: getDatasCinemas");
+            //    console.log("Store: getDatasCinemas");
             commit("GET_CINEMAS", datacine);
           })
             .catch(err => console.log("Err Store: getDatasDynamic Cinema", err.message))
@@ -80,7 +84,7 @@ export default new Vuex.Store({
         if (data.update.infos) {
           // 
           restService.getDatasInfos().then(datacine => {
-          //  console.log("Store: getDatasInfos");
+            console.log("Store: getDatasInfos");
             commit("GET_INFOS", datacine);
           })
             .catch(err => console.log("Err Store: getDatasInfos INfos", err.message))
@@ -88,6 +92,7 @@ export default new Vuex.Store({
 
       })
         .catch(err => console.log("Err Store: getDatasDynamic Dyna", err.message))
+
     },
   }
 });

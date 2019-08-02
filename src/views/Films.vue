@@ -32,11 +32,14 @@
 <script>
 import AppNavigation from "@/components/AppNavigation.vue";
 import FilmCard from "@/components/FilmCard.vue";
+import Pub from "@/components/pub.vue";
+import {store} from "@/store.js";
 
 export default {
 	components: {
 		AppNavigation,
-		FilmCard
+		FilmCard,
+		Pub
 	},
 	data() {
 		return {
@@ -62,7 +65,7 @@ export default {
 			return this.$refs.youtube.player;
 		},
 		films() {
-			return this.$store.state.films;
+			return store.state.films;
 		}
 	}
 };

@@ -1,19 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
-// vue par défaut
-import Home from './views/Home.vue'
+import '../vue.config.js'
+import AppConfig from "@/config";
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: __dirname,
+  base: AppConfig.subFolder,
   routes: [
     {
       path: '/home',
       name: 'home',
-      component: Home,
+      component: () => import('./views/Home.vue'),
       props: true,
       meta: { title: "Accueil", icon: 'home', menu: 'main', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },

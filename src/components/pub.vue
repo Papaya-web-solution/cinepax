@@ -1,7 +1,6 @@
 <template>
 	<div>
-		xxxxxxxxxx {{toto}}qsqd{{picturePub}}qsdqsd
-		<div v-if="imgExists" style="text-align:center">
+		<div v-if="picturePub" style="text-align:center">
 			<div v-if="picturePub['url']!=''">
 				<a :href="picturePub['url']" target="_blank" :title="picturePub['title']">
 					<img :src="picturePub['image'] | addBaseURL" :class="classPub" :alt="picturePub['title']" />
@@ -15,35 +14,19 @@
 </template>
 
 <script>
+
+import {store} from "@/store.js";
+
 export default {
-	data() {
-		return {
-			picturePub: {},
-			picturePubxxxxx: {}
-		};
-	},
 	props: {
 		pagePub: String,
 		classPub: String
+		
 	},
 	computed: {
-		toto() {
-			return this.$store.state.pubs
+		picturePub () {
+			return store.state.pubs[this.pagePub]
 		}
-	},
-	mounted() {
-		console.log("eee",this.pagePub);
-		this.picturePub = this.$store.state.pubs[this.pagePub];
-		console.log("aaaa", this.picturePub )
-	},
-	methods: {
-		 imgExists() {
-		// 	if (this.$store.state.pubs[this.pagePub]["image"] == "undefined") {
-		// 		return false;
-		// 	} else {
-		 		return true;
-		// 	}
-		 }
 	}
 };
 </script>
