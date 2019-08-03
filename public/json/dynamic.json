@@ -21,43 +21,43 @@
       "seances": {
         "1": {
           "id_cinema": "majestic",
-          "id_salle": 3,
-          "day": "2019-07-17",
+          "id_salle": 1,
+          "day": "20190901",
           "hour": "20:30",
           "lang":"VF",
-          "tech": "Dolby,3D"
+          "techs": ["Dolby","3D"]
         },
         "2": {
           "id_cinema": "concorde",
-          "id_salle": 3,
-          "day": "2019-07-17",
+          "id_salle": 2,
+          "day": "20190717",
           "hour": "22:30",
           "lang":"VOST",
-          "tech": "2D"
+          "techs": ["2D"]
         },
         "3": {
           "id_cinema": "hollywood",
-          "id_salle": 3,
-          "day": "2019-07-18",
+          "id_salle": 2,
+          "day": "20190710",
           "hour": "12:00",
           "lang":"VF",
-          "tech": ""
+          "techs": ""
         },
         "4": {
           "id_cinema": "majestic",
           "id_salle": 3,
-          "day": "2019-07-18",
+          "day": "20190718",
           "hour": "14:00",
           "lang":"VF",
-          "tech": "Dolby,3D"
+          "techs": ["Dolby","2D"]
         },
         "5": {
-          "id_cinema": 1,
+          "id_cinema": "majestic",
           "id_salle": 3,
-          "day": "2019-07-18",
+          "day": "20200718",
           "hour": "16:00",
           "lang":"VOST",
-          "tech": ""
+          "techs": []
         }
       }
     },
@@ -79,42 +79,18 @@
         "1": {
           "id_cinema": "majestic",
           "id_salle": 3,
-          "day": "2019-07-17",
+          "day": "20190717",
           "hour": "20:30",
           "lang":"VF",
-          "tech": "Dolby,3D"
+          "techs": ["Dolby","3D"]
         },
         "2": {
           "id_cinema": "concorde",
           "id_salle": 3,
-          "day": "2019-07-17",
+          "day": "20190717",
           "hour": "22:30",
           "lang":"VOST",
-          "tech": "2D"
-        },
-        "3": {
-          "id_cinema": "hollywood",
-          "id_salle": 3,
-          "day": "2019-07-18",
-          "hour": "12:00",
-          "lang":"VF",
-          "tech": ""
-        },
-        "4": {
-          "id_cinema": "majestic",
-          "id_salle": 3,
-          "day": "2019-07-18",
-          "hour": "14:00",
-          "lang":"VF",
-          "tech": "Dolby,3D"
-        },
-        "5": {
-          "id_cinema": 1,
-          "id_salle": 3,
-          "day": "2019-07-18",
-          "hour": "16:00",
-          "lang":"VOST",
-          "tech": ""
+          "techs": ["Dolby","2D"]
         }
       }
     },
@@ -136,42 +112,34 @@
         "1": {
           "id_cinema": "majestic",
           "id_salle": 3,
-          "day": "2019-07-17",
+          "day": "20190717",
           "hour": "20:30",
           "lang":"VF",
-          "tech": "Dolby,3D"
+          "techs": []
         },
         "2": {
           "id_cinema": "concorde",
           "id_salle": 3,
-          "day": "2019-07-17",
+          "day": "20190717",
           "hour": "22:30",
           "lang":"VOST",
-          "tech": "2D"
+          "techs": []
         },
         "3": {
           "id_cinema": "hollywood",
           "id_salle": 3,
-          "day": "2019-07-18",
+          "day": "20170718",
           "hour": "12:00",
           "lang":"VF",
-          "tech": ""
+          "techs": []
         },
         "4": {
           "id_cinema": "majestic",
           "id_salle": 3,
-          "day": "2019-07-18",
+          "day": "20190718",
           "hour": "14:00",
           "lang":"VF",
-          "tech": "Dolby,3D"
-        },
-        "5": {
-          "id_cinema": 1,
-          "id_salle": 3,
-          "day": "2019-07-18",
-          "hour": "16:00",
-          "lang":"VOST",
-          "tech": ""
+          "techs": []
         }
       }
     }

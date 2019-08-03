@@ -36,19 +36,19 @@
       "title": "3D",
       "color": "#eb0000"
     },
-    "2D": {
-      "title": "",
-      "color": "#000"
+    "x2D": {
+      "title": "2D",
+      "color": "#eb0000"
     },
     "Dolby": {
-      "title": "Dolby",
-      "color": "#eb0000"
+      "title": "DOLBY",
+      "color": "#ff4424"
     }
   },
   "lang": {
     "VF": {
       "title": "VF",
-      "color": "#eb0000"
+      "color": "#000"
     },
     "VOST": {
       "title": "VOST",

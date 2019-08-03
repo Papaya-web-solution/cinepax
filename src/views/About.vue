@@ -14,7 +14,7 @@
 						<a
 							href="https://www.papaya-web-solution.com"
 							target="_blank"
-						>Papaya Web Solution</a>
+						>Bolard Marc</a>
 					</div>
 					<v-container text-xs-center>
 						<h2>Contactez-nous</h2>

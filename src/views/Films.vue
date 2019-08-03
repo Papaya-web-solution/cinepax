@@ -21,7 +21,7 @@
 							</v-btn>
 						</v-toolbar>
 						<!-- https://github.com/anteriovieira/vue-youtube -->
-						<!-- <youtube video-id="IH0CwRZxjoU" :player-vars="playerVars" ref="youtube"></youtube> -->
+						<youtube :video-id="videoId" :player-vars="playerVars" ref="youtube" fitParent></youtube>
 					</v-card>
 				</v-dialog>
 			</v-layout>
@@ -46,7 +46,8 @@ export default {
 			trailer: false,
 			playerVars: {
 				autoplay: 1
-			}
+			},
+			videoId:""
 		};
 	},
 	methods: {
@@ -54,10 +55,10 @@ export default {
 			this.player.stopVideo();
 			this.trailer = false;
 		},
-		methodFromChild(e) {
+		methodFromChild(idYT) {
 			this.trailer = true;
-			console.log(e)
-			console.log("eeeeeeeeeeeeeeeeee")
+			this.videoId=idYT
+			console.log("eeeeeeeeeeeeeeeeee", e)
 		}
 	},
 	computed: {
