@@ -41,7 +41,7 @@
           ]
         },
         "3": {
-          "id_cinema": "hollywood",
+          "id_cinema": "liberty",
           "id_salle": 2,
           "day": "20190710",
           "hour": "12:00",
@@ -141,7 +141,7 @@
       "rating": 3,
       "seances": {
         "1": {
-          "id_cinema": "majestic",
+          "id_cinema": "concorde",
           "id_salle": 3,
           "day": "20190717",
           "hour": "20:30",
@@ -180,7 +180,7 @@
       "rating": 3,
       "seances": {
         "1": {
-          "id_cinema": "majestic",
+          "id_cinema": "concorde",
           "id_salle": 3,
           "day": "20190717",
           "hour": "20:30",
@@ -204,7 +204,7 @@
           "techs": []
         },
         "4": {
-          "id_cinema": "majestic",
+          "id_cinema": "hollywood",
           "id_salle": 3,
           "day": "20190718",
           "hour": "14:00",

@@ -1,8 +1,8 @@
 /* eslint-disable */
-<template>
+<template> 
 	<div>
 		<app-navigation></app-navigation>
-		<v-content style="position:fixed; z-index:10; width:100%; text-align:center">
+		<v-content style="position:fixed; z-index:2; width:100%; text-align:center">
 			<v-layout justify-space-around>
 				<v-flex xs12>
 					<v-sheet elevation="10" class="py-2 px-1">
@@ -11,6 +11,7 @@
 								v-for="(d,dateSeance) in allSeances"
 								:key="dateSeance"
 								@click="changeDate(dateSeance)"
+								
 							>{{dateSeance |dateF2 }}</v-chip>
 						</v-chip-group>
 					</v-sheet>
@@ -28,6 +29,7 @@
 							:idFilm="idFilm"
 							:Seances="Seances.seance"
 							:dateChoice="dateChoice"
+							cinemaChoice=""
 						></film-card>
 					</template>
 				</v-flex>

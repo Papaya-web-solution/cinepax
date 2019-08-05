@@ -1,18 +1,41 @@
 <template>
 	<div>
-		<app-navigation></app-navigation>
-		<v-content class>
+		<app-navigation  style="z-index:100;"></app-navigation>
+		<v-content style="position:fixed; z-index:2; width:100%; text-align:center">
+			<v-layout justify-space-around>
+				<v-flex xs12>
+					<v-sheet elevation="10" class="py-2 px-1">
+						<v-chip-group mandatory active-class="primary--text">
+							<v-chip
+								@click="changeCine('')"
+								class="font-weight-bold text-uppercase mx-1"
+							>Tous</v-chip>
+							<v-chip
+								v-for="(cinema,idCinema) in cinemas"
+								:key="idCinema"
+								@click="changeCine(idCinema)"
+								class="font-weight-bold text-uppercase mx-1"
+							>{{cinema.title}}</v-chip>
+						</v-chip-group>
+					</v-sheet>
+				</v-flex>
+			</v-layout>
+		</v-content>
+		<v-content class="pa-0">
 			<v-layout wrap>
-				<v-flex xs12 class="mt-3">
+				<v-flex xs12 style="margin-top:150px;">
 					<pub pagePub="films" classPub="max100"></pub>
 					<template v-for="(film,idFilm) in films">
-						<film-card
-							:key="idFilm"
-							source="Films"
-							:idFilm="idFilm"
-							:Seances="allSeances(idFilm)"
-							dateChoice="0"
-						></film-card>
+						<div v-if="FilmByCinema(idFilm)">
+							<film-card
+								:key="idFilm"
+								source="Films"
+								:idFilm="idFilm"
+								:Seances="allSeances(idFilm)"
+								:cinemaChoice="cinemaChoice"
+								dateChoice="0"
+							></film-card>
+						</div>
 					</template>
 				</v-flex>
 			</v-layout>
@@ -32,18 +55,45 @@ export default {
 		FilmCard,
 		Pub
 	},
+	data() {
+		return {
+			cinemaChoice: ""
+		};
+	},
 	computed: {
 		films() {
 			return store.state.films;
+		},
+		cinemas() {
+			return store.state.cinemas;
 		}
 	},
 	methods: {
 		allSeances(idFilm) {
-			var result = [];			
+			var result = [];
 			for (var cle in this.films[idFilm].seances) {
 				result.push(cle);
 			}
 			return result;
+		},
+		changeCine(idCinema) {
+			this.cinemaChoice = idCinema;
+		},
+		FilmByCinema(idFilm) {
+			const seances = this.films[idFilm].seances;
+			//	console.log("aaa", idFilm, this.cinemaChoice);
+			for (var property1 in seances) {
+				if (seances[property1].id_cinema == this.cinemaChoice || this.cinemaChoice=="") {
+					return true;
+				}
+			}
+			return false;
+		}
+	},
+	watch: {
+		cinemaChoice(newValue, oldValue) {
+			//console.log("22", newValue);
+			this.$forceUpdate();
 		}
 	}
 };

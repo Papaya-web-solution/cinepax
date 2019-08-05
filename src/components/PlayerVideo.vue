@@ -25,13 +25,13 @@ export default {
 		}
 	},
 	props: {
-		videoId: "",
-		trailer: false
+		videoId: String,
+		trailer: Boolean
 	},
 	methods: {
 		closeTrailer() {
 			this.player.stopVideo();
-			this.trailer = false;
+			this.$emit("stopTrailer");
 		},
 	},
 	computed: {

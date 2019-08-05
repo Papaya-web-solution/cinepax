@@ -52,10 +52,15 @@
 						</v-card-actions>
 					</v-flex>
 				</v-layout>
-				<film-card-seances :idFilm="idFilm" :Seances="Seances" :source="source"></film-card-seances>
+				<film-card-seances
+					:idFilm="idFilm"
+					:Seances="Seances"
+					:source="source"
+					:cinemaChoice="cinemaChoice"
+				></film-card-seances>
 			</v-flex>
 		</v-container>
-		<player-video :videoId="videoId" :trailer="trailer"></player-video>
+		<player-video :videoId="videoId" :trailer="trailer" @stopTrailer="stopTrailer($event)"></player-video>
 	</div>
 </template>
 
@@ -80,7 +85,8 @@ export default {
 	props: {
 		source: String,
 		Seances: {},
-		idFilm: String
+		idFilm: String,
+		cinemaChoice: String
 	},
 	computed: {
 		film() {
@@ -96,6 +102,9 @@ export default {
 		}
 	},
 	methods: {
+		stopTrailer() {
+			this.trailer = false;
+		},
 		goTrailer(idYT) {
 			this.trailer = true;
 			this.videoId = idYT;
