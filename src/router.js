@@ -66,13 +66,6 @@ export default new Router({
       meta: { title: "Evenements", icon: 'star', menu: '["main","footer"]', divider: true, navLeft: 'prev', navRight: 'share', footer: 'normal' }
     },
     {
-      path: '/film/:id',
-      name: 'film',
-      component: () => import('./views/Film.vue'),
-      props: true,
-      meta: { title: "", icon: '', menu: '', divider: false, navLeft: 'prev', navRight: 'share', footer: 'normal' }
-    },
-    {
       path: '/cinema/:id',
       name: 'cinema',
       component: () => import('./views/Cinema.vue'),

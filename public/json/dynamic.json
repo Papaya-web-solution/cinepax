@@ -80,11 +80,11 @@
           "id_salle": 1,
           "day": "20190710",
           "hour": "14:01",
-          "lang": "VO",
+          "lang": "",
           "techs": ["3D"]
         },
         "8": {
-          "id_cinema": "concorde",
+          "id_cinema": "majestic",
           "id_salle": 1,
           "day": "20190710",
           "hour": "14:02",
@@ -192,7 +192,7 @@
           "id_salle": 3,
           "day": "20190717",
           "hour": "22:30",
-          "lang": "VOST",
+          "lang": "",
           "techs": []
         },
         "3": {
@@ -232,6 +232,11 @@
       "title": "eico",
       "image": "pubs/eico2.gif",
       "url": "https://www.seances.com"
+    },
+    "films": {
+      "title": "eico",
+      "image": "pubs/eico.gif",
+      "url": "https://www.cinema.com"
     },
     "cinemas": {
       "title": "eico",
