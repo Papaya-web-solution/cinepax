@@ -2,8 +2,58 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 import restService from "@/services/rest.js";
+import { cpus } from "os";
 
 Vue.use(Vuex);
+
+function prepareSeances(films) {
+
+  const today = new Date();
+  const todayString = today.getFullYear() + "" + ((today.getMonth() + 1).toString().padStart(2, "0")) + "" + today.getDate().toString().padStart(2, "0");
+  var lDates = {};
+  for (var idFilm in films) {
+    let seances = films[idFilm].seances;
+    for (var idSeance in seances) {
+      let day = seances[idSeance].day;
+      if (day != todayString) { // la date de la séance est supérieur à la date du jour
+        //  console.log(lDates)
+
+
+        let seancesOfTheDay = lDates[day]
+        if (seancesOfTheDay == undefined) {
+          let data = {}
+          data[idFilm] = { "seance": [idSeance] }
+          lDates[day] = data;
+        } else {
+          let data = lDates[day]
+          let dataFilm = data[idFilm]
+          if (dataFilm == undefined) {
+            dataFilm = {}
+          }
+        //  console.log(day, idFilm, idSeance);
+       //   console.log(dataFilm);
+       //   console.log("eee");
+          if (dataFilm.seance == undefined) {
+            dataFilm.seance = []
+          }
+          dataFilm.seance.push(idSeance)
+       //   console.log(dataFilm);
+          data[idFilm] = dataFilm
+          lDates[day] = data
+        }
+
+      }
+    }
+  }
+
+  // Tri sur la clé (date)
+  const lDatesSorted = {};
+  Object.keys(lDates).sort().forEach(function (key) {
+    lDatesSorted[key] = lDates[key];
+  });
+  //console.log(lDatesSorted);
+  return lDatesSorted;
+}
 
 export const store = new Vuex.Store({
   state: {
@@ -18,13 +68,9 @@ export const store = new Vuex.Store({
     splashAnnonce: {},
     loadingAnnonce: false,
     cinemas: {},
-    infos: {}
+    infos: {},
   },
-  getters: {
-    donePubs: state => {
-      return state.pubs
-    }
-  },
+
   mutations: {
     SET_CURRENT_ROUTE(state, route) {
       this.state.route = route;
@@ -33,11 +79,12 @@ export const store = new Vuex.Store({
       this.state.loadingDynamic = false;
       this.state.update = data.update;
       this.state.films = data.films;
-      this.state.seances = data.seances;
       this.state.pubs = data.pubs;
       this.state.prochainement = data.prochainement;
       this.state.evenements = data.evenements;
       this.state.splashAnnonce = data.splashAnnonce;
+      this.state.seances = prepareSeances(data.films);
+
       if (this.state.splashAnnonce.html == "") {
         this.state.loadingAnnonce = false;
       } else {

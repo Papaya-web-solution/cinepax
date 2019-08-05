@@ -17,7 +17,7 @@
 						>Bolard Marc</a>
 					</div>
 					<v-container text-xs-center>
-						<h2>Contactez-nous</h2>
+						<h3 class="font-weight-medium">Contactez-nous</h3>
 						<v-flex>
 							par
 							<v-btn text>

@@ -8,7 +8,7 @@
 						<pub pagePub="films" classPub="max100"></pub>
 					</div>
 					<template v-for="(film,index) in films">
-						<film-card :film="film" :idFilm="index" :key="index" @fromChild="methodFromChild($event)"></film-card>
+						<film-card :film="film" :idFilm="index" :key="index" @goTrailer="goTrailer($event)"></film-card>
 					</template>
 				</v-flex>
 
@@ -21,7 +21,7 @@
 							</v-btn>
 						</v-toolbar>
 						<!-- https://github.com/anteriovieira/vue-youtube -->
-						<youtube :video-id="videoId" :player-vars="playerVars" ref="youtube" fitParent></youtube>
+						<youtube :video-id="videoId" :player-vars="playerVars" ref="youtube" resize></youtube>
 					</v-card>
 				</v-dialog>
 			</v-layout>
@@ -33,7 +33,7 @@
 import AppNavigation from "@/components/AppNavigation.vue";
 import FilmCard from "@/components/FilmCard.vue";
 import Pub from "@/components/pub.vue";
-import {store} from "@/store.js";
+import { store } from "@/store.js";
 
 export default {
 	components: {
@@ -47,7 +47,7 @@ export default {
 			playerVars: {
 				autoplay: 1
 			},
-			videoId:""
+			videoId: ""
 		};
 	},
 	methods: {
@@ -55,10 +55,9 @@ export default {
 			this.player.stopVideo();
 			this.trailer = false;
 		},
-		methodFromChild(idYT) {
+		goTrailer(idYT) {
 			this.trailer = true;
-			this.videoId=idYT
-			console.log("eeeeeeeeeeeeeeeeee", e)
+			this.videoId = idYT;
 		}
 	},
 	computed: {
@@ -71,6 +70,10 @@ export default {
 	}
 };
 </script>
-
+<style>
+iframe {
+	width: 100%;
+}
+</style>
 <style scoped>
 </style>

@@ -14,7 +14,7 @@
 						<div v-if="intoMenu(route.meta.menu,'main')==true">
 							<div :route="route">
 								<v-divider v-if="route.meta.divider"></v-divider>
-								<v-list-tile :key="route.meta.title" :to="{name: route.name, params:{id:route.meta.id} }">
+								<v-list-tile :key="route.meta.title" :to="{name: route.name }">
 									<v-list-tile-action>
 										<v-icon>{{route.meta.icon}}</v-icon>
 									</v-list-tile-action>

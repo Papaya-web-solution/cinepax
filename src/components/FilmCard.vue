@@ -1,5 +1,6 @@
 <template>
 	<v-container class="px-2 py-0 mb-3">
+		<div class="my-4" style="height:5px; background:rgba(255,255,255,0.5);"></div>
 		<h4 class="mb-3">{{film.title}} - {{film.year}}</h4>
 		<v-flex xs12 mr-1 ml-1>
 			<v-layout>
@@ -83,6 +84,7 @@
 												<span v-if="seance.techs && myInfo('tech')">
 													<template v-for="tech in seance.techs">
 														<v-chip
+														:key="tech"
 															v-if="tech!='' && tech && titleTech(tech)"
 															class="tech"
 															:style="'background-color:'+ colorTech(tech)"
@@ -99,8 +101,6 @@
 					</v-expansion-panel-content>
 				</v-expansion-panel>
 			</v-expansion-panels>
-
-			<v-divider class="mt-2" style="background:rgba(255,255,255,0.5);"></v-divider>
 		</v-flex>
 	</v-container>
 </template>
@@ -135,7 +135,7 @@ export default {
 	methods: {
 		goTrailer(idYT) {
 			if (idYT) {
-				this.$emit("fromChild", idYT);
+				this.$emit("goTrailer", idYT);
 			} else {
 				console.log("idYT invalide");
 			}

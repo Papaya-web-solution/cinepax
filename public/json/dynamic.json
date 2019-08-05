@@ -5,7 +5,7 @@
   },
   "films": {
     "tt0371746": {
-      "title": "Lâche-moi les valseuses!...",
+      "title": "tt0371746 Lâche-moi les valseuses!...",
       "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/moNTkXigaVuSr5FFMT9hHQALesj.jpg?resize=400%2C650&ssl=1",
       "youtube": "kSiPwM31Y08",
       "genre": "Action, Adventure, Sci-Fi",
@@ -24,52 +24,116 @@
           "id_salle": 1,
           "day": "20190901",
           "hour": "20:30",
-          "lang":"VF",
-          "techs": ["Dolby","3D"]
+          "lang": "VF",
+          "techs": [
+            "Dolby",
+            "3D"
+          ]
         },
         "2": {
           "id_cinema": "concorde",
           "id_salle": 2,
           "day": "20190717",
           "hour": "22:30",
-          "lang":"VOST",
-          "techs": ["2D"]
+          "lang": "VOST",
+          "techs": [
+            "2D"
+          ]
         },
         "3": {
           "id_cinema": "hollywood",
           "id_salle": 2,
           "day": "20190710",
           "hour": "12:00",
-          "lang":"VF",
-          "techs": ""
+          "lang": "VF",
+          "techs": []
         },
         "4": {
           "id_cinema": "majestic",
           "id_salle": 3,
-          "day": "20190718",
+          "day": "20191205",
           "hour": "14:00",
-          "lang":"VF",
-          "techs": ["Dolby","2D"]
+          "lang": "VF",
+          "techs": [
+            "Dolby",
+            "2D"
+          ]
         },
         "5": {
           "id_cinema": "majestic",
           "id_salle": 3,
           "day": "20200718",
           "hour": "16:00",
-          "lang":"VOST",
+          "lang": "VOST",
           "techs": []
+        },
+        "6": {
+          "id_cinema": "concorde",
+          "id_salle": 1,
+          "day": "20190710",
+          "hour": "14:00",
+          "lang": "VO",
+          "techs": ["3D"]
+        },
+        "7": {
+          "id_cinema": "concorde",
+          "id_salle": 1,
+          "day": "20190710",
+          "hour": "14:01",
+          "lang": "VO",
+          "techs": ["3D"]
+        },
+        "8": {
+          "id_cinema": "concorde",
+          "id_salle": 1,
+          "day": "20190710",
+          "hour": "14:02",
+          "lang": "VO",
+          "techs": ["3D"]
+        },
+        "9": {
+          "id_cinema": "concorde",
+          "id_salle": 1,
+          "day": "20190710",
+          "hour": "14:04",
+          "lang": "VO",
+          "techs": ["3D"]
+        },
+        "10": {
+          "id_cinema": "concorde",
+          "id_salle": 1,
+          "day": "20190710",
+          "hour": "14:05",
+          "lang": "VO",
+          "techs": ["3D"]
+        },
+        "11": {
+          "id_cinema": "concorde",
+          "id_salle": 1,
+          "day": "20190710",
+          "hour": "14:06",
+          "lang": "VO",
+          "techs": ["3D"]
+        },
+        "12": {
+          "id_cinema": "concorde",
+          "id_salle": 1,
+          "day": "20190710",
+          "hour": "14:07",
+          "lang": "VO",
+          "techs": ["3D"]
         }
       }
     },
     "tt0xxx371746": {
-      "title": "aaaaaLâche-moi les valseuses!...",
-      "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/moNTkXigaVuSr5FFMT9hHQALesj.jpg?resize=400%2C650&ssl=1",
+      "title": "tt0xxx371746 aaaaaLâche-moi les valseuses!...",
+      "poster": "https://i0.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/ukOL84ybXve6y6Q913lr8IDE22e.jpg?resize=400%2C650&ssl=1",
       "youtube": "",
       "genre": "Action, Adventure, Sci-Fi",
       "runtime": "71 min",
       "year": "1977",
       "rated": "G",
-      "etat": "exclu",
+      "etat": "new",
       "country": "France",
       "director": "Alain Nauroy",
       "actors": "Linda Guegan, Hervé Palud, Roland Blanche, André Chazel",
@@ -81,22 +145,28 @@
           "id_salle": 3,
           "day": "20190717",
           "hour": "20:30",
-          "lang":"VF",
-          "techs": ["Dolby","3D"]
+          "lang": "VF",
+          "techs": [
+            "Dolby",
+            "3D"
+          ]
         },
         "2": {
           "id_cinema": "concorde",
           "id_salle": 3,
           "day": "20190717",
           "hour": "22:30",
-          "lang":"VOST",
-          "techs": ["Dolby","2D"]
+          "lang": "VOST",
+          "techs": [
+            "Dolby",
+            "2D"
+          ]
         }
       }
     },
     "xxxxxx": {
-      "title": "XXXXXLâche-moi les valseuses!...",
-      "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/moNTkXigaVuSr5FFMT9hHQALesj.jpg?resize=400%2C650&ssl=1",
+      "title": "xxxxxx Lâche-moi les valseuses!...",
+      "poster": "https://i0.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/eycO6M2s38xO1888Gq2gSrXf0A6.jpg?resize=400%2C650&ssl=1",
       "youtube": "eV6yW6aPanA",
       "genre": "Action, Adventure, Sci-Fi",
       "runtime": "71 min",
@@ -114,7 +184,7 @@
           "id_salle": 3,
           "day": "20190717",
           "hour": "20:30",
-          "lang":"VF",
+          "lang": "VF",
           "techs": []
         },
         "2": {
@@ -122,7 +192,7 @@
           "id_salle": 3,
           "day": "20190717",
           "hour": "22:30",
-          "lang":"VOST",
+          "lang": "VOST",
           "techs": []
         },
         "3": {
@@ -130,7 +200,7 @@
           "id_salle": 3,
           "day": "20170718",
           "hour": "12:00",
-          "lang":"VF",
+          "lang": "VF",
           "techs": []
         },
         "4": {
@@ -138,7 +208,15 @@
           "id_salle": 3,
           "day": "20190718",
           "hour": "14:00",
-          "lang":"VF",
+          "lang": "VF",
+          "techs": []
+        },
+        "6": {
+          "id_cinema": "majestic",
+          "id_salle": 1,
+          "day": "20190710",
+          "hour": "14:30",
+          "lang": "VOST",
           "techs": []
         }
       }

@@ -4,11 +4,11 @@
 			<div v-if="metaFooter.footer=='normal'">
 				<v-footer app fixed class="pa-4">
 					<v-bottom-nav value="true" absolute>
-						<template v-for="(route) in $router.options.routes">
-							<v-btn v-if="route.meta && intoMenu(route.meta.menu,'footer')==true" :key="route.name">
-								<span>
+						<template v-for="(route) in $router.options.routes" >
+							<v-btn v-if="route.meta && intoMenu(route.meta.menu,'footer')==true"   :key="route.meta.title">
+								<div>
 									<router-link :to="{name: route.name}" class="mx-2">{{route.meta.title}}</router-link>
-								</span>
+								</div>
 								<v-icon>{{route.meta.icon}}</v-icon>
 							</v-btn>
 						</template>
