@@ -1,17 +1,18 @@
 {
   "cinemas": {
     "majestic": {
-      "title": "Majestic T",
+      "title": "Majestic",
       "logo": "img/majestic.png",
+      "description": "<h4>Bienvenue au Cinéma MAJESTIC TAHITI</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet lorem eget malesuada iaculis. Pellentesque hendrerit sagittis enim at molestie. Sed consectetur viverra tellus quis finibus. Sed et vestibulum lacus. Duis vitae purus sed nisl finibus suscipit vitae in leo. Vestibulum auctor dui et nibh viverra rhoncus. Sed sed quam vel orci tristique consectetur id sit amet nunc. Donec hendrerit augue id leo mattis luctus.",
+      "prices": "<h3>NOUVEAUX TARIFS</h3><table class='table_tarif'><tr><th></th><th>2D</th><th>3D</th></tr>      <tr>        <td>Adulte</td><td>1100F</td>        <td>1450F</td>      </tr>      <tr>        <td>Enfant -12 ans</td>        <td>750F</td>        <td>1100F</td>      </tr>      <tr>        <td>Senior + 60ans </td>        <td>1000F</td>        <td>1000F</td>      </tr>    </table>    <div class='mt-2'>Veuillez nous contacter pour les tarifs groupes.</div>    <div class='mt-2'>Tous nos tarifs 3D sont hors lunettes 3D</div>    <div class='mt-2'>Ajouter 200 F pour les lunettes 3D</div>    <div class='mt-2'>(N'oubliez pas de les conserver aprés le film)</div>",
+      "annonce": "<h2>Petit vent de fraîcheur au Majestic<br>Venez découvrir les nouveaux fauteuils de notre salle 4!</h2>",
+      "rating": -1,
+      "latlong": "-17.534831, -149.558564",
+      "googlemap": "https://maps.google.com/maps?q=Cinema%20majestic%2C%20papeete&t=&z=13&ie=UTF8&iwloc=&output=embed",
+      "website": "http://www.majestictahiti.pf",
       "adress": "Avenue du Commandant Chesse MAMAO 98713 Papeete",
       "telephone": "40 42 54 69",
-      "website": "http://www.majestictahiti.pf",
-      "facebook": "https://www.facebook.com/majestictahiti/?ref=br_rs",      
-      "latlong": "-17.534831, -149.558564",
-      "googlemap":"https://maps.google.com/maps?q=Cinema%20majestic%2C%20papeete&t=&z=13&ie=UTF8&iwloc=&output=embed",
-      "description": "<h4>Bienvenue au Cinéma MAJESTIC TAHITI</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet lorem eget malesuada iaculis. Pellentesque hendrerit sagittis enim at molestie. Sed consectetur viverra tellus quis finibus. Sed et vestibulum lacus. Duis vitae purus sed nisl finibus suscipit vitae in leo. Vestibulum auctor dui et nibh viverra rhoncus. Sed sed quam vel orci tristique consectetur id sit amet nunc. Donec hendrerit augue id leo mattis luctus.",
-      "prices": "<h3>NOUVEAUX TARIFS</h3><p>2D/3D<br>Adulte 1100F/1450F<br>Enfant -12ans 750F / 1100F<br>Senior +60ans1000F<br><br>Veuillez nous contacter pour les tarifs groupes<br>Tous nos tarifs 3D sont hors lunettes 3D<br>Ajouter 200 F pour les lunettes 3D<br>(N'oubliez pas de les conserver aprés le film)",
-      "rating": 3,
+      "facebook": "https://www.facebook.com/majestictahiti/?ref=br_rs",
       "images": [
         "http://www.majestictahiti.pf/images/Majestic/Photos%20restaurant%202014/DSC03025.JPG",
         "http://www.majestictahiti.pf/images/Majestic/Salles%20accueil/Salle%201.jpg",
@@ -19,83 +20,95 @@
       ],
       "salles": {
         "1": {
-          "title": "Salle 1 Majestic",
+          "title": "Salle 1",
           "infos": "Dolby 3D, écran géeant, blabalbalbaab"
         },
         "2": {
-          "title": "Salle 2 Majestic",
-          "infos": "Dolby 3D"
+          "title": "Salle 2",
+          "infos": ""
         },
         "3": {
-          "title": "Salle 3 Majestic",
-          "infos": "dsfdsfs sfsddsf"
+          "title": "Salle 3",
+          "infos": ""
         }
       }
     },
     "concorde": {
       "title": "Concorde",
       "logo": "img/pacificfilms.png",
-      "description": "balblablalba",
-      "prices": "sdfsdfsdfsdfsdfsf sfsdf sdfsdf ds",
-      "telephone": "+33 01.02.04.788 ",
-      "rating": 2,
+      "description": "",
+      "prices": "<img src='https://www.turlututu.top/cinepax/img/pf_tarifs.png'>",
+      "annonce": "<img src='https://www.turlututu.top/cinepax/img/pf_carte.jpg'>",
+      "rating": -1,
       "latlong": "-17.540534, -149.568339",
-      "googlemap":"https://maps.google.com/maps?q=Cinema%20concorde%2C%20papeete&t=&z=13&ie=UTF8&iwloc=&output=embed",
+      "googlemap": "https://maps.google.com/maps?q=Cinema%20concorde%2C%20papeete&t=&z=13&ie=UTF8&iwloc=&output=embed",
       "website": "http://www.pacificfilms.pf",
+      "adress": "Passage Cardella",
+      "telephone": "40 54 59 60",
+      "facebook": "https://www.facebook.com/PacificFilms.Tahiti/",
       "images": [],
       "salles": {
         "1": {
-          "title": "Salle 1 Concorde",
-          "infos": "Dolby 3D, écran géeant, blabalbalbaab"
+          "title": "Concorde 1",
+          "infos": ""
         },
         "2": {
-          "title": "Salle 2 Concorde",
-          "infos": "Dolby 3D"
+          "title": "Concorde 2",
+          "infos": ""
         }
       }
     },
     "liberty": {
       "title": "Liberty",
       "logo": "img/pacificfilms.png",
-      "description": "balblablalba",
-      "prices": "sdfsdfsdfsdfsdfsf sfsdf sdfsdf ds",
-      "telephone": "+33 01 0204 ",
-      "rating": 5,
+      "description": "",
+      "prices": "<img src='https://www.turlututu.top/cinepax/img/pf_tarifs.png'>",
+      "annonce": "<img src='https://www.turlututu.top/cinepax/img/pf_carte.jpg'>",
+      "rating": -1,
       "latlong": "-17.539129, -149.566159",
-      "googlemap":"https://maps.google.com/maps?q=Cinema%20Liberty%2C%20papeete&t=&z=13&ie=UTF8&iwloc=&output=embed",
+      "googlemap": "https://maps.google.com/maps?q=Cinema%20Liberty%2C%20papeete&t=&z=13&ie=UTF8&iwloc=&output=embed",
       "website": "http://www.pacificfilms.pf",
-      "facebook": "",
+      "adress": "Passage Cardella",
+      "telephone": "40 54 59 60",
+      "facebook": "https://www.facebook.com/PacificFilms.Tahiti/",
       "images": [],
       "salles": {
         "1": {
-          "title": "Salle 1 Liberty",
-          "infos": "Dolby 3D, écran géeant, blabalbalbaab"
+          "title": "Liberty 1",
+          "infos": ""
         },
         "2": {
-          "title": "Salle 2 Liberty",
-          "infos": "Dolby 3D"
+          "title": "Liberty 2",
+          "infos": ""
+        },
+        "3": {
+          "title": "Liberty 3",
+          "infos": ""
         }
       }
     },
     "hollywood": {
       "title": "Hollywood",
       "logo": "img/pacificfilms.png",
-      "description": "balblablalba qsd qsdsqd qsqs dqsdqsdqsd sqd sqdsqd sqdsq sqd sqd",
-      "prices": "sdfsdfsdfsdfsdfsf sfsdf sdfsdf ds qs qssqd qsd qsdqs dqsd sq dsd ",
-      "rating": 1,
+      "description": "",
+      "prices": "<img src='https://www.turlututu.top/cinepax/img/pf_tarifs.png'>",
+      "annonce": "<img src='https://www.turlututu.top/cinepax/img/pf_carte.jpg'>",
+      "rating": -1,
       "latlong": "-17.540419, -149.568733",
-      "googlemap":"https://maps.google.com/maps?q=Cinema%20Hollywood%2C%20papeete&t=&z=13&ie=UTF8&iwloc=&output=embed",
+      "googlemap": "https://maps.google.com/maps?q=Cinema%20Hollywood%2C%20papeete&t=&z=13&ie=UTF8&iwloc=&output=embed",
       "website": "http://www.pacificfilms.pf",
-      "facebook": "",
+      "adress": "Passage Cardella",
+      "telephone": "40 54 59 60",
+      "facebook": "https://www.facebook.com/PacificFilms.Tahiti/",
       "images": [],
       "salles": {
         "1": {
-          "title": "Salle 1 Hollywood",
-          "infos": "Dolby 3D, écran géeant, blabalbalbaab"
+          "title": "Premium",
+          "infos": ""
         },
         "2": {
-          "title": "Salle 2 Hollywood",
-          "infos": "Dolby 3D"
+          "title": "Salle 2",
+          "infos": ""
         }
       }
     }

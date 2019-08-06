@@ -21,7 +21,7 @@ export default new Router({
       name: 'seances',
       component: () => import('./views/Seances.vue'),
       props: true,
-      meta: { title: "A l'affiche", icon: 'alarm', menu: '["main","footer"]', divider: true, navLeft: 'ham', navRight: 'search', footer: 'normal' }
+      meta: { title: "A l'affiche", icon: 'alarm', menu: '["main","footer"]', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/films',

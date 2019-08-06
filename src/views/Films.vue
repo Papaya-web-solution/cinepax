@@ -1,15 +1,12 @@
 <template>
 	<div>
-		<app-navigation  style="z-index:100;"></app-navigation>
+		<app-navigation style="z-index:100;"></app-navigation>
 		<v-content style="position:fixed; z-index:2; width:100%; text-align:center">
 			<v-layout justify-space-around>
 				<v-flex xs12>
 					<v-sheet elevation="10" class="py-2 px-1">
 						<v-chip-group mandatory active-class="primary--text">
-							<v-chip
-								@click="changeCine('')"
-								class="font-weight-bold text-uppercase mx-1"
-							>Tous</v-chip>
+							<v-chip @click="changeCine('')" class="font-weight-bold text-uppercase mx-1">Tous</v-chip>
 							<v-chip
 								v-for="(cinema,idCinema) in cinemas"
 								:key="idCinema"
@@ -26,9 +23,8 @@
 				<v-flex xs12 style="margin-top:150px;">
 					<pub pagePub="films" classPub="max100"></pub>
 					<template v-for="(film,idFilm) in films">
-						<div v-if="FilmByCinema(idFilm)">
+						<div v-if="FilmByCinema(idFilm)" :key="idFilm">
 							<film-card
-								:key="idFilm"
 								source="Films"
 								:idFilm="idFilm"
 								:Seances="allSeances(idFilm)"
@@ -83,7 +79,10 @@ export default {
 			const seances = this.films[idFilm].seances;
 			//	console.log("aaa", idFilm, this.cinemaChoice);
 			for (var property1 in seances) {
-				if (seances[property1].id_cinema == this.cinemaChoice || this.cinemaChoice=="") {
+				if (
+					seances[property1].id_cinema == this.cinemaChoice ||
+					this.cinemaChoice == ""
+				) {
 					return true;
 				}
 			}
@@ -91,7 +90,7 @@ export default {
 		}
 	},
 	watch: {
-		cinemaChoice(newValue, oldValue) {
+		cinemaChoice(newValue) {
 			//console.log("22", newValue);
 			this.$forceUpdate();
 		}

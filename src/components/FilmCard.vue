@@ -16,7 +16,7 @@
 							>{{infoValue('etat', film.etat, 'title')}}</v-chip>
 						</v-flex>
 						<v-card-title row class="pt-1">
-							<h4 class="mb-0 pb-0">{{film.title}} s- {{film.year}}</h4>
+							<h4 class="mb-0 pb-0 mr-2 title">{{film.title}} </h4><span class="caption" v-if="film.year!=''">({{film.year}})</span>
 						</v-card-title>
 						<v-card-title row class="mb-0 pt-0" :class="fontSizeText">
 							<v-flex v-if="film.director!=''" xs12>
@@ -45,11 +45,13 @@
 								</v-btn>
 							</v-flex>
 						</v-card-title>
+						<template v-if="film.rating>=0">
 						<v-card-actions class="px-3 py-0" :class="fontSizeText">
 							Noter ce film
 							<span class="caption mr-2">({{ film.rating }})</span>
 							<v-rating v-model="film.rating" background-color="white" dense hover size="20"></v-rating>
 						</v-card-actions>
+						</template>
 					</v-flex>
 				</v-layout>
 				<film-card-seances

@@ -5,7 +5,7 @@
 		<v-content style="position:fixed; z-index:2; width:100%; text-align:center">
 			<v-layout justify-space-around>
 				<v-flex xs12>
-					<v-sheet elevation="10" class="py-2 px-1">
+					<v-sheet  class="py-2 px-1">
 						<v-chip-group mandatory active-class="primary--text">
 							<v-chip
 								v-for="(d,dateSeance) in allSeances"
@@ -73,9 +73,10 @@ export default {
 		}
 	},
 	watch: {
-		dateChoice(newValue, oldValue) {
+		dateChoice(newValue) {
 			//console.log("22", newValue, this.allSeances[newValue]);
 			this.SeancesByDay = this.allSeances[newValue];
+		
 		}
 	}
 };

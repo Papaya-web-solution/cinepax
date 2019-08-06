@@ -2,7 +2,7 @@
   "etat": {
     "new": {
       "title": "Nouveau",
-      "color": "#eb0000"
+      "color": "#008bda"
     },
     "exclu": {
       "title": "Exclusivité",
@@ -25,24 +25,16 @@
     "PG-18": {
       "title": "-18",
       "color": "#ff4424"
-    },
-    "X": {
-      "title": "X",
-      "color": "#eb0000"
     }
   },
   "tech": {
     "3D": {
       "title": "3D",
-      "color": "#eb0000"
+      "color": "#242e4c"
     },
-    "x2D": {
+    "2D": {
       "title": "2D",
-      "color": "#eb0000"
-    },
-    "Dolby": {
-      "title": "DOLBY",
-      "color": "#ff4424"
+      "color": "#000000"
     }
   },
   "lang": {
@@ -52,11 +44,11 @@
     },
     "VOST": {
       "title": "VOST",
-      "color": "#eb0000"
+      "color": "#242624"
     },
     "VO": {
       "title": "VO",
-      "color": "#eb0000"
+      "color": "#242624"
     }
   }
 }

@@ -9,12 +9,18 @@
 							<v-container grid-list-xl pa-3>
 								<v-layout wrap>
 									<v-flex xs12 md6>
-										<div v-html="cinema.description"></div>
-										<v-divider class="my-3"></v-divider>
-										<div v-html="cinema.prices"></div>
+										<img width="100%" :src="cinema.logo | addBaseURL" />
 									</v-flex>
 									<v-flex xs12 md6>
-										<img width="100%" :src="cinema.logo | addBaseURL" />
+										<div v-html="cinema.description"></div>
+									</v-flex>
+									<v-flex xs12>
+										<div v-html="cinema.prices"></div>
+									</v-flex>
+									<v-flex xs12>
+										<div v-html="cinema.annonce"></div>
+									</v-flex>
+									<v-flex xs12>
 										<v-card color="primary" elevation="10">
 											<v-container grid-list-xl py-2 px-4 mt-3 class="black--text">
 												<v-layout wrap>
@@ -31,13 +37,22 @@
 														</v-btn>
 													</v-flex>
 												</v-layout>
-												<v-divider></v-divider>
-												<v-card-actions class="pa-1">
-													Noter ce cinéma
-													<v-spacer></v-spacer>
-													<span class="caption mr-2">({{ cinema.rating }})</span>
-													<v-rating v-model="cinema.rating" color="white" background-color="black" dense hover size="20"></v-rating>
-												</v-card-actions>
+												<template v-if="cinema.rating>=0">
+													<v-divider></v-divider>
+													<v-card-actions class="pa-1">
+														Noter ce cinéma
+														<v-spacer></v-spacer>
+														<span class="caption mr-2">({{ cinema.rating }})</span>
+														<v-rating
+															v-model="cinema.rating"
+															color="white"
+															background-color="black"
+															dense
+															hover
+															size="20"
+														></v-rating>
+													</v-card-actions>
+												</template>
 											</v-container>
 										</v-card>
 									</v-flex>
@@ -120,5 +135,15 @@ export default {
 <style scoped>
 .theme--dark.v-sheet {
 	background-color: inherit;
+}
+</style>
+<style >
+.table_tarif {
+	border-collapse: collapse;
+}
+.table_tarif td,
+.table_tarif th {
+	padding: 5px 10px;
+	border:1px solid gray
 }
 </style>

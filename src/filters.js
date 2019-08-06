@@ -9,6 +9,11 @@ Vue.filter('dateF', function (date) {
 		var ladate=new Date(date.substr(0, 4) , date.substr(4, 2)-1 , date.substr(6, 2))
 		return j[ladate.getDay()] + " " + date.substr(6, 2) + "." + date.substr(4, 2) + "." + date.substr(2, 2);
 	}),
+	Vue.filter('dateF3', function (date) {
+		var j = new Array( "Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam" );
+		var ladate=new Date(date.substr(0, 4) , date.substr(4, 2)-1 , date.substr(6, 2))
+		return j[ladate.getDay()] + " " + date.substr(6, 2) + "." + date.substr(4, 2) ;
+	}),
 	Vue.filter('linkTel', function (tel) {
 		const teltrim = tel.replace(new RegExp("[^(0-9)]", "g"), '')
 

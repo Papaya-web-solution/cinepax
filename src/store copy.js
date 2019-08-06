@@ -15,34 +15,34 @@ function prepareSeances(films) {
   for (var idFilm in films) {
     let seances = films[idFilm].seances;
     for (var idSeance in seances) {
-      for (var keyday in seances[idSeance].days) {
-        const day = seances[idSeance].days[keyday]
-       
-        if (day != todayString) { // la date de la séance est supérieur à la date du jour
-          //  console.log(lDates)
-          let seancesOfTheDay = lDates[day]
-          if (seancesOfTheDay == undefined) {
-            let data = {}
-            data[idFilm] = { "seance": [idSeance] }
-            lDates[day] = data;
-          } else {
-            let data = lDates[day]
-            let dataFilm = data[idFilm]
-            if (dataFilm == undefined) {
-              dataFilm = {}
-            }
-            //  console.log(day, idFilm, idSeance);
-            //   console.log(dataFilm);
-            //   console.log("eee");
-            if (dataFilm.seance == undefined) {
-              dataFilm.seance = []
-            }
-            dataFilm.seance.push(idSeance)
-            //   console.log(dataFilm);
-            data[idFilm] = dataFilm
-            lDates[day] = data
+      let day = seances[idSeance].day;
+      if (day != todayString) { // la date de la séance est supérieur à la date du jour
+        //  console.log(lDates)
+
+
+        let seancesOfTheDay = lDates[day]
+        if (seancesOfTheDay == undefined) {
+          let data = {}
+          data[idFilm] = { "seance": [idSeance] }
+          lDates[day] = data;
+        } else {
+          let data = lDates[day]
+          let dataFilm = data[idFilm]
+          if (dataFilm == undefined) {
+            dataFilm = {}
           }
+          //  console.log(day, idFilm, idSeance);
+          //   console.log(dataFilm);
+          //   console.log("eee");
+          if (dataFilm.seance == undefined) {
+            dataFilm.seance = []
+          }
+          dataFilm.seance.push(idSeance)
+          //   console.log(dataFilm);
+          data[idFilm] = dataFilm
+          lDates[day] = data
         }
+
       }
     }
   }
@@ -88,7 +88,7 @@ export const store = new Vuex.Store({
 
       this.state.loadingAnnonce = false;
 
-      if (this.state.splashAnnonce.html == "" && this.state.splashAnnonce.image == "") {
+      if (this.state.splashAnnonce.html == "" && this.state.splashAnnonce.image == "" ) {
         this.state.loadingAnnonce = false;
       } else {
         if (process.env.NODE_ENV != "development") {

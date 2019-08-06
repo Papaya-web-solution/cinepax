@@ -17,7 +17,6 @@
 							<install-prompt></install-prompt>
 						</v-flex>
 					</v-layout>
-					<pub pagePub="home" classPub="max100"></pub>
 				</div>
 			</v-container>
 		</v-content>
@@ -27,13 +26,11 @@
 <script>
 import InstallPrompt from "@/components/InstallPrompt.vue";
 import AppNavigation from "@/components/AppNavigation.vue";
-import Pub from "@/components/pub.vue";
 
 export default {
 	components: {
 		InstallPrompt,
 		AppNavigation,
-		Pub
 	}
 };
 </script>

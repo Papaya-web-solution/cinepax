@@ -55,6 +55,7 @@
 															<v-icon dark>fas fa-link</v-icon>
 														</v-btn>
 														<v-spacer></v-spacer>
+														<template v-if="cinema.rating>=0">
 														<span class="grey--text text--lighten-2 caption mr-2">({{ cinema.rating }})</span>
 														<v-rating
 															v-model="cinema.rating"
@@ -65,6 +66,7 @@
 															hover
 															size="18"
 														></v-rating>
+														</template>
 													</v-card-actions>
 												</v-flex>
 											</v-flex>
