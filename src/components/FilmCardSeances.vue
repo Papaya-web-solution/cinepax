@@ -2,52 +2,60 @@
 	<v-layout>
 		<v-container grid-list-sm fluid class="ma-0 pa-0 mt-3">
 			<v-layout wrap>
-				<v-flex v-for="IdSeance in Seances" :key="IdSeance" xs6 sm4 md3 lg3>
-						<v-card v-if="cinemaChoice=='' || infoSeanceFilm(IdSeance,'id_cinema') == cinemaChoice" flat tile class="pa-0">
-							<v-card-text class="pa-3">
-								<div class="font-weight-black mb-1">
-									<span class="text-uppercase">{{cinemaTitle(infoSeanceFilm(IdSeance,'id_cinema'))}}</span>
-									<span
-										class="font-weight-light"
-									>- {{salleTitle(infoSeanceFilm(IdSeance,'id_cinema'),infoSeanceFilm(IdSeance,'id_salle'))}}</span>
-								</div>
-								<div>
-									<template v-if="source=='Films'">
-										<template v-for="zeday in infoSeanceFilm(IdSeance,'days')">
-											<v-chip
-												:key="zeday"
-												class="day ml-0 mr-2 primary--text"
-												color="font-weight-medium "
-												small
-											>{{zeday | dateF3 }}</v-chip>
-										</template>
+				<v-flex v-for="IdSeance in Seances" :key="IdSeance" xs12 sm6 md4>
+					<v-card
+						v-if="cinemaChoice=='' || infoSeanceFilm(IdSeance,'id_cinema') == cinemaChoice"
+						flat
+						tile
+						height="100%"
+						class="pa-0"
+					>
+						<v-card-text class="pa-3">
+							<div class="font-weight-black mb-1">
+								<span class="text-uppercase">{{cinemaTitle(infoSeanceFilm(IdSeance,'id_cinema'))}}</span>
+								<span
+									class="font-weight-light"
+								>- {{salleTitle(infoSeanceFilm(IdSeance,'id_cinema'),infoSeanceFilm(IdSeance,'id_salle'))}}</span>
+							</div>
+							<div>
+								<template v-if="source=='Films'">
+									<template v-for="zeday in infoSeanceFilm(IdSeance,'days')">
+										<v-chip
+											:key="zeday"
+											class="day ml-0 mr-2 primary--text"
+											color="font-weight-medium "
+											small
+										>{{zeday | dateF3 }}</v-chip>
 									</template>
-								</div>
+								</template>
+							</div>
+							<template v-for="hour in infoSeanceFilm(IdSeance,'hour')">
 								<v-chip
+									:key="hour"
 									small
 									class="hour ml-0"
 									color="font-weight-medium primary black--text"
-								>{{infoSeanceFilm(IdSeance,"hour")}}</v-chip>
-
-								<v-chip
-									v-if="infoSeanceFilm(IdSeance,'lang')!=''"
-									class="lang caption"
-									:style="'background-color:' + infoValue('lang', infoSeanceFilm(IdSeance,'lang'), 'color') "
-									small
-								>{{infoValue('lang', infoSeanceFilm(IdSeance,'lang'), 'title')}}</v-chip>
-								<template v-if="infoSeanceFilm(IdSeance,'techs') && infoExists('tech')">
-									<template v-for="tech in infoSeanceFilm(IdSeance,'techs')">
-										<v-chip
-											:key="tech"
-											v-if="tech!='' && tech && infoValue('tech', tech, 'title')"
-											class="tech caption"
-											:style="'background-color:'+ infoValue('tech', tech, 'color')"
-											small
-										>{{infoValue('tech', tech, 'title')}}</v-chip>
-									</template>
+								>{{hour}}</v-chip>
+							</template>
+							<v-chip
+								v-if="infoSeanceFilm(IdSeance,'lang')!=''"
+								class="lang caption"
+								:style="'background-color:' + infoValue('lang', infoSeanceFilm(IdSeance,'lang'), 'color') "
+								small
+							>{{infoValue('lang', infoSeanceFilm(IdSeance,'lang'), 'title')}}</v-chip>
+							<template v-if="infoSeanceFilm(IdSeance,'techs') && infoExists('tech')">
+								<template v-for="tech in infoSeanceFilm(IdSeance,'techs')">
+									<v-chip
+										:key="tech"
+										v-if="tech!='' && tech && infoValue('tech', tech, 'title')"
+										class="tech caption"
+										:style="'background-color:'+ infoValue('tech', tech, 'color')"
+										small
+									>{{infoValue('tech', tech, 'title')}}</v-chip>
 								</template>
-							</v-card-text>
-						</v-card>
+							</template>
+						</v-card-text>
+					</v-card>
 				</v-flex>
 			</v-layout>
 		</v-container>

@@ -4,16 +4,31 @@
 		<v-content style="position:fixed; z-index:2; width:100%; text-align:center">
 			<v-layout justify-space-around>
 				<v-flex xs12>
-					<v-sheet elevation="10" class="py-2 px-1">
-						<v-chip-group mandatory active-class="primary--text">
-							<v-chip @click="changeCine('')" class="font-weight-bold text-uppercase mx-1">Tous</v-chip>
-							<v-chip
-								v-for="(cinema,idCinema) in cinemas"
-								:key="idCinema"
-								@click="changeCine(idCinema)"
-								class="font-weight-bold text-uppercase mx-1"
-							>{{cinema.title}}</v-chip>
-						</v-chip-group>
+					<v-sheet>
+						<v-item-group mandatory>
+							<v-container grid-list-xs class="py-2 px-1">
+								<v-layout wrap>
+									<v-flex>
+										<v-item>
+											<v-chip
+												@click="changeCine('')"
+												:color="cinemaChoice=='' ? 'primary' : ''"
+												class="font-weight-bold text-uppercase"
+											>Tous</v-chip>
+										</v-item>
+									</v-flex>
+									<v-flex v-for="(cinema,idCinema) in cinemas" :key="idCinema">
+										<v-item>
+											<v-chip
+												:color="idCinema==cinemaChoice ? 'primary' : ''"
+												@click="changeCine(idCinema)"
+												class="font-weight-bold text-uppercase"
+											>{{cinema.title}}</v-chip>
+										</v-item>
+									</v-flex>
+								</v-layout>
+							</v-container>
+						</v-item-group>
 					</v-sheet>
 				</v-flex>
 			</v-layout>

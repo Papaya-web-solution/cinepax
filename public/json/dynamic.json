@@ -4,7 +4,7 @@
     "infos": true
   },
   "films": {
-    "tt0371746": {
+    "leroilion": {
       "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/moNTkXigaVuSr5FFMT9hHQALesj.jpg?resize=400%2C650&ssl=1",
       "title": "Le Roi Lion",
       "year": "2019",
@@ -22,178 +22,238 @@
         "1": {
           "id_cinema": "hollywood",
           "id_salle": 1,
-          "days": ["20191201","20191202","20191203","20191204","20191205","20191206","20191207"],
-          "hour": "12:30",
-          "lang": "VF",
-          "techs": ["2D"]
-        },
-        "2": {
-          "id_cinema": "hollywood",
-          "id_salle": 1,
-          "days": ["20191201","20191203","20191204","20191205","20191206","20191207"],
-          "hour": "17:45",
-          "lang": "VF",
-          "techs": ["2D"]
-        },
-        "3": {
-          "id_cinema": "hollywood",
-          "id_salle": 1,
-          "days": ["20191206"],
-          "hour": "09:00",
-          "lang": "VF",
-          "techs": ["2D"]
-        },
-        "4": {
-          "id_cinema": "liberty",
-          "id_salle": 1,
-          "days": ["20191203","20191204"],
-          "hour": "18:00",
-          "lang": "VO",
-          "techs": ["3D"]
-        },
-        "5": {
-          "id_cinema": "liberty",
-          "id_salle": 1,
-          "days": ["20191203","20191204"],
-          "hour": "18:00",
-          "lang": "VO",
-          "techs": ["3D"]
-        },
-        "6": {
-          "id_cinema": "liberty",
-          "id_salle": 1,
-          "days": ["20191203","20191204"],
-          "hour": "18:00",
-          "lang": "VO",
-          "techs": ["3D"]
-        },
-        "7": {
-          "id_cinema": "liberty",
-          "id_salle": 1,
-          "days": ["20191203","20191204"],
-          "hour": "18:10",
-          "lang": "VO",
-          "techs": ["3D"]
-        },
-        "8": {
-          "id_cinema": "liberty",
-          "id_salle": 1,
-          "days": ["20191203","20191204"],
-          "hour": "18:11",
-          "lang": "VO",
-          "techs": ["3D"]
-        },
-        "9": {
-          "id_cinema": "liberty",
-          "id_salle": 1,
-          "days": ["20191203","20191204"],
-          "hour": "18:12",
-          "lang": "VO",
-          "techs": ["3D"]
-        },
-        "10": {
-          "id_cinema": "concorde",
-          "id_salle": 2,
-          "days": ["20191203"],
-          "hour": "18:30",
-          "lang": "VO",
-          "techs": []
-        }
-      }
-    },
-    "tt0xxx371746": {
-      "title": "tt0xxx371746 aaaaaLâche-moi les valseuses!...",
-      "poster": "https://i0.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/ukOL84ybXve6y6Q913lr8IDE22e.jpg?resize=400%2C650&ssl=1",
-      "youtube": "",
-      "genre": "Action, Adventure, Sci-Fi",
-      "runtime": "71 min",
-      "year": "1977",
-      "rated": "G",
-      "etat": "new",
-      "country": "France",
-      "director": "Alain Nauroy",
-      "actors": "Linda Guegan, Hervé Palud, Roland Blanche, André Chazel",
-      "plot": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-      "rating": 3,
-      "seances": {
-        "1": {
-          "id_cinema": "concorde",
-          "id_salle": 2,
-          "days": ["20191206"],
-          "hour": "20:30",
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["12:30","17:45"],
           "lang": "VF",
           "techs": [
-            "Dolby",
-            "3D"
+            "2D"
           ]
         },
         "2": {
+          "id_cinema": "hollywood",
+          "id_salle": 1,
+          "days": [
+            "20191206"
+          ],
+          "hour": ["09:00"],
+          "lang": "VF",
+          "techs": [
+            "2D"
+          ]
+        },
+        "3": {
           "id_cinema": "concorde",
           "id_salle": 1,
-          "days": ["20191206"],
-          "hour": "22:30",
-          "lang": "VOST",
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["11:45","14:20","17:30","20:00"],
+          "lang": "VF",
           "techs": [
-            "Dolby",
+            "3D"
+          ]
+        },
+        "8": {
+          "id_cinema": "concorde",
+          "id_salle": 1,
+          "days": [
+            "20191204"
+          ],
+          "hour": ["20:00"],
+          "lang": "VO",
+          "techs": [
+            "3D"
+          ]
+        }
+      }
+    },
+    "uglydolls": {
+      "poster": "https://i2.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/p97LQ1TL95mptVL2AS8Rz1cJCQg.jpg?resize=400%2C650&ssl=1",
+      "title": "UglyDolls",
+      "year": "2019",
+      "director": "Kelly Asbury",
+      "actors": "Pitbull, Blake Shelton, Kelly Clarkson, Nick Jonas, Janelle Monae, Emma Roberts",
+      "genre": " Animation, Aventure, Comédie, Familial, Fantastique",
+      "country": "USA",
+      "runtime": "1h27",
+      "plot": "A Uglyville, l’existence de Moxy et de ses amis UglyDolls est chaque jour un tourbillon de bonheur. Mais la curiosité de Moxy la conduit à se demander ce qui peut bien se trouver de l’autre côté de la montagne longeant Uglyville. Accompagnée de ses camarades, Moxy va découvrir un autre monde –Perfection-. Une ville où les poupées sont conformes aux critères de beauté conventionnels afin de séduire les enfants. Moxy et ses copains vont être soumis aux manipulations de Lou, la poupée idéale, chargé de former les nouvelles recrues. Au sein de Perfection, les UglyDolls vont se retrouver confronter à la différence, au rejet et à l’envie d’être aimé.",
+      "youtube": "gMLb119sa7g",
+      "rated": "G",
+      "etat": "",
+      "rating": -1,
+      "seances": {
+        "1": {
+          "id_cinema": "concorde",
+          "id_salle": 1,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["14:30","17:15"],
+          "lang": "VF",
+          "techs": [
             "2D"
           ]
         }
       }
     },
-    "xxxxxx": {
-      "title": "xxxxxx Lâche-moi les valseuses!...",
-      "poster": "https://i0.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/eycO6M2s38xO1888Gq2gSrXf0A6.jpg?resize=400%2C650&ssl=1",
-      "youtube": "eV6yW6aPanA",
-      "genre": "Action, Adventure, Sci-Fi",
-      "runtime": "71 min",
-      "year": "1977",
-      "rated": "PG-18",
-      "etat": "exclu",
-      "country": "France",
-      "director": "Alain Nauroy",
-      "actors": "Linda Guegan, Hervé Palud, Roland Blanche, André Chazel",
-      "plot": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-      "rating": 3,
+    "xmen": {
+      "poster": "https://i2.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/06/kZv92eTc0Gg3mKxqjjDAM73z9cy.jpg?resize=400%2C650&ssl=1",
+      "title": "X-Men : Dark Phoenix",
+      "year": "2019",
+      "director": "Simon Kinberg",
+      "actors": "Sophie Turner, Nicholas Hoult, Jessica Chastain, James McAvoy, Jennifer Lawrence, Michael Fassbender",
+      "genre": "Action, Science-Fiction",
+      "country": "USA",
+      "runtime": "1h53",
+      "plot": "Lors d’une périlleuse mission spatiale, Jean est frappée par une force qui la change en l’un des mutants les plus puissants qui soient. En lutte contre elle-même, Jean Grey déchaîne ses pouvoirs, incapable de les comprendre ou de les maîtriser. Devenue incontrôlable et dangereuse pour ses proches, elle défait peu à peu les liens qui unissent les X-Men. Voici le point d’orgue de vingt années d’histoire des X-Men, et l’ultime confrontation entre la famille de mutants que nous avons appris à aimer et son pire ennemi : l’une des leurs.",
+      "youtube": "NOoqMzg6TrM",
+      "rated": "G",
+      "etat": "",
+      "rating": -1,
       "seances": {
         "1": {
           "id_cinema": "concorde",
-          "id_salle": 1,
-          "days": ["20191206"],
-          "hour": "20:30",
+          "id_salle": 2,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["12:00","19:45"],
           "lang": "VF",
-          "techs": []
+          "techs": [
+            "2D"
+          ]
+        }
+      }
+    },
+    "Midsommar": {
+      "poster": "https://i0.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/eycO6M2s38xO1888Gq2gSrXf0A6.jpg?resize=400%2C650&ssl=1",
+      "title": "Midsommar",
+      "year": "2019",
+      "director": "Ari Aster",
+      "actors": "Vilhelm Blomgren, Florence Pugh, William Jackson Harper, Ellora Torchia, Will Poulter, Jack Reynor ",
+      "genre": " Drame, Horreur",
+      "country": "USA",
+      "runtime": "2h36",
+      "plot": "Dani et Christian sont sur le point de se séparer quand la famille de Dani est touchée par une tragédie. Attristé par le deuil de la jeune femme, Christian ne peut se résoudre à la laisser seule et l’emmène avec lui et ses amis à un festival estival qui n’a lieu que tous les 90 ans et se déroule dans un village suédois isolé. Mais ce qui commence comme des vacances insouciantes dans un pays où le soleil ne se couche pas va vite prendre une tournure beaucoup plus sinistre et inquiétante.",
+      "youtube": "I0v11YAIYq4",
+      "rated": "G",
+      "etat": "new",
+      "rating": -1,
+      "seances": {
+        "1": {
+          "id_cinema": "hollywood",
+          "id_salle": 1,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["20:20"],
+          "lang": "VF",
+          "techs": [
+            "2D"
+          ]
         },
         "2": {
-          "id_cinema": "concorde",
-          "id_salle": 1,
-          "days": ["20191206"],
-          "hour": "22:30",
-          "lang": "",
-          "techs": []
-        },
-        "3": {
-          "id_cinema": "hollywood",
-          "id_salle": 3,
-          "days": ["20191206"],
-          "hour": "12:00",
-          "lang": "VF",
-          "techs": []
-        },
-        "4": {
           "id_cinema": "liberty",
-          "id_salle": 3,
-          "days": ["20191206"],
-          "hour": "14:00",
+          "id_salle": 2,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["12:00","14:50","17:40","20:30"],
           "lang": "VF",
-          "techs": []
-        },
-        "6": {
-          "id_cinema": "majestic",
+          "techs": [
+            "2D"
+          ]
+        }
+      }
+    },
+    "betes": {
+      "poster": "https://i0.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/ukOL84ybXve6y6Q913lr8IDE22e.jpg?resize=400%2C650&ssl=1",
+      "title": "Comme des bêtes 2",
+      "year": "2019",
+      "director": "Chris Renaud",
+      "actors": "Patton Oswalt, Ellie Kemper, Lake Bell, Jenny Slate, Kevin Hart, Eric Stonestreet",
+      "genre": "Animation, Aventure, Comédie, Familial",
+      "country": "USA",
+      "runtime": "1h26",
+      "plot": "La suite du film d’animation “Comme des bêtes”, qui permet de découvrir à nouveau la vie secrète que mènent nos animaux domestiques.",
+      "youtube": "FXkej-5tSnM",
+      "rated": "G",
+      "etat": "new",
+      "rating": -1,
+      "seances": {
+        "1": {
+          "id_cinema": "hollywood",
           "id_salle": 1,
-          "days": ["20191206"],
-          "hour": "14:30",
-          "lang": "VOST",
-          "techs": []
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["15:00"],
+          "lang": "VF",
+          "techs": [
+            "2D"
+          ]
+        },
+        "2": {
+          "id_cinema": "liberty",
+          "id_salle": 1,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["12:00","13:50","15:55","17:55","20:05"],
+          "lang": "VF",
+          "techs": [
+            "3D"
+          ]
         }
       }
     }

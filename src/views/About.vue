@@ -98,9 +98,9 @@ export default {
 		return {
 			valid: true,
 			form: {
-				nom: "Bolard Marc",
-				email: "contact@tahitihoster.com",
-				message: "Test"
+				nom: "",
+				email: "",
+				message: ""
 			},
 			nomRules: [v => !!v || "Nom prénom obligatoire"],
 			emailRules: [

@@ -1,19 +1,27 @@
 /* eslint-disable */
-<template> 
+<template>
 	<div>
 		<app-navigation></app-navigation>
+
 		<v-content style="position:fixed; z-index:2; width:100%; text-align:center">
 			<v-layout justify-space-around>
 				<v-flex xs12>
-					<v-sheet  class="py-2 px-1">
-						<v-chip-group mandatory active-class="primary--text">
-							<v-chip
-								v-for="(d,dateSeance) in allSeances"
-								:key="dateSeance"
-								@click="changeDate(dateSeance)"
-								
-							>{{dateSeance |dateF2 }}</v-chip>
-						</v-chip-group>
+					<v-sheet >
+						<v-item-group mandatory>
+							<v-container grid-list-xs class="py-2 px-1">
+								<v-layout wrap>
+									<v-flex v-for="(d,dateSeance) in allSeances" :key="dateSeance">
+										<v-item>
+											<v-chip
+												:color="dateSeance==dateChoice ? 'primary black--text' : ''"
+												@click="changeDate(dateSeance)"
+												class="font-weight-bold"
+											>{{dateSeance |dateF3 }}</v-chip>
+										</v-item>
+									</v-flex>
+								</v-layout>
+							</v-container>
+						</v-item-group>
 					</v-sheet>
 				</v-flex>
 			</v-layout>
@@ -29,7 +37,7 @@
 							:idFilm="idFilm"
 							:Seances="Seances.seance"
 							:dateChoice="dateChoice"
-							cinemaChoice=""
+							cinemaChoice
 						></film-card>
 					</template>
 				</v-flex>
@@ -53,7 +61,7 @@ export default {
 	data() {
 		return {
 			dateChoice: "",
-			SeancesByDay: {},
+			SeancesByDay: {}
 		};
 	},
 	computed: {
@@ -61,7 +69,8 @@ export default {
 			return store.state.seances;
 		}
 	},
-	mounted() {
+
+	beforeMount() {
 		for (var date in store.state.seances) {
 			this.dateChoice = date;
 			break;
@@ -76,13 +85,9 @@ export default {
 		dateChoice(newValue) {
 			//console.log("22", newValue, this.allSeances[newValue]);
 			this.SeancesByDay = this.allSeances[newValue];
-		
 		}
 	}
 };
 </script>
-<style scoped>
-.active-class {
-	background-color: red;
-}
+
 </style>

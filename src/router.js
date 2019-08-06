@@ -14,7 +14,7 @@ export default new Router({
       name: 'home',
       component: () => import('./views/Home.vue'),
       props: true,
-      meta: { title: "Accueil", icon: 'home', menu: 'main', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
+      meta: { title: "Accueil", icon: 'home', menu: '', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/seances',
@@ -38,20 +38,6 @@ export default new Router({
       meta: { title: "Les Cinemas", icon: 'videocam', menu: 'main', divider: true, navLeft: 'prev', navRight: '', footer: 'normal' }
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('./views/About.vue'),
-      props: true,
-      meta: { title: "A propos", icon: 'info', menu: 'main', divider: true, navLeft: 'prev', navRight: '', footer: 'normal' }
-    },
-    {
-      path: '/annonceur',
-      name: 'annonceur',
-      component: () => import('./views/Annonceur.vue'),
-      props: true,
-      meta: { title: "Devenez annonceur", icon: 'monetization_on', menu: 'main', divider: true, navLeft: 'prev', navRight: '', footer: '' }
-    },
-    {
       path: '/prochainement',
       name: 'prochainement',
       component: () => import('./views/Prochainement.vue'),
@@ -66,6 +52,20 @@ export default new Router({
       meta: { title: "Evenements", icon: 'star', menu: '["main","footer"]', divider: true, navLeft: 'prev', navRight: 'share', footer: 'normal' }
     },
     {
+      path: '/about',
+      name: 'about',
+      component: () => import('./views/About.vue'),
+      props: true,
+      meta: { title: "A propos", icon: 'info', menu: 'main', divider: true, navLeft: 'prev', navRight: '', footer: 'normal' }
+    },
+    {
+      path: '/annonceur',
+      name: 'annonceur',
+      component: () => import('./views/Annonceur.vue'),
+      props: true,
+      meta: { title: "Devenez annonceur", icon: 'monetization_on', menu: 'main', divider: true, navLeft: 'prev', navRight: '', footer: '' }
+    },
+    {
       path: '/cinema/:id',
       name: 'cinema',
       component: () => import('./views/Cinema.vue'),
@@ -77,14 +77,14 @@ export default new Router({
       name: 'test',
       component: () => import('./views/Test.vue'),
       props: true,
-      meta: { title: "Test", icon: '', menu: 'main', divider: true, navLeft: 'prev', footer: 'autre' }
+      meta: { title: "Test", icon: '', menu: '', divider: true, navLeft: 'prev', footer: 'autre' }
     },
     {
       path: '/testvuetify',
       name: 'testvuetify',
       component: () => import('./views/testvuetify.vue'),
       props: true,
-      meta: { title: "testvuetify", icon: '', menu: 'main', divider: true, navLeft: 'prev', footer: 'autre' }
+      meta: { title: "testvuetify", icon: '', menu: '', divider: true, navLeft: 'prev', footer: 'autre' }
     },
     {
       path: '*',
