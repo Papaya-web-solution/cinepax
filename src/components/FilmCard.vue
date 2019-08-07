@@ -54,12 +54,14 @@
 						</template>
 					</v-flex>
 				</v-layout>
+				<template v-if="source!='prochainement'">
 				<film-card-seances
 					:idFilm="idFilm"
 					:Seances="Seances"
 					:source="source"
 					:cinemaChoice="cinemaChoice"
 				></film-card-seances>
+				</template>
 			</v-flex>
 		</v-container>
 		

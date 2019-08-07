@@ -37,6 +37,7 @@
 			</v-btn>
 			<v-spacer v-if="$store.state.route.meta['navLeft']=='ham'"></v-spacer>
 			<v-toolbar-title>{{the_title}}</v-toolbar-title>
+			<span v-if="nodeenv == 'development'" class="ml-2">({{this.$vuetify.breakpoint.name}})</span>
 			<v-spacer></v-spacer>
 			<v-btn icon v-if="$store.state.route.meta['navRight']=='search'">
 				<v-icon @click="searchfield = !searchfield">search</v-icon>
@@ -75,7 +76,8 @@ export default {
 	data() {
 		return {
 			drawer: false,
-			searchfield: false
+			searchfield: false,
+			nodeenv: process.env.NODE_ENV
 		};
 	},
 	props: {

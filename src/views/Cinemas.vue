@@ -5,7 +5,7 @@
 			<v-layout wrap>
 				<v-flex xs12  sm8 offset-sm2>
 					<div class="mb-3">
-						<pub pagePub="cinemas" classPub="full"></pub>
+						<pub pagePub="cinemas" classPub="max100"></pub>
 					</div>
 					<v-card v-for="(cinema,index) in cinemas" :key="cinema.title" class="mb-3">
 						<v-layout>

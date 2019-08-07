@@ -63,7 +63,7 @@ export default new Router({
       name: 'annonceur',
       component: () => import('./views/Annonceur.vue'),
       props: true,
-      meta: { title: "Devenez annonceur", icon: 'monetization_on', menu: 'main', divider: true, navLeft: 'ham', navRight: '', footer: '' }
+      meta: { title: "Devenez annonceur", icon: 'monetization_on', menu: 'main', divider: true, navLeft: 'prev', navRight: '', footer: '' }
     },
     {
       path: '/cinema/:id',

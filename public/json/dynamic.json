@@ -566,8 +566,51 @@
       "url": "https://www.cinema.com"
     }
   },
-  "evenements": {},
-  "prochainement": {},
+  "evenements": {
+    "1": {
+      "html": "<h1>Annonce en mode HTML</h1><h2>Texte, image, lien, vidéo, etc..</h2><p>Tout ce que vous voulez!!!</p>",
+      "image": ""
+    },
+    "2": {
+      "html": "",
+      "image": "https://www.turlututu.top/cinepax/pubs/airfrance.png"
+    }
+  },
+  "prochainement": {
+    "godz": {
+      "poster": "https://i2.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/05/pU3bnutJU91u3b4IeRPQTOP8jhV.jpg?resize=400%2C650&ssl=1",
+      "title": "Godzilla II : Roi des Monstres",
+      "year": "2019",
+      "director": "Michael Dougherty",
+      "actors": "Millie Bobby Brown, Kyle Chandler, Vera Farmiga, Sally Hawkins, Ken Watanabe, Bradley Whitford",
+      "genre": "Action, Science-Fiction, Thriller",
+      "country": "USA",
+      "runtime": "2h12",
+      "plot": "L’agence crypto-zoologique Monarch doit faire face à une vague de monstres titanesques, comme Godzilla, Mothra, Rodan et surtout le redoutable roi Ghidorah à trois têtes. Un combat sans précédent entre ces créatures considérées jusque-là comme chimériques menace d’éclater. Alors qu’elles cherchent toutes à dominer la planète, l’avenir même de l’humanité est en jeu…",
+      "youtube": "KijzJa8hcTY",
+      "rated": "G",
+      "etat": "",
+      "rating": -1,
+      "cinemas": ["majestic","liberty"]
+    },
+    "Aladdin ": {
+      "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/05/zhPqd766H4ZxGbTOOMQOSY4dxmS.jpg?resize=400%2C650&ssl=1",
+      "title": "Aladdin ",
+      "year": "2019",
+      "director":  "Guy Ritchie",
+      "actors": "Mena Massoud, Nasim Pedrad, Navid Negahban, Marwan Kenzari, Naomi Scott, Will Smith",
+      "genre": "Aventure, Fantastique, Musique, Romance",
+      "country": "USA",
+      "runtime": "2h00",
+      "plot": "Quand un charmant garçon des rues du nom d’Aladdin cherche à conquérir le cœur de la belle, énigmatique et fougueuse princesse Jasmine, il fait appel au tout puissant Génie, le seul qui puisse lui permettre de réaliser trois vœux, dont celui de devenir le prince Ali pour mieux accéder au palais…",
+      "youtube": "1P10uLzaPao",
+      "rated": "G",
+      "etat": "",
+      "rating": -1,
+      "cinemas": ["liberty"]
+    }
+
+  },
   "splashAnnonce": {
     "html": "<h1>SplashScreen pour une info important ou une pub</h1><br><div>Une nouvelle version est disponibles, veuillez vous connectez à cette adresse pour l'installer<br><a href='https://www.glopglop.com' target='blank'>URL</a></div><br><img src='https://www.turlututu.top/cinepax/pubs/airfrance.png'>",
     "image": "https://www.turlututu.top/cinepax/pubs/airfrance.png",
