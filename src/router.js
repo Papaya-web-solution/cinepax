@@ -1,56 +1,90 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
-// vue par défaut
-import Home from './views/Home.vue'
+import '../vue.config.js'
+import AppConfig from "@/config";
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: __dirname,
+  base: AppConfig.subFolder,
   routes: [
     {
       path: '/home',
       name: 'home',
-      component: Home,
+      component: () => import('./views/Home.vue'),
       props: true,
-      meta: { title: "Accueil", icon: 'home', id: '', menu: 'main', divider: true } 
+      meta: { title: "Accueil", icon: 'home', menu: '', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/seances',
       name: 'seances',
       component: () => import('./views/Seances.vue'),
       props: true,
-      meta: { title: "A l'affiche", icon: 'alarm', id: '', menu: 'main', divider: true }
+      meta: { title: "A l'affiche", icon: 'alarm', menu: '["main","footer"]', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
-      path: '/film/:id',
-      name: 'film',
-      component: () => import('./views/Film.vue'),
+      path: '/films',
+      name: 'films',
+      component: () => import('./views/Films.vue'),
       props: true,
-      meta: { title: "Film", icon: 'local_movies', id: '0', menu: 'main', divider: true }
+      meta: { title: "Les Films", icon: 'local_movies', menu: '["main","footer"]', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
+    },
+    {
+      path: '/cinemas',
+      name: 'cinemas',
+      component: () => import('./views/Cinemas.vue'),
+      props: true,
+      meta: { title: "Les Cinemas", icon: 'videocam', menu: 'main', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
+    },
+    {
+      path: '/prochainement',
+      name: 'prochainement',
+      component: () => import('./views/Prochainement.vue'),
+      props: true,
+      meta: { title: "Prochainement", icon: 'calendar_today', menu: '["main","footer"]', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
+    },
+    {
+      path: '/evenements',
+      name: 'evenements',
+      component: () => import('./views/Evenements.vue'),
+      props: true,
+      meta: { title: "Evenements", icon: 'star', menu: '["main","footer"]', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import('./views/_About.vue'),
+      component: () => import('./views/About.vue'),
       props: true,
-      meta: { title: "About", icon: 'help', id: '', menu: 'main', divider: true }
+      meta: { title: "A propos", icon: 'info', menu: 'main', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/annonceur',
       name: 'annonceur',
       component: () => import('./views/Annonceur.vue'),
       props: true,
-      meta: { title: "Devenez Annonceur", icon: 'home', id: '', menu: 'footer', divider: false }
+      meta: { title: "Devenez annonceur", icon: 'monetization_on', menu: '', divider: true, navLeft: 'prev', navRight: '', footer: '' }
     },
     {
-      path: '/testdb',
-      name: 'testdb',
-      component: () => import('./views/_testdb.vue'),
+      path: '/cinema/:id',
+      name: 'cinema',
+      component: () => import('./views/Cinema.vue'),
       props: true,
-      meta: { title: "testdb", icon: 'help', id: '', menu: 'main', divider: true }
+      meta: { title: "Cinema", icon: '', menu: '', divider: false, navLeft: 'prev', navRight: '', footer: 'normal' }
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('./views/Test.vue'),
+      props: true,
+      meta: { title: "Test", icon: '', menu: '', divider: true, navLeft: 'prev', footer: 'autre' }
+    },
+    {
+      path: '/testvuetify',
+      name: 'testvuetify',
+      component: () => import('./views/testvuetify.vue'),
+      props: true,
+      meta: { title: "testvuetify", icon: '', menu: '', divider: true, navLeft: 'prev', footer: 'autre' }
     },
     {
       path: '*',

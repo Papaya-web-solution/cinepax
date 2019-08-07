@@ -21,8 +21,7 @@ export default {
     };
   },
   props: {
-    msg: String,
-    config: {}
+    msg: String
   },
   methods: {
     testToParent() {

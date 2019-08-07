@@ -8,12 +8,15 @@
   </v-container>
 </template>
 <script>
+
 let installEvent;
+
 export default {
   name: "installPrompt",
   data() {
     return {
-      showInstallBanner: false
+      showInstallBanner: false,
+      messageInfo:true
     };
   },
   created() {
@@ -23,8 +26,12 @@ export default {
       this.showInstallBanner = true;
     });
     window.addEventListener("appinstalled", function handler(e) {
-      console.log("a2hs installed");
-      alert("L'application a été ajoutée à votre écran d'accueil");
+     // console.log("a2hs installed",e);
+     if(this.messageInfo==true) {
+       alert("L'application a été ajoutée à votre écran d'accueil");
+        this.messageInfo=false
+     }
+      
       this.removeEventListener("appinstalled", handler);
     });
   },
@@ -33,6 +40,7 @@ export default {
       this.showInstallBanner = false;
       installEvent.prompt();
       installEvent.userChoice.then(choiceResult => {
+        console.log(choiceResult)
         installEvent = null;
       });
     }

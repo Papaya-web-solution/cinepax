@@ -1,0 +1,54 @@
+{
+  "etat": {
+    "new": {
+      "title": "Nouveau",
+      "color": "#008bda"
+    },
+    "exclu": {
+      "title": "Exclusivité",
+      "color": "#b90061"
+    }
+  },
+  "rated": {
+    "G": {
+      "title": "Tout public",
+      "color": "#14b600"
+    },
+    "PG-12": {
+      "title": "-12",
+      "color": "#ffac14"
+    },
+    "PG-16": {
+      "title": "-16",
+      "color": "#ff4424"
+    },
+    "PG-18": {
+      "title": "-18",
+      "color": "#ff4424"
+    }
+  },
+  "tech": {
+    "3D": {
+      "title": "3D",
+      "color": "#242e4c"
+    },
+    "2D": {
+      "title": "2D",
+      "color": "#000000"
+    }
+  },
+  "lang": {
+    "VF": {
+      "title": "VF",
+      "color": "#000"
+    },
+    "VOST": {
+      "title": "VOST",
+      "color": "#242624"
+    },
+    "VO": {
+      "title": "VO",
+      "color": "#242624"
+    }
+  }
+}
