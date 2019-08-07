@@ -5,11 +5,11 @@
 		<v-container fill-height text-xs-center>
 			<v-layout align-center justify-center column>
 				<v-flex>
-					<v-card style="padding:30px;" color="black" elevation="10">
+					<v-card style="padding:10px;" color="black">
 						<img src="@/assets/logo.png" width="192" />
 					</v-card>
 					<div @click="showInfo = true">&copy; {{copyrightYear}} - {{this.$root.appTxt.version}}</div>
-					<div class="my-3" @click="showInfo = true">
+					<div class="mt-3" @click="showInfo = true">
 						Conçu et réalisé par
 						<a
 							href="https://www.papaya-web-solution.com"
@@ -17,6 +17,10 @@
 						>Bolard Marc</a>
 					</div>
 					<v-container text-xs-center>
+						<h3 class="font-weight-light mt-2 mb-3">
+							Si vous aussi, vous souhaitez avoir votre application mobile totalement personnalisable,<br>
+							ou si vous aimeriez placer votre publicité sur celle ci:
+						</h3>
 						<h3 class="font-weight-medium">Contactez-nous</h3>
 						<v-flex>
 							par
@@ -27,7 +31,7 @@
 								<a href="tel:+68987791037" style="text-decoration:none">Téléphone</a>
 							</v-btn>
 						</v-flex>
-						<v-container v-show="!sended">
+						<v-container v-if="true==false" v-show="!sended">
 							ou encore via ce formulaire:
 							<v-form ref="form" v-model="valid" lazy-validation>
 								<v-layout wrap>
