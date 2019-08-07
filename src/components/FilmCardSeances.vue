@@ -1,6 +1,6 @@
 <template>
 	<v-layout>
-		<v-container grid-list-sm fluid class="ma-0 pa-0 mt-3">
+		<v-container grid-list-sm fluid class="ma-0 pa-0 mt-1">
 			<v-layout wrap>
 				<v-flex v-for="IdSeance in Seances" :key="IdSeance" xs12 sm6 md4>
 					<v-card

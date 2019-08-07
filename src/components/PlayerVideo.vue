@@ -9,7 +9,7 @@
 					</v-btn>
 				</v-toolbar>
 				<!-- https://github.com/anteriovieira/vue-youtube -->
-				<youtube :video-id="videoId" :player-vars="playerVars" ref="youtube" resize></youtube>
+				<youtube v-if="videoId!=''" :video-id="videoId" :player-vars="playerVars" ref="youtube" resize></youtube>
 			</v-card>
 		</v-dialog>
 	</div>

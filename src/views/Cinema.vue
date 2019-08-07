@@ -4,12 +4,12 @@
 			<app-navigation :chgTitle="cinema.title"></app-navigation>
 			<v-content grid-list-md>
 				<v-layout mt-4>
-					<v-flex xs10 offset-xs1 md8 offset-md2>
+					<v-flex xs12 md8 offset-md2>
 						<v-card>
 							<v-container grid-list-xl pa-3>
-								<v-layout wrap>
+								<v-layout wrap class="mep">
 									<v-flex xs12 md6>
-										<img width="100%" :src="cinema.logo | addBaseURL" />
+										<img :src="cinema.logo | addBaseURL" />
 									</v-flex>
 									<v-flex xs12 md6>
 										<div v-html="cinema.description"></div>
@@ -144,6 +144,9 @@ export default {
 .table_tarif td,
 .table_tarif th {
 	padding: 5px 10px;
-	border:1px solid gray
+	border: 1px solid gray;
+}
+.mep img {
+	max-width: 100%;
 }
 </style>

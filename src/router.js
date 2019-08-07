@@ -28,49 +28,49 @@ export default new Router({
       name: 'films',
       component: () => import('./views/Films.vue'),
       props: true,
-      meta: { title: "Les Films", icon: 'local_movies', menu: '["main","footer"]', divider: true, navLeft: 'prev', navRight: '', footer: 'normal' }
+      meta: { title: "Les Films", icon: 'local_movies', menu: '["main","footer"]', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/cinemas',
       name: 'cinemas',
       component: () => import('./views/Cinemas.vue'),
       props: true,
-      meta: { title: "Les Cinemas", icon: 'videocam', menu: 'main', divider: true, navLeft: 'prev', navRight: '', footer: 'normal' }
+      meta: { title: "Les Cinemas", icon: 'videocam', menu: 'main', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/prochainement',
       name: 'prochainement',
       component: () => import('./views/Prochainement.vue'),
       props: true,
-      meta: { title: "Prochainement", icon: 'calendar_today', menu: '["main","footer"]', divider: true, navLeft: 'prev', navRight: '', footer: 'normal' }
+      meta: { title: "Prochainement", icon: 'calendar_today', menu: '["main","footer"]', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/evenements',
       name: 'evenements',
       component: () => import('./views/Evenements.vue'),
       props: true,
-      meta: { title: "Evenements", icon: 'star', menu: '["main","footer"]', divider: true, navLeft: 'prev', navRight: 'share', footer: 'normal' }
+      meta: { title: "Evenements", icon: 'star', menu: '["main","footer"]', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/about',
       name: 'about',
       component: () => import('./views/About.vue'),
       props: true,
-      meta: { title: "A propos", icon: 'info', menu: 'main', divider: true, navLeft: 'prev', navRight: '', footer: 'normal' }
+      meta: { title: "A propos", icon: 'info', menu: 'main', divider: true, navLeft: 'ham', navRight: '', footer: 'normal' }
     },
     {
       path: '/annonceur',
       name: 'annonceur',
       component: () => import('./views/Annonceur.vue'),
       props: true,
-      meta: { title: "Devenez annonceur", icon: 'monetization_on', menu: 'main', divider: true, navLeft: 'prev', navRight: '', footer: '' }
+      meta: { title: "Devenez annonceur", icon: 'monetization_on', menu: 'main', divider: true, navLeft: 'ham', navRight: '', footer: '' }
     },
     {
       path: '/cinema/:id',
       name: 'cinema',
       component: () => import('./views/Cinema.vue'),
       props: true,
-      meta: { title: "Cinema", icon: '', menu: '', divider: false, navLeft: 'prev', navRight: 'share', footer: 'normal' }
+      meta: { title: "Cinema", icon: '', menu: '', divider: false, navLeft: 'prev', navRight: '', footer: 'normal' }
     },
     {
       path: '/test',

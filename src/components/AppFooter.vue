@@ -1,25 +1,31 @@
 <template>
-	<div>
-		<div v-if="metaFooter">
-			<div v-if="metaFooter.footer=='normal'">
-				<v-footer app fixed class="pa-4">
-					<v-bottom-nav value="true" absolute>
-						<template v-for="(route) in $router.options.routes" >
-							<v-btn v-if="route.meta && intoMenu(route.meta.menu,'footer')==true"   :key="route.meta.title">
-								<div>
-									<router-link :to="{name: route.name}" class="mx-2">{{route.meta.title}}</router-link>
-								</div>
-								<v-icon>{{route.meta.icon}}</v-icon>
-							</v-btn>
-						</template>
-					</v-bottom-nav>
-				</v-footer>
-			</div>
-			<div v-if="metaFooter.footer=='autre'">
-				<v-footer class="px-3" color="grey--text text--darken-2">
-					<v-layout justify-center>test</v-layout>
-				</v-footer>
-			</div>
+	<div v-if="metaFooter">
+		<div v-if="metaFooter.footer=='normal'">
+			<v-footer app fixed>
+				<v-layout justify-center>
+					<template v-for="(route) in $router.options.routes">
+						<router-link
+							:to="{name: route.name}"
+							v-if="route.meta && intoMenu(route.meta.menu,'footer')==true"
+							:key="route.meta.title"
+						>
+							<v-tooltip top>
+								<template v-slot:activator="{ on }">
+									<v-btn v-on="on" class="mx-0">
+										<v-icon>{{route.meta.icon}}</v-icon>
+									</v-btn>
+								</template>
+								<span>{{route.meta.title}}</span>
+							</v-tooltip>
+						</router-link>
+					</template>
+				</v-layout>
+			</v-footer>
+		</div>
+		<div v-if="metaFooter.footer=='autre'">
+			<v-footer app fixed color="grey--text text--darken-2">
+				<v-layout justify-center>test</v-layout>
+			</v-footer>
 		</div>
 	</div>
 </template>

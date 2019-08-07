@@ -1,9 +1,9 @@
 <template>
 	<div>
-		<v-container class="pr-0 pl-2 py-0 mb-3">
+		<v-container class="pr-0 pl-2 py-0 mb-0">
 			<v-flex xs12 mr-3 ml-1>
-				<div class="my-4" style="height:5px; background:rgba(255,255,255,0.5);"></div>
-				<v-layout>
+				<div class="mt-0" style="height:5px; background:rgba(255,255,255,0.5);"></div>
+				<v-layout class="mt-4">
 					<v-flex xs2 mr-2>
 						<v-img contain :src="film.poster"></v-img>
 					</v-flex>
@@ -16,7 +16,7 @@
 							>{{infoValue('etat', film.etat, 'title')}}</v-chip>
 						</v-flex>
 						<v-card-title row class="pt-1">
-							<h4 class="mb-0 pb-0 mr-2 title">{{film.title}} </h4><span class="caption" v-if="film.year!=''">({{film.year}})</span>
+							<h4 class="mb-0 pb-0 mr-2 title">{{film.title}}</h4><span class="caption" v-if="film.year!=''">({{film.year}})</span>
 						</v-card-title>
 						<v-card-title row class="mb-0 pt-0" :class="fontSizeText">
 							<v-flex v-if="film.director!=''" xs12>
@@ -62,7 +62,7 @@
 				></film-card-seances>
 			</v-flex>
 		</v-container>
-		<player-video :videoId="videoId" :trailer="trailer" @stopTrailer="stopTrailer($event)"></player-video>
+		
 	</div>
 </template>
 
@@ -70,18 +70,15 @@
 <script>
 import { store } from "@/store.js";
 import FilmCardSeances from "@/components/FilmCardSeances.vue";
-import PlayerVideo from "@/components/PlayerVideo.vue";
+
 
 export default {
 	components: {
-		FilmCardSeances,
-		PlayerVideo
+		FilmCardSeances
 	},
 	data() {
 		return {
 			rating: 0,
-			trailer: false,
-			videoId: ""
 		};
 	},
 	props: {
@@ -104,12 +101,9 @@ export default {
 		}
 	},
 	methods: {
-		stopTrailer() {
-			this.trailer = false;
-		},
+		
 		goTrailer(idYT) {
-			this.trailer = true;
-			this.videoId = idYT;
+			this.$emit("goTrailer",idYT);
 		},
 		infoValue(inf, elm, prop) {
 			if (store.state.infos) {

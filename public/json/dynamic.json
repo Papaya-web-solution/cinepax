@@ -256,6 +256,297 @@
           ]
         }
       }
+    },
+    "toy": {
+      "poster": "https://i2.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/qWtRA6rfUNm81A7ITDrq6WkfCNy.jpg?resize=400%2C650&ssl=1",
+      "title": "Toy Story 4",
+      "year": "2019",
+      "director": "Josh Cooley",
+      "actors": "Joan Cusack, Wallace Shawn, Blake Clark, Tim Allen, Annie Potts, Tom Hanks ",
+      "genre": "Animation, Aventure, Comédie, Familial",
+      "country": "USA",
+      "runtime": "1h40",
+      "plot": "Woody a toujours privilégié la joie et le bien-être de ses jeunes propriétaires – Andy puis Bonnie – et de ses compagnons, n’hésitant pas à prendre tous les risques pour eux, aussi inconsidérés soient-ils. L’arrivée de Forky, un nouveau jouet qui ne veut pas en être un dans la chambre de Bonnie, met toute la petite bande en émoi. C’est le début d’une grande aventure et d’un extraordinaire voyage pour Woody et ses amis. Le cowboy va découvrir à quel point le monde peut être vaste pour un jouet…",
+      "youtube": "hu6mN0YJjNA",
+      "rated": "G",
+      "etat": "",
+      "rating": -1,
+      "seances": {
+        "1": {
+          "id_cinema": "hollywood",
+          "id_salle": 2,
+          "days": [
+            "20191206"
+          ],
+          "hour": ["09:00"],
+          "lang": "VF",
+          "techs": [
+            "2D"
+          ]
+        },
+        "2": {
+          "id_cinema": "liberty",
+          "id_salle": 3,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["12:15","14:35","17:30"],
+          "lang": "VF",
+          "techs": [
+            "2D"
+          ]
+        }
+      }
+    },
+    "wick": {
+      "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/05/gaFS0WmDynCVPtJLoIq4cKfwfUQ.jpg?resize=400%2C650&ssl=1",
+      "title": "John Wick : Parabellum",
+      "year": "2019",
+      "director": "Chad Stahelski",
+      "actors": "Anjelica Huston, Saïd Taghmaoui, Ian McShane, Halle Berry, Keanu Reeves, Laurence Fishburne",
+      "genre": "Action, Crime, Thriller",
+      "country": "USA",
+      "runtime": "2h10",
+      "plot": "John Wick a transgressé une règle fondamentale : il a tué à l’intérieur même de l’Hôtel Continental. “Excommunié”, tous les services liés au Continental lui sont fermés et sa tête mise à prix. John se retrouve sans soutien, traqué par tous les plus dangereux tueurs du monde.",
+      "youtube": "DFhYLXkuXSc",
+      "rated": "PG-12",
+      "etat": "",
+      "rating": -1,
+      "seances": {
+        "1": {
+          "id_cinema": "liberty",
+          "id_salle": 3,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["19:50"],
+          "lang": "VF",
+          "techs": [
+            "2D"
+          ]
+        }
+      }
+    },
+    "spider": {
+      "poster": "https://i0.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/rubpFaO1QnrcOO6Bk3vthwPfvr.jpg?resize=400%2C650&ssl=1",
+      "title": "Spider-Man : Far from Home",
+      "year": "2019",
+      "director": "Jon Watts",
+      "actors": "Zendaya, Jon Favreau, Marisa Tomei, Tom Holland, Jake Gyllenhaal, Samuel L. Jackson",
+      "genre": "Action, Aventure, Comédie, Romance, Science-Fiction",
+      "country": "USA",
+      "runtime": "2h09",
+      "plot": "Peter et ses amis passent leurs vacances d’été en Europe. Mais ils n’auront pas vraiment l’occasion de se reposer puisque Peter accepte d’aider Nick Fury pour débusquer les mystérieuses créatures qui sont la cause des catastrophes naturelles qui frappent le continent.",
+      "youtube": "SFoCPkEfHEM",
+      "rated": "G",
+      "etat": "",
+      "rating": -1,
+      "seances": {
+        "1": {
+          "id_cinema": "majestic",
+          "id_salle": 1,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["12:00","14:30","17:45","20:15"],
+          "lang": "VF",
+          "techs": [
+            "3D"
+          ]
+        }
+      }
+    },
+    "mer": {
+      "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/3tihUSGDNDNCYMpdp6UAHRQxs25.jpg?resize=400%2C650&ssl=1",
+      "title": "Les Enfants de la mer",
+      "year": "2019",
+      "director": "Ayumu Watanabe",
+      "actors": "",
+      "genre": "Animation, Drame, Fantastique",
+      "country": "Japon",
+      "runtime": "1h50",
+      "plot": "Ruka, jeune collégienne, vit avec sa mère, avec qui elle ne s’entend pas toujours très bien. Elle se consacre à sa passion du handball. Hélas, elle se fait injustement exclure de son équipe le 1er jour des vacances. Furieuse et désoeuvrée, elle erre dans la ville et décide de rendre visite à son père à l’aquarium où il travaille . Elle y rencontre un étrange garçon, Umi…",
+      "youtube": "WWGnOx_HkUA",
+      "rated": "G",
+      "etat": "",
+      "rating": -1,
+      "seances": {
+        "1": {
+          "id_cinema": "majestic",
+          "id_salle": 2,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["12:00"],
+          "lang": "VF",
+          "techs": [
+            "2D"
+          ]
+        }
+      }
+    },
+    "anna": {
+      "poster": "https://i2.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/07/qWsHMrbg9DsBY3bCMk9jyYCRVRs.jpg?resize=400%2C650&ssl=1",
+      "title": "Annabelle – La maison du Mal",
+      "year": "2019",
+      "director": "Gary Dauberman",
+      "actors": "Michael Cimino, Katie Sarife, Mckenna Grace, Madison Iseman, Vera Farmiga, Patrick Wilson",
+      "genre": "Horreur",
+      "country": "USA",
+      "runtime": "1h46",
+      "plot": "Résolus à empêcher Annabelle de causer davantage de dégâts, les démonologues Ed et Lorraine Warren rangent la poupée possédée dans la pièce verrouillée de leur maison réservée aux artefacts, la plaçant ainsi « en sécurité » derrière un verre sacré qui a reçu la sainte bénédiction d’un prêtre. Mais une nuit d’horreurs se profile alors qu’Annabelle réveille les esprits maléfiques de la salle, qui dirigent leur attention vers une nouvelle cible : la fille de 10 ans des Warrens, Judy et ses amis.",
+      "youtube": "3TPiCQg2MZQ",
+      "rated": "PG-12",
+      "etat": "",
+      "rating": -1,
+      "seances": {
+        "1": {
+          "id_cinema": "majestic",
+          "id_salle": 2,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["14:00","18:00"],
+          "lang": "VF",
+          "techs": [
+            "2D"
+          ]
+        },"2": {
+          "id_cinema": "majestic",
+          "id_salle": 3,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["20:15"],
+          "lang": "VF",
+          "techs": [
+            "2D"
+          ]
+        }
+      }
+    },
+    "godz": {
+      "poster": "https://i2.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/05/pU3bnutJU91u3b4IeRPQTOP8jhV.jpg?resize=400%2C650&ssl=1",
+      "title": "Godzilla II : Roi des Monstres",
+      "year": "2019",
+      "director": "Michael Dougherty",
+      "actors": "Millie Bobby Brown, Kyle Chandler, Vera Farmiga, Sally Hawkins, Ken Watanabe, Bradley Whitford",
+      "genre": "Action, Science-Fiction, Thriller",
+      "country": "USA",
+      "runtime": "2h12",
+      "plot": "L’agence crypto-zoologique Monarch doit faire face à une vague de monstres titanesques, comme Godzilla, Mothra, Rodan et surtout le redoutable roi Ghidorah à trois têtes. Un combat sans précédent entre ces créatures considérées jusque-là comme chimériques menace d’éclater. Alors qu’elles cherchent toutes à dominer la planète, l’avenir même de l’humanité est en jeu…",
+      "youtube": "KijzJa8hcTY",
+      "rated": "G",
+      "etat": "",
+      "rating": -1,
+      "seances": {
+        "1": {
+          "id_cinema": "majestic",
+          "id_salle": 2,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["20:15"],
+          "lang": "VF",
+          "techs": [
+            "3D"
+          ]
+        },"2": {
+          "id_cinema": "majestic",
+          "id_salle": 3,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["17:45"],
+          "lang": "VF",
+          "techs": [
+            "3D"
+          ]
+        }
+      }
+    },
+    "Aladdin ": {
+      "poster": "https://i1.wp.com/www.netfenua.pf/cms/wp-content/uploads/2019/05/zhPqd766H4ZxGbTOOMQOSY4dxmS.jpg?resize=400%2C650&ssl=1",
+      "title": "Aladdin ",
+      "year": "2019",
+      "director":  "Guy Ritchie",
+      "actors": "Mena Massoud, Nasim Pedrad, Navid Negahban, Marwan Kenzari, Naomi Scott, Will Smith",
+      "genre": "Aventure, Fantastique, Musique, Romance",
+      "country": "USA",
+      "runtime": "2h00",
+      "plot": "Quand un charmant garçon des rues du nom d’Aladdin cherche à conquérir le cœur de la belle, énigmatique et fougueuse princesse Jasmine, il fait appel au tout puissant Génie, le seul qui puisse lui permettre de réaliser trois vœux, dont celui de devenir le prince Ali pour mieux accéder au palais…",
+      "youtube": "1P10uLzaPao",
+      "rated": "G",
+      "etat": "",
+      "rating": -1,
+      "seances": {
+        "1": {
+          "id_cinema": "majestic",
+          "id_salle": 3,
+          "days": [
+            "20191201",
+            "20191202",
+            "20191203",
+            "20191204",
+            "20191205",
+            "20191206",
+            "20191207"
+          ],
+          "hour": ["11:45","14h30"],
+          "lang": "VF",
+          "techs": [
+            "3D"
+          ]
+        }
+      }
     }
   },
   "pubs": {
