@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<app-navigation></app-navigation>
-		<v-content style="position:fixed; z-index:2; width:100%; text-align:center">
+		<v-content style="position:fixed; z-index:2; width:100%; text-align:center;">
 			<v-layout style="background:gray">
 				<v-flex class="xs10 offset-xs1">
 					<!-- https://ssense.github.io/vue-carousel/api/ -->

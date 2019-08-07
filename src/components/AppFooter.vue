@@ -1,7 +1,7 @@
 <template>
 	<div v-if="metaFooter">
 		<div v-if="metaFooter.footer=='normal'">
-			<v-footer app fixed>
+			<v-footer app >
 				<v-layout justify-center>
 					<template v-for="(route) in $router.options.routes">
 						<router-link
