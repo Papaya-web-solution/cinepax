@@ -1,4 +1,4 @@
-const rootURL = "https://www.turlututu.top/cinepax/";
+const rootURL = "https://app.tahitihoster.com/cinepax/";
 
 const subFolder = process.env.NODE_ENV === 'production'
     ? '/cinepax/'

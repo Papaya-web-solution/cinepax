@@ -573,7 +573,7 @@
     },
     "2": {
       "html": "",
-      "image": "https://www.turlututu.top/cinepax/pubs/airfrance.png"
+      "image": "https://app.tahitihoster.com/cinepax/pubs/airfrance.png"
     }
   },
   "prochainement": {
@@ -612,8 +612,8 @@
 
   },
   "splashAnnonce": {
-    "html": "<h1>SplashScreen pour une info important ou une pub</h1><br><div>Une nouvelle version est disponibles, veuillez vous connectez à cette adresse pour l'installer<br><a href='https://www.glopglop.com' target='blank'>URL</a></div><br><img src='https://www.turlututu.top/cinepax/pubs/airfrance.png'>",
-    "image": "https://www.turlututu.top/cinepax/pubs/airfrance.png",
+    "html": "<h1>SplashScreen pour une info important ou une pub</h1><br><div>Une nouvelle version est disponibles, veuillez vous connectez à cette adresse pour l'installer<br><a href='https://www.glopglop.com' target='blank'>URL</a></div><br><img src='https://app.tahitihoster.com/cinepax/pubs/airfrance.png'>",
+    "image": "https://app.tahitihoster.com/cinepax/pubs/airfrance.png",
     "delay": 0,
     "close": true
   }
