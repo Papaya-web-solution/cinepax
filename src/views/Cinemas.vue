@@ -50,7 +50,7 @@
 													light
 													fab
 												>
-													<v-icon dark>fas fa-plus</v-icon>
+													<v-icon dark>fas fa-arrow-right </v-icon>
 												</v-btn>
 											</template>
 											<span>En savoir plus</span>
