@@ -17,7 +17,7 @@
 								<v-chip
 									:color="dateSeance==dateChoice ? 'primary black--text' : ''"
 									@click="changeDate(dateSeance)"
-									class="font-weight-bold"
+									class="font-weight-bold pointer"
 								>{{dateSeance |dateF3 }}</v-chip>
 							</slide>
 						</template>
@@ -98,7 +98,7 @@ export default {
 
 	beforeMount() {
 		for (var date in store.state.seances) {
-			this.dateChoice = date;
+			this.changeDate(date); // traiter que la première date et ensuite on sort.
 			break;
 		}
 	},

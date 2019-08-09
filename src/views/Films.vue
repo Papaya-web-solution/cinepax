@@ -24,7 +24,7 @@
 								<v-chip
 									:color="idCinema==cinemaChoice ? 'primary' : ''"
 									@click="changeCine(idCinema)"
-									class="font-weight-bold text-uppercase"
+									class="font-weight-bold text-uppercase pointer"
 								>{{cinema.title}}</v-chip>
 							</slide>
 						</template>
