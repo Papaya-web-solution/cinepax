@@ -16,7 +16,8 @@
 							>{{infoValue('etat', film.etat, 'title')}}</v-chip>
 						</v-flex>
 						<v-card-title row class="pt-1">
-							<h4 class="mb-0 pb-0 mr-2 title">{{film.title}}</h4><span class="caption" v-if="film.year!=''">({{film.year}})</span>
+							<h4 class="mb-0 pb-0 mr-2 title">{{film.title}}</h4>
+							<span class="caption" v-if="film.year!=''">({{film.year}})</span>
 						</v-card-title>
 						<v-card-title row class="mb-0 pt-0" :class="fontSizeText">
 							<v-flex v-if="film.director!=''" xs12>
@@ -38,7 +39,14 @@
 									small
 								>{{infoValue('rated', film.rated, 'title')}}</v-chip>
 							</v-flex>
-							<v-flex v-if="film.plot!=''" xs12 class="mt-2">{{film.plot}}</v-flex>
+							<v-flex v-if="film.plot!=''" xs12 class="mt-2">
+								<div>
+									<span v-show="!morePlot">{{film.plot|trunctext(0,150,'...')}}</span>
+									<span class="primary--text" style="cursor: pointer;" @click="moreLink" v-show="!morePlot">[+]</span>									
+									<span v-show="morePlot">{{film.plot}}</span>
+									<span class="primary--text" style="cursor: pointer;" @click="moreLink" v-show="morePlot">[-]</span>
+								</div>
+							</v-flex>
 							<v-flex xs12 v-if="film.youtube!=''">
 								<v-btn @click="goTrailer(film.youtube)" class="mt-3 ml-0" :class="fontSizeText">
 									<v-icon>arrow_right</v-icon>Bande-Annonce
@@ -46,25 +54,24 @@
 							</v-flex>
 						</v-card-title>
 						<template v-if="film.rating>=0">
-						<v-card-actions class="px-3 py-0" :class="fontSizeText">
-							Noter ce film
-							<span class="caption mr-2">({{ film.rating }})</span>
-							<v-rating v-model="film.rating" background-color="white" dense hover size="20"></v-rating>
-						</v-card-actions>
+							<v-card-actions class="px-3 py-0" :class="fontSizeText">
+								Noter ce film
+								<span class="caption mr-2">({{ film.rating }})</span>
+								<v-rating v-model="film.rating" background-color="white" dense hover size="20"></v-rating>
+							</v-card-actions>
 						</template>
 					</v-flex>
 				</v-layout>
 				<template v-if="source!='prochainement'">
-				<film-card-seances
-					:idFilm="idFilm"
-					:Seances="Seances"
-					:source="source"
-					:cinemaChoice="cinemaChoice"
-				></film-card-seances>
+					<film-card-seances
+						:idFilm="idFilm"
+						:Seances="Seances"
+						:source="source"
+						:cinemaChoice="cinemaChoice"
+					></film-card-seances>
 				</template>
 			</v-flex>
 		</v-container>
-		
 	</div>
 </template>
 
@@ -73,7 +80,6 @@
 import { store } from "@/store.js";
 import FilmCardSeances from "@/components/FilmCardSeances.vue";
 
-
 export default {
 	components: {
 		FilmCardSeances
@@ -81,6 +87,7 @@ export default {
 	data() {
 		return {
 			rating: 0,
+			morePlot: false
 		};
 	},
 	props: {
@@ -103,9 +110,8 @@ export default {
 		}
 	},
 	methods: {
-		
 		goTrailer(idYT) {
-			this.$emit("goTrailer",idYT);
+			this.$emit("goTrailer", idYT);
 		},
 		infoValue(inf, elm, prop) {
 			if (store.state.infos) {
@@ -126,6 +132,9 @@ export default {
 					return info;
 				}
 			}
+		},
+		moreLink: function(event) {
+			this.morePlot = !this.morePlot;
 		}
 	}
 };

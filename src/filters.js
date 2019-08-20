@@ -5,14 +5,14 @@ Vue.filter('dateF', function (date) {
 	return date.substr(6, 2) + "." + date.substr(4, 2) + "." + date.substr(0, 4);
 }),
 	Vue.filter('dateF2', function (date) {
-		var j = new Array( "Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam" );
-		var ladate=new Date(date.substr(0, 4) , date.substr(4, 2)-1 , date.substr(6, 2))
+		var j = new Array("Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam");
+		var ladate = new Date(date.substr(0, 4), date.substr(4, 2) - 1, date.substr(6, 2))
 		return j[ladate.getDay()] + " " + date.substr(6, 2) + "." + date.substr(4, 2) + "." + date.substr(2, 2);
 	}),
 	Vue.filter('dateF3', function (date) {
-		var j = new Array( "Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam" );
-		var ladate=new Date(date.substr(0, 4) , date.substr(4, 2)-1 , date.substr(6, 2))
-		return j[ladate.getDay()] + " " + date.substr(6, 2) + "." + date.substr(4, 2) ;
+		var j = new Array("Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam");
+		var ladate = new Date(date.substr(0, 4), date.substr(4, 2) - 1, date.substr(6, 2))
+		return j[ladate.getDay()] + " " + date.substr(6, 2) + "." + date.substr(4, 2);
 	}),
 	Vue.filter('linkTel', function (tel) {
 		const teltrim = tel.replace(new RegExp("[^(0-9)]", "g"), '')
@@ -22,9 +22,17 @@ Vue.filter('dateF', function (date) {
 		} else {
 			return "tel:+689" + teltrim
 		}
-
 	}),
 	Vue.filter('addBaseURL', function (image) {
 		return process.env.BASE_URL + image;
+	}),
+	Vue.filter('trunctext', function (texte, debut, limite, indic ) {
+		if (texte.length > limite && limite>0) {
+			texte = texte.substring(debut, (limite - 3)) + indic;
+		} else if (limite==0) {
+			texte = texte.substring(debut);
+		}
+
+		return texte
 	})
 
