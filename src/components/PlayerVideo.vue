@@ -22,7 +22,7 @@ export default {
 			playerVars: {
 			autoplay: 1
 		}
-		}
+		} 
 	},
 	props: {
 		videoId: String,
