@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# cinepax
+# cinepax .....
 
 ## Project setup
 ```
